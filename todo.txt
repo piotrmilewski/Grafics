@@ -1,0 +1,30 @@
+Piotr Milewski
+Roster: Piotr Milewski, Yuyang Zhang, Angel Ng
+Name: Grafics
+APCS1 pd1
+HW57 -- ...and Keeping It Pointed Up
+2017-01-10
+
+Grafic's Next Steps:
+
+I. Complete the Character.java superclass
+    1. Complete Character.java subclasses
+      -Soldier.java
+      -Mage.java
+      -Swordsman.java
+II. Complete the Monster.java superclass
+    1. Complete Monster.java subclasses
+       -Gargoyles.java
+       -Cyclops.java
+       -Goblins.java
+III. Complete the Map.java superclass
+    1. Complete Map.java subclasses
+       -Forest.java
+       -Endless.java
+       -Quests.java
+    2. Complete Quests.java subclasses
+       -WatefallQ.java
+       -DungeonQ.java
+       -HellQ.java
+IV. Complete the Driver.java main class
+V. Incorporate new additions in Driver.java to other classes
