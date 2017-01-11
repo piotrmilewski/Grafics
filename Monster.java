@@ -1,31 +1,17 @@
-public abstract class Monster{
-    protected int _health;
-    protected int _attack;
-    protected int _defense;
-    protected int _speed;
-    protected int _level;
-    protected int _currency;
-    protected ArrayList<String> _inventory;
-
-    public int getHealth(){
-	return _health;
-    }
-
-    public boolean isAlive(){
-	return (getHealth() > 0);
-    }
-
-    public int lowerHP(int damage){
-	if ((_health - damage) > 0){
-	   _health -= damage;
+import util.java.ArrayList;
+public abstract class Monster extends Monster{
+    public String dropped(ArrayList<String> a){
+	if (Math.random()*10 > 6){
+	    return a.get(1);
+	}
+	else if (Math.random()*10 > 3){
+	    return a.get(2);
 	}
 	else{
-	    _health = 0;
+	    return a.get(3);
 	}
-	return _health;
     }
-
-    public String attack(Character a){
+}
 	
 
 
