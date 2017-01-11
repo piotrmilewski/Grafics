@@ -26,5 +26,5 @@ III. Complete the Map.java superclass
        -WatefallQ.java
        -DungeonQ.java
        -HellQ.java
-IV. Complete the Driver.java main class
+IV. Complete the Driver.java main class as we work on the other classes. Should be the last class to be completed.
 V. Incorporate new additions in Driver.java to other classes
