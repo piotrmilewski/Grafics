@@ -1,4 +1,6 @@
 public abstract class LivingEntity{
+    import java.util.ArrayList; 
+    
     protected int _health;
     protected int _attack;
     protected int _defense;
@@ -26,6 +28,6 @@ public abstract class LivingEntity{
 
     public abstract void sortinventory();
 
-    public void attack(){
-	
+    public void attack(LivingEntity x){
+	//implement attack 
     }
