@@ -1,17 +1,14 @@
-pubilc abstract class Character{
+import java.util.ArrayList;
 
-    protected String _name;
-    protected int _health;
-    protected int _attack;
-    protected int _defense;
+public class Character{
+
+    /*protected String _name;
     protected int _level;
     protected int _spattack;
-    protected int _speed;
-    protected int _experience;
-    protected int _currency;
-    protected ArrayList<String> _inventory;
+    protected int _experience;*/
+    private static ArrayList<ArrayList<String>> _inventory = new ArrayList(3);
 
-    public String getName(){
+    /*public String getName(){
 	return _name;
     }
 
@@ -20,27 +17,33 @@ pubilc abstract class Character{
 	return getName();
     }
 
-    public int getHealth(){
-	return _health;
-    }
-    
-    public boolean isAlive(){
-	return (getHealth() > 0);
-    }
-
     public void sortinventory(){
 	//Implement inventory sorting
+	}*/
+
+    public static void fillArrayList(){
+	String blank = "x";
+	for (ArrayList<String> x : _inventory){
+	    x = new ArrayList(5);
+	    for (String y : x){
+		y.add(blank);
+	    }
+	}
     }
 
-    public int lowerHP(int damage){
-	if ((_health - damage) > 0){
-	    _health -= damage;
+    public static String printArrayList(){
+	String retStr = "";
+	for (ArrayList<String> x : _inventory){
+	    retStr += "\n";
+	    for (String y : x){
+		retStr += x + ", ";
+	    }
 	}
-	else{
-	    _health = 0;
-	}
-	return getHealth();
+	return retStr;
     }
 
-    
+    public static void main(String[] args){
+	fillArrayList();
+	System.out.println(printArrayList());
+    }
 }
