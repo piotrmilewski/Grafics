@@ -6,8 +6,7 @@ public class Character{
     protected int _level;
     protected int _spattack;
     protected int _experience;
-    private static ArrayList<ArrayList<String>> _inventory = new ArrayList(3);
-
+    
     public String getName(){
 	return _name;
     }
