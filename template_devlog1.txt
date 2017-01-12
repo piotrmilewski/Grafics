@@ -6,23 +6,6 @@ pd 1
 ---------------------
 Kingdom Quests
 
-
-Suggested usage: 
-* Replace all fields, angle brackets included, with specified info.
-  eg, pd <pd#> --> pd 3
-* Delete these instructions once all teammates understand usage.
-
-devlog--
-Use keyboard shortcut to jump to end,
- replicate entry template,
- modify appropriately.
-
-zone of reflection--
-Flesh out each category whenever necessary, appropriate.
- Need not be fully filled in until end of project,
- but best done as you go along.
-
-
 /////////// Zone of Reflection \\\\\\\\\\\
 ------------------------------------------
 OBSTACLES OVERCOME
@@ -57,13 +40,32 @@ tales of wisdom gained...
    \:\/.:| |\:\____/\\ ..::/ / \:\/___/\\:\_\ \ \\:\_\ \ \ 
     \____/_/ \_____\/ \___/_(   \_____\/ \_____\/ \_____\/ 
 ==============================================================
+2016-01-06
+--------------------------------------------------------------
+All 3 members worked together to create project proposal.
+==============================================================
 
+2016-01-09
+--------------------------------------------------------------
+Piotr Milewski :: Create UML diagram for Driver.java and Character.java
+Yuyang Zhang :: Edited proposal 0and created UML diagram for Monster.java
+Angel Ng :: Created UML diagram for Map.java and Castle.java
+==============================================================
+
+2016-01-10
+--------------------------------------------------------------
+Piotr Milewski :: Created todo.txt
+Yuyang Zhang :: Created flow chart using draw.io.
+Angel Ng :: Aided Yuyang to the creation of flow chart.
+==============================================================
 
 2016-01-11
 --------------------------------------------------------------
-Piotr Milewski :: Completed Character.java superclass for Character.java subclasses
-Yuyang Zhang :: Completed Monster.java superclass for Monster.java subclasses
-Angel Ng :: Completed LivingEntity.java superclass for Monster.java and Character.java
+Piotr Milewski :: Worked on Character.java superclass for Character.java subclasses
+Yuyang Zhang :: Worked on Monster.java superclass for Monster.java subclasses
+Angel Ng :: Worked on LivingEntity.java superclass for Monster.java and Character.java
+
+*Character and Monster will be under the superclass LivingEntity
 ==============================================================
 
 yyyy-mm-dd
