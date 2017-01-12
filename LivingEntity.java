@@ -1,12 +1,10 @@
 public abstract class LivingEntity{
-    import java.util.ArrayList; 
     
     protected int _health;
     protected int _attack;
     protected int _defense;
     protected int _speed;
     protected int _currency;
-    protected ArrayList<String> _inventory;
 
     public int getHealth(){
 	return _health;
@@ -25,8 +23,6 @@ public abstract class LivingEntity{
 	}
 	return _health;
     }
-
-    public abstract void sortinventory();
 
     public void attack(LivingEntity x){
 	//implement attack 
