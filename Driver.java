@@ -25,7 +25,7 @@ public class Driver{
 	String prints;
 	String name = "";
 	String nameofclass = "";
-	boolean looper = false;
+	boolean looper = true;
 
 	prints = "Welcome young warrior, to a marvelous world where you will encounter many allies and foes, challenges and obstacles, and treasures that lie beyond the grasp of mortals.\n";
 	prints += "Before we begin our journey through Kingdom Quests, may you tell me what you are called by your brethren? (Input name): ";
@@ -42,17 +42,14 @@ public class Driver{
 	
 	while (looper){
 	    if (nameofclass.equals("Soldier")){
-		System.out.println(Soldier.desc());
 		player = new Soldier(name);
-		looper = true;
+		looper = false;
 	    }
 	    /*else if (nameofclass.equals("Mage")){
-		System.out.println(Mage.desc());
 		player = new Mage(name);
 		looper = true;
 	    }
 	    else if (nameofclass.equals("Swordsman")){
-		System.out.println(Swordsman.desc());
 		player = new Swordsman(name);
 		looper = true;
 		}*/
@@ -66,7 +63,7 @@ public class Driver{
 
         
 	prints = "A valiant choice, " + name + "\n";
-	prints = "Now, we are ready to begin our journey. Ready? Well, I sure am.\n";
+	prints += "Now, we are ready to begin our journey. Ready? Well, I sure am.\n";
 	System.out.print(prints);
 
     }//end newGame()
@@ -114,6 +111,7 @@ public class Driver{
 	}
 	else if (!monster.isAlive()){
 	    prints = "With one last slash from its claw, the Gargoyle was able to take down the mighty " + player.getName() + "\n";
+	    System.out.println(prints);
 	}
     }//end tutorial()
 	
