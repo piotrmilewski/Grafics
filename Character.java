@@ -1,4 +1,4 @@
-public abstract class Character{
+public abstract class Character extends LivingEntity{
 
     protected String _name;
     protected int _level;
