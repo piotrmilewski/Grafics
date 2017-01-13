@@ -86,7 +86,7 @@ public abstract class Character extends LivingEntity{
     }
 
     public int parry(Monster mon){
-	int damage = _attack - mon._defense();
+	int damage = _attack - mon._defense;
 	if (Math.random() < 0.5){
 	    gainHP(mon._attack - _defense);
 	    mon.lowerHP((damage)/2);
