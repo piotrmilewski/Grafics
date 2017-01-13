@@ -68,11 +68,15 @@ Angel Ng :: Worked on LivingEntity.java superclass for Monster.java and Characte
 *Character and Monster will be under the superclass LivingEntity
 ==============================================================
 
-2017-01-13
+2017-01-12
 --------------------------------------------------------------
+*MVP- Due to restriction of time, many ideas from today were not incorporated into MVP.
+
 Piotr Milewski :: Completed constructor(), preGame(), tutorial(), started main() for Driver.java. Helped fix errors during incorporation of work into Driver.
-<Member> :: <Thing member did.>
-<Member> :: <Thing member did.>
+Yuyang Zhang :: Filled ArrayList in Monster.java (not in MVP), created Weapons.java (not in MVP), created Map.java/Forest.java(not in MVP), created Gargoyle.java, aided LivingEntity.java. Helped fix errors during incorporation of work into Driver. 
+Angel Ng :: Created Soldier.java. Created LivingEntity.java. Helped fix errors during incorporation of work into Driver. 
+
+*Due to Angel’s lack of configuration of email, the commits for his account did not increase despite his contribution.
 ==============================================================
 
 yyyy-mm-dd
