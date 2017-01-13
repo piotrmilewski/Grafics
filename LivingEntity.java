@@ -10,6 +10,10 @@ public abstract class LivingEntity{
 	return _health;
     }
 
+    public int getDefense(){
+	return _defense;
+    }
+    
     public boolean isAlive(){
 	return (getHealth() > 0);
     }
@@ -25,5 +29,7 @@ public abstract class LivingEntity{
     }
 
     public void attack(LivingEntity x){
-	//implement attack 
+	int damage = (_attack / 2) - x.getDefense;
+	if (damage < 0) damage = 0;
+	x.lowerHP(damage);
     }
