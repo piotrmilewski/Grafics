@@ -18,9 +18,9 @@ public abstract class Character extends LivingEntity{
     }
 
     public static String desc(){
-	String retStr = "\tSoldier: ___ health, ___ level, ___ attack, ___defense, ___ speed, ___ special attack\n";
-	retStr += "\tSwordsman: ___ health, ___ level, ___ attack, ___defense, ___ speed, ___ special attack\n";
-	retStr += "\tMage: ___ health, ___ level, ___ attack, ___defense, ___ speed, ___ special attack\n";
+	String retStr = "\tSoldier: 200 health, 0 level, 10 attack, 10 defense, 10 speed, 10 special attack\n";
+	//retStr += "\tSwordsman: ___ health, ___ level, ___ attack, ___defense, ___ speed, ___ special attack\n";
+	//retStr += "\tMage: ___ health, ___ level, ___ attack, ___defense, ___ speed, ___ special attack\n";
 	return retStr; 
     }
 
