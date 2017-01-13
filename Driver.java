@@ -72,7 +72,8 @@ public class Driver{
     }//end newGame()
 
     public void tutorial(){
-	String prints, selection, dP, dM;
+	String prints, selection;
+	int dP, dM;
 	monster = new Gargoyle();
 
 	prints = "Welcome to the tutorial, my name is Carl the Guide and I will be assisting you throughout the course of the tutorial\n";
@@ -84,11 +85,11 @@ public class Driver{
 	while (player.isAlive() && monster.isAlive()){
 	    prints = "Would you like to attack or parry the next monster's attack?\n";
 	    prints += "\t1: attack\t2. parry\n";
-	    prints += "Selection (1 or 2): ";
+	    prints += "Selection (attack or parry): ";
 	    System.out.print(prints);
 	    selection = Keyboard.readString();
 
-	    if (selection == 1){
+	    if (selection.equals("attack")){
 		dP = player.attack(monster);
 	    }
 	    else{
@@ -126,7 +127,7 @@ public class Driver{
 	prints = "Would you like to do the tutorial? (Recommended for new players)\n";
 	prints += "Selection (Yes or No): ";
 	System.out.print(prints);
-	selection = readString();
+	selection = Keyboard.readString();
 
 	if (selection.equals("Yes")){
 	    game.tutorial();
