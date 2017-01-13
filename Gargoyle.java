@@ -1,7 +1,7 @@
 public class Gargoyle extends Monster{
 
     public Gargoyle(){
-	_health = 100;
+	_health = 50;
 	_attack = 10;
 	_defense = 5;
 	_speed = 5;
