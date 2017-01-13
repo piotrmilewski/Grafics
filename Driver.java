@@ -80,7 +80,7 @@ public class Driver{
 	System.out.println(prints);
 
 	while (player.isAlive() && monster.isAlive()){
-	    prints = "Would you like to attack or parry the next monster's attack?\n";
+	    prints = "Would you like to attack or parry the next monster's attack during your next turn?\n";
 	    prints += "\t1: attack\t2. parry\n";
 	    prints += "Selection (attack or parry): ";
 	    System.out.print(prints);
@@ -97,7 +97,7 @@ public class Driver{
 	    prints = "\n" + player.getName() + " dealt " + dP + " damage to the Gargoyle.\n";
 	    prints += "Gargoyle dealt " + dM + " damage to " + player.getName() + ".\n";
 	    prints += "Your health is now: " + player.getHealth() + "\n";
-	    prints += "Gargoyle's name is now: " + monster.getHealth() + "\n";
+	    prints += "Gargoyle's health is now: " + monster.getHealth() + "\n";
 	    System.out.println(prints);
 	}
 
