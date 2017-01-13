@@ -1,3 +1,5 @@
+package cs1;
+
 //********************************************************************
 //  Keyboard.java       Author: Lewis and Loftus
 //

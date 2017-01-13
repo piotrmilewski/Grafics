@@ -1,3 +1,5 @@
+import cs1.Keyboard;
+
 public class Driver{
 
     //private Character player;
@@ -61,7 +63,7 @@ public class Driver{
 	}
 	*/
 
-	
+        
 	prints = "A valiant choice, " + name + "\n";
 	prints = "Now, we are ready to begin our journey. Ready? Well, I sure am.\n";
 	System.out.print(prints);
