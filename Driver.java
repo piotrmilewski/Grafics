@@ -86,7 +86,7 @@ public class Driver{
 	    prints += "\t1: attack\t2. parry\n";
 	    prints += "Selection (1 or 2): ";
 	    System.out.print(prints);
-	    selection = readString();
+	    selection = Keyboard.readString();
 
 	    if (selection == 1){
 		dP = player.attack(monster);
