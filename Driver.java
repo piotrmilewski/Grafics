@@ -81,7 +81,6 @@ public class Driver{
 
 	while (player.isAlive() && monster.isAlive()){
 	    prints = "Would you like to attack or parry the next monster's attack during your next turn?\n";
-	    prints += "\t1: attack\t2. parry\n";
 	    prints += "Selection (attack or parry): ";
 	    System.out.print(prints);
 	    selection = Keyboard.readString();
