@@ -7,7 +7,7 @@ public class Soldier extends Character{
 	_maxhealth = 200;
 	_health = 200;
 	_attack = 10;
-	_defense = 10;
+	_defense = 7;
 	_speed = 10;
 	_spattack = 10;
 	_currency = 0;
