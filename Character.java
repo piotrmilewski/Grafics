@@ -85,7 +85,7 @@ public abstract class Character{
 	}
     }
 
-    public void counterAttack(Monster mon){
+    public void parry(Monster mon){
         if (Math.random() < 0.5){
 	    gainHP(mon_attack - _defense);
 	    mon.lowerHP((mon._attack - _defense)/2);
