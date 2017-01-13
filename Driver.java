@@ -61,7 +61,7 @@ public class Driver{
 	}
 	*/
 
-	System.out.println(nameofclass + name);
+	
 	prints = "A valiant choice, " + name + "\n";
 	prints = "Now, we are ready to begin our journey. Ready? Well, I sure am.\n";
 	System.out.print(prints);
