@@ -68,5 +68,20 @@ public abstract class Character{
 	}
     }
 
-    
+    public String desc(){
+	String retStr = "Name: " + _name;
+	retStr += "\nLevel: " + _level;
+	retStr += "\nHealth: " + _health;
+	retStr += "\nAttack: " + _attack;
+	retStr += "\nDefense: " + _defense;
+	retStr += "\nSpeed: " + _speed;
+	retStr += "\nSpecial Attack: " + _spattack;
+	for (int x = 0; x < 3; x++){
+	    retStr += "\n";
+	    for (String item: _inventory[x]){
+		retStr += item + "\t";
+	    }
+	}
+	return retStr; 
+    }
 }
