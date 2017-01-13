@@ -63,25 +63,25 @@ public abstract class Character{
 
     public void addItem(String name){
 	if (name.substring(0).equals("P")){
-	    insertinv(name, 0);
+	    insertInv(name, 0);
 	}
 	if (name.substring(0).equals("W")){
-	    insertinv(name, 1);
+	    insertInv(name, 1);
 	}
 	if (name.substring(0).equals("A")){
-	    insertinv(name, 2);
+	    insertInv(name, 2);
 	}
     }
 
     public void sellItem(String name){
 	if (name.substring(0).equals("P")){
-	    removeinv(name, 0);
+	    removeInv(name, 0);
 	}
 	if (name.substring(0).equals("W")){
-	    removeinv(name, 1);
+	    removeInv(name, 1);
 	}
 	if (name.substring(0).equals("A")){
-	    removeinv(name, 2);
+	    removeInv(name, 2);
 	}
     }
 
