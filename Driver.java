@@ -2,9 +2,9 @@ import cs1.Keyboard;
 
 public class Driver{
 
-    //private Character player;
-    //private Monster monster;
-    //private Map map;
+    private Character player;
+    private Monster monster;
+    private Map map;
 
     private int questCount;
     private int maxQuests; //specify max number of quests in a game
@@ -39,7 +39,7 @@ public class Driver{
 	System.out.print(prints);
 
 	nameofclass = Keyboard.readString();
-	/*
+	
 	while (looper){
 	    if (nameofclass.equals("Soldier")){
 		System.out.println(Soldier.desc());
@@ -62,7 +62,7 @@ public class Driver{
 		prints += "Selection: ";
 	    }
 	}
-	*/
+	
 
         
 	prints = "A valiant choice, " + name + "\n";
@@ -129,7 +129,7 @@ public class Driver{
 	selection = readString();
 
 	if (selection.equals("Yes")){
-	    tutorial();
+	    game.tutorial();
 	}
 	
 
