@@ -21,13 +21,13 @@ public abstract class Character{
 	if (_experience > _lvlupexp){
 	    _level += 1;
 	    _experience = _experience - _lvlupexp;
-	    _lvlupexp + 200;
+	    _lvlupexp += 200;
 	}
 	return _level;
     }
 
     public void insertinv(String name, int a){
-	for (int x = 0; x < _inventory[0]; x++){
+	for (int x = 0; x < _inventory[0].length; x++){
 	    if (_inventory[a][x].equals("")){
 		_inventory[a][x] = name;
 		break;
@@ -35,8 +35,8 @@ public abstract class Character{
 	}
     }
 
-    public void removeint(String name, int a){
-	for (int x = 0; x < _inventory[0]; x++){
+    public void removeinv(String name, int a){
+	for (int x = 0; x < _inventory[0].length; x++){
 	    if (_inventory[a][x].equals(name)){
 		_inventory[a][x] = "";
 		break;
@@ -45,43 +45,33 @@ public abstract class Character{
     }
 
     public void additem(String name){
-	if (name[0].equals("P")){
-	    accessinv(name, 0);
+	if (name.substring(0).equals("P")){
+	    insertinv(name, 0);
 	}
-	if (name[0].equals("W")){
-	    accessinv(name, 1);
+	if (name.substring(0).equals("W")){
+	    insertinv(name, 1);
 	}
-	if (name[0].equals("A")){
-	    accessinv(name, 2);
+	if (name.substring(0).equals("A")){
+	    insertinv(name, 2);
 	}
     }
 
     public void sellitem(String name){
-	if (name[0].equals("P")){
+	if (name.substring(0).equals("P")){
 	    removeinv(name, 0);
 	}
-	if (name[0].equals("W")){
+	if (name.substring(0).equals("W")){
 	    removeinv(name, 1);
 	}
-	if (name[0].equals("A")){
+	if (name.substring(0).equals("A")){
 	    removeinv(name, 2);
 	}
     }
 
-    public String desc(){
-	String retStr = "Name: " + _name;
-	retStr += "\nLevel: " + _level;
-	retStr += "\nHealth: " + _health;
-	retStr += "\nAttack: " + _attack;
-	retStr += "\nDefense: " + _defense;
-	retStr += "\nSpeed: " + _speed;
-	retStr += "\nSpecial Attack: " + _spattack;
-	for (int x = 0; x < 3; x++){
-	    retStr += "\n";
-	    for (String item: _inventory[x]){
-		retStr += item + "\t";
-	    }
-	}
+    public static String desc(){
+	String retStr = "\tSoldier: ___ health, ___ level, ___ attack, ___defense, ___ speed, ___ special attack\n";
+	retStr += "\tSwordsman: ___ health, ___ level, ___ attack, ___defense, ___ speed, ___ special attack\n";
+	retStr += "\tMage: ___ health, ___ level, ___ attack, ___defense, ___ speed, ___ special attack\n";
 	return retStr; 
     }
 }

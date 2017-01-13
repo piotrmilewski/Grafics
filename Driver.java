@@ -33,7 +33,7 @@ public class Driver{
 	name = Keyboard.readString();
 
 	prints = name + ", what a splendid name. Now, which warrior suits your fancy? (Pick a class): \n";
-	//prints += Character.desc();
+	prints += Character.desc();
 	prints += "Selection: ";
 	System.out.print(prints);
 
