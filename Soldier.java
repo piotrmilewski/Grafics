@@ -1,4 +1,4 @@
-public class Soldier{
+public class Soldier extends Character{
     public Soldier(String name){
 	_name = name;
 	_level = 0;
