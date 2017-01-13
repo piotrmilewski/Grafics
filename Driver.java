@@ -104,11 +104,11 @@ public class Driver{
 	    prints = "Although " + player.getName() + " killed the Gargoyle with one last blow from his fist, the Gargoyle lashed at " + player.getName() + " with one last slash and took " + player.getName() + " down with him.\n";
 	    System.out.println(prints);
 	}
-	else if (!player.isAlive()){
+	else if (!monster.isAlive()){
 	    prints = "With one last blow from his fist, " + player.getName() + " was able to take down the Gargoyle\n";
 	    System.out.println(prints);
 	}
-	else if (!monster.isAlive()){
+	else if (!player.isAlive()){
 	    prints = "With one last slash from its claw, the Gargoyle was able to take down the mighty " + player.getName() + "\n";
 	    System.out.println(prints);
 	}
