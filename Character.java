@@ -41,6 +41,7 @@ public abstract class Character extends LivingEntity{
 	else{
 	    _health += hp;
 	}
+	return _health;
     }
 
     public void insertInv(String name, int a){
