@@ -34,5 +34,6 @@ public abstract class LivingEntity{
 	x.lowerHP(damage);
 	return damage;
     }
+}
 
     
