@@ -28,8 +28,8 @@ public abstract class LivingEntity{
 	return _health;
     }
 
-    public String attack(LivingEntity x){
-	int damage = _attack  - x.getDefense;
+    public int attack(LivingEntity x){
+	int damage = _attack  - x.getDefense();
 	if (damage < 0) damage = 0;
 	x.lowerHP(damage);
 	return damage;
