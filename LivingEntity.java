@@ -29,7 +29,7 @@ public abstract class LivingEntity{
     }
 
     public void attack(LivingEntity x){
-	int damage = (_attack / 2) - x.getDefense;
+	int damage = _attack  - x.getDefense;
 	if (damage < 0) damage = 0;
 	x.lowerHP(damage);
     }
