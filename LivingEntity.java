@@ -33,3 +33,5 @@ public abstract class LivingEntity{
 	if (damage < 0) damage = 0;
 	x.lowerHP(damage);
     }
+
+    
