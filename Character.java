@@ -5,6 +5,7 @@ public abstract class Character{
     protected int _spattack;
     protected int _experience;
     protected int _lvlupexp;
+    protected int _maxhealth;
     protected String[][] _inventory = new String[3][3];
     
     public String getName(){
@@ -14,6 +15,13 @@ public abstract class Character{
     public String setName(String name){
 	_name = name;
 	return getName();
+    }
+
+    public static String desc(){
+	String retStr = "\tSoldier: ___ health, ___ level, ___ attack, ___defense, ___ speed, ___ special attack\n";
+	retStr += "\tSwordsman: ___ health, ___ level, ___ attack, ___defense, ___ speed, ___ special attack\n";
+	retStr += "\tMage: ___ health, ___ level, ___ attack, ___defense, ___ speed, ___ special attack\n";
+	return retStr; 
     }
 
     public int levelUp(int exp){
@@ -26,7 +34,16 @@ public abstract class Character{
 	return _level;
     }
 
-    public void insertinv(String name, int a){
+    public int gainHP(int hp){
+	if (_health + hp > _maxhealth){
+	    _health = _maxhealth;
+	}
+	else{
+	    _health += hp;
+	}
+    }
+
+    public void insertInv(String name, int a){
 	for (int x = 0; x < _inventory[0].length; x++){
 	    if (_inventory[a][x].equals("")){
 		_inventory[a][x] = name;
@@ -35,7 +52,7 @@ public abstract class Character{
 	}
     }
 
-    public void removeinv(String name, int a){
+    public void removeInv(String name, int a){
 	for (int x = 0; x < _inventory[0].length; x++){
 	    if (_inventory[a][x].equals(name)){
 		_inventory[a][x] = "";
@@ -44,7 +61,7 @@ public abstract class Character{
 	}
     }
 
-    public void additem(String name){
+    public void addItem(String name){
 	if (name.substring(0).equals("P")){
 	    insertinv(name, 0);
 	}
@@ -56,7 +73,7 @@ public abstract class Character{
 	}
     }
 
-    public void sellitem(String name){
+    public void sellItem(String name){
 	if (name.substring(0).equals("P")){
 	    removeinv(name, 0);
 	}
@@ -68,10 +85,10 @@ public abstract class Character{
 	}
     }
 
-    public static String desc(){
-	String retStr = "\tSoldier: ___ health, ___ level, ___ attack, ___defense, ___ speed, ___ special attack\n";
-	retStr += "\tSwordsman: ___ health, ___ level, ___ attack, ___defense, ___ speed, ___ special attack\n";
-	retStr += "\tMage: ___ health, ___ level, ___ attack, ___defense, ___ speed, ___ special attack\n";
-	return retStr; 
+    public void counterAttack(Monster mon){
+        if (Math.random() < 0.5){
+	    gainHP(mon_attack - _defense);
+	    mon.lowerHP((mon._attack - _defense)/2);
+	}
     }
 }
