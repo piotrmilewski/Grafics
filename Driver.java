@@ -7,6 +7,7 @@ public class Driver{
     //private Map map;
 
     private int questCount;
+    private int maxQuests; //specify max number of quests in a game
     private int deathCount;
     private boolean Endgame;
     private boolean inQuest; //true if in a quest
@@ -70,8 +71,27 @@ public class Driver{
 
     }//end newGame()
 
+    public void tutorial(){
+	String prints;
+
+	prints = "Welcome to the tutorial, my name is Carl the Guide and I will be assisting you throughout the course of the tutorial\n";
+	
+
     public static void main(String[] args){
+	String prints;
+	String selection;
+	
 	Driver game = new Driver();
+	
+	prints = "Would you like to do the tutorial? (Recommended for new players)\n";
+	prints += "Selection (Yes or No): ";
+	System.out.print(prints);
+	selection = readString();
+
+	if (selection.equals("Yes")){
+	    tutorial();
+	}
+	
 
     }//end main
     
