@@ -4,7 +4,7 @@ public class Driver{
 
     private Character player;
     private Monster monster;
-    private Map map;
+    //private Map map;
 
     private int questCount;
     private int maxQuests; //specify max number of quests in a game
@@ -46,7 +46,7 @@ public class Driver{
 		player = new Soldier(name);
 		looper = true;
 	    }
-	    else if (nameofclass.equals("Mage")){
+	    /*else if (nameofclass.equals("Mage")){
 		System.out.println(Mage.desc());
 		player = new Mage(name);
 		looper = true;
@@ -55,7 +55,7 @@ public class Driver{
 		System.out.println(Swordsman.desc());
 		player = new Swordsman(name);
 		looper = true;
-	    }
+		}*/
 	    else{
 		prints = "Invalid choice, please try again\n";
 		prints += Character.desc();
@@ -77,7 +77,7 @@ public class Driver{
 
 	prints = "Welcome to the tutorial, my name is Carl the Guide and I will be assisting you throughout the course of the tutorial\n";
 	prints += "Here approaches a Gargoyle, prepare to battle\n";
-	prints += "*" + Soldier.getName() + " puffs out his chest and raises his fists in a cowardly manner*\n\n";
+	prints += "*" + player.getName() + " puffs out his chest and raises his fists in a cowardly manner*\n\n";
 	prints += "Well, that's a start. Now, you will have to decide what you will want to do during each cycle. You can either attack the monster for 100% damage or you can parry the monster's attack with a 50% success rate and then strike for 50% damage. Well let's not wait around, get in there\n";
 	System.out.println(prints);
 
