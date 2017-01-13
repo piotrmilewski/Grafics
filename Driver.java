@@ -72,9 +72,49 @@ public class Driver{
     }//end newGame()
 
     public void tutorial(){
-	String prints;
+	String prints, selection, dP, dM;
+	monster = new Gargoyle();
 
 	prints = "Welcome to the tutorial, my name is Carl the Guide and I will be assisting you throughout the course of the tutorial\n";
+	prints += "Here approaches a Gargoyle, prepare to battle\n";
+	prints += "*" + Soldier.getName() + " puffs out his chest and raises his fists in a cowardly manner*\n\n";
+	prints += "Well, that's a start. Now, you will have to decide what you will want to do during each cycle. You can either attack the monster for 100% damage or you can parry the monster's attack with a 50% success rate and then strike for 50% damage. Well let's not wait around, get in there\n";
+	System.out.println(prints);
+
+	while (player.isAlive() && monster.isAlive()){
+	    prints = "Would you like to attack or parry the next monster's attack?\n";
+	    prints += "\t1: attack\t2. parry\n";
+	    prints += "Selection (1 or 2): ";
+	    System.out.print(prints);
+	    selection = readString();
+
+	    if (selection == 1){
+		dP = player.attack(monster);
+	    }
+	    else{
+		dP = player.parry(monster);
+	    }
+	    dM = monster.attack(player);
+
+	    prints = "\n" + player.getName() + " dealt " + dP + " damage to the Gargoyle.\n";
+	    prints += "Gargoyle dealt " + dM + " damage to " + player.getName() + ".\n";
+	    prints += "Your health is now: " + player.getHealth() + "\n";
+	    prints += "Gargoyle's name is now: " + monster.getHealth() + "\n";
+	    System.out.println(prints);
+	}
+
+	if (!player.isAlive() && !monster.isAlive()){
+	    prints = "Although " + player.getName() + " killed the Gargoyle with one last blow from his fist, the Gargoyle lashed at " + player.getName() + " with one last slash and took " + player.getName() + " down with him.\n";
+	    System.out.println(prints);
+	}
+	else if (!player.isAlive()){
+	    prints = "With one last blow from his fist, " + player.getName() + " was able to take down the Gargoyle\n";
+	    System.out.println(prints);
+	}
+	else if (!monster.isAlive()){
+	    prints = "With one last slash from its claw, the Gargoyle was able to take down the mighty " + player.getName() + "\n";
+	}
+    }//end tutorial()
 	
 
     public static void main(String[] args){
