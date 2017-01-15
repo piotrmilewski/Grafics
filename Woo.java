@@ -3,6 +3,7 @@ import cs1.Keyboard;
 public class Woo{
 
     private Character player;
+    //    private String name;
     private Monster monster;
     //private Map map;
 
@@ -13,7 +14,7 @@ public class Woo{
     private boolean inQuest; //true if in a quest
     
 
-    public Driver(){
+    public Woo(){
 	questCount = 0;
 	deathCount = 0;
 	Endgame = false;
@@ -39,19 +40,20 @@ public class Woo{
 	System.out.print(prints);
 
 	nameofclass = Keyboard.readString();
+	nameofclass = nameofclass.toLowerCase();
 	
 	while (looper){
-	    if (nameofclass.equals("Soldier")){
+	    if (nameofclass.equals("soldier")){
 		player = new Soldier(name);
 		looper = false;
 	    }
-	    /*else if (nameofclass.equals("Mage")){
+	    /*else if (nameofclass.equals("mage")){
 		player = new Mage(name);
-		looper = true;
+		looper = false;
 	    }
-	    else if (nameofclass.equals("Swordsman")){
+	    else if (nameofclass.equals("swordsman")){
 		player = new Swordsman(name);
-		looper = true;
+		looper = false;
 		}*/
 	    else{
 		prints = "Invalid choice, please try again\n";
@@ -59,8 +61,6 @@ public class Woo{
 		prints += "Selection: ";
 	    }
 	}
-	
-
         
 	prints = "A valiant choice, " + name + "\n";
 	prints += "Now, we are ready to begin our journey. Ready? Well, I sure am.\n";
@@ -119,18 +119,19 @@ public class Woo{
 	String prints;
 	String selection;
 	
-	Driver game = new Driver();
+	Woo game = new Woo();
 	
 	prints = "Would you like to do the tutorial? (Recommended for new players)\n";
 	prints += "Selection (Yes or No): ";
 	System.out.print(prints);
 	selection = Keyboard.readString();
+	selection = selection.toLowerCase();
 
-	if (selection.equals("Yes")){
+	if (selection.equals("yes")){
 	    game.tutorial();
 	}
 	
 
     }//end main
     
-}//end class Driver
+}//end class Woo
