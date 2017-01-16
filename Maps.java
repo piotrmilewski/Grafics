@@ -20,7 +20,7 @@ public abstract class Maps{
     public void fight(){
 	boolean quit = false;
 	int selection = Keyboard.readInt();
-	int prints;
+	String prints;
 	while (player.isAlive() && monster.isAlive()){
 	    prints = "Would you like to attack or parry the next monster's attack during your next turn?\n";
 	    prints += "Selection (attack(1) or parry(2) or would you like to quit(3)?): ";
