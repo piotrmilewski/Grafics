@@ -27,10 +27,10 @@ public abstract class Maps{
 	    prints = "Would you like to attack or parry the next monster's attack during your next turn?\n";
 	    prints += "Selection (attack(1) or parry(2) or would you like to quit(3)?): ";
 	    System.out.print(prints);
-	    if (selection.equals(1)){
+	    if (selection == 1){
 		dP = player.attack(monster);
 	    }
-	    else if (selection.equals(2)){
+	    else if (selection == 2){
 		dP = player.parry(monster);
 	    }
 	    else{
