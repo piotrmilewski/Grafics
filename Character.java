@@ -1,4 +1,4 @@
-public abstract class Character extends LivingEntity{
+public class Character extends LivingEntity{
 
     protected String _name;
     protected int _level;
@@ -102,5 +102,18 @@ public abstract class Character extends LivingEntity{
 	    mon.lowerHP(damage);
 	}
 	return damage;
+    }
+
+    //returns currency and inventory
+    public String playerInfo(){
+	String summary;
+	summary = "Currency: " + _currency + "\n";
+	summary += "Inventory:\n";
+	for (int a = 0; a < 3; a++){
+	    for (int x = 0; x < 3; x++){
+		summary += "\t" + _inventory[a][x];
+	    }
+	    summary += "\n";
+	}
     }
 }

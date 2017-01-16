@@ -3,7 +3,7 @@ import cs1.Keyboard;
 public class Woo{
 
     private Character player;
-    //    private String name;
+    //private String name;
     private Monster monster;
     //private Map map;
 
@@ -20,7 +20,7 @@ public class Woo{
 	deathCount = 0;
 	Endgame = false;
 	inQuest = false;
-	//newGame();
+	newGame();
     }
 
     public void newGame(){
@@ -87,6 +87,7 @@ public class Woo{
 	    prints += "Selection (attack or parry): ";
 	    System.out.print(prints);
 	    selection = Keyboard.readString();
+	    selection = selection.toLowerCase();
 
 	    if (selection.equals("attack")){
 		dP = player.attack(monster);
@@ -151,20 +152,18 @@ public class Woo{
 	}
 	}*/
 
-    public static void shop(){
+    public  void shop(){
 	String prints;
 	int selection;
 	int buyitem;
 	String sellitem;
-	String[][] inventory = new String[2][4];
-	inventory[0][0] = "Item A";
-	inventory[0][1] = "Item B";
-	inventory[0][2] = "Item C";
-	inventory[0][3] = "Item D";
+	String[][] inventory = new String[2][3];
+	inventory[0][0] = "Potion";
+	inventory[0][1] = "Weapon";
+	inventory[0][2] = "Armor";
 	inventory[1][0] = "50";
 	inventory[1][1] = "100";
 	inventory[1][2] = "150";
-	inventory[1][3] = "200";	
 	
 	prints = "Welcome to the Shop! What would you like to do?\n";
 	prints += "\t1: I would like to use some currency!\t2: I would like to gain some currency!\t3: Leave Shop\n";
@@ -175,13 +174,17 @@ public class Woo{
 	while (true) {
 	    if (selection == 1){
 		prints = "Wonderful! What would you like?\n\n";
-		for (int x = 0; x < 4; x++){
+		for (int x = 0; x < 3; x++){
 		    prints +=  "\t" + x + ":  " + inventory[0][x] + "\t" + inventory[1][x] + "\n";
 		}
 		prints += "\nSelection(number): ";
 		System.out.print(prints);
 		buyitem = Keyboard.readInt();
-		//implement adding item to inventory and taking away currency
+		player.addItem(inventory[0][buyitem]);
+		int cost = Integer.parseInt(inventory[1][buyitem]);
+		player.loseCurrency(cost);
+		System.out.print(player._inventory);
+		System.out.print(player._currency);
 		//account for when player doesn't have enough funds
 		System.out.println(inventory[0][buyitem] + " has been added to your inventory!");
 		prints = "Now, what would you like to do?\n";
@@ -194,17 +197,18 @@ public class Woo{
 		prints = "Oh joy, role reversal! What do you have for me?\n";
 		prints += "Your inventory:\n\n";
 		//prints player's inventory
-		/*for (int a = 0; a < 3; a++){
+		for (int a = 0; a < 3; a++){
 		    for (int x = 0; x < 3; x++){
-			prints += player._inventory[a][x] + "\t";
+			prints += "\t" + player._inventory[a][x];
 		    }
 		    prints += "\n";
-		    }*/
+		}
 		prints += "\nChoose an item to sell: ";
 		System.out.print(prints);
 	        sellitem = Keyboard.readString();
 		sellitem = sellitem.toLowerCase();
 		//implementation for selling items to the shop
+		
 		//account for when player doesn't have the item
 		System.out.println(sellitem + " has been sold to the shop!");
 		prints = "Now, what would you like to do?\n";
@@ -228,42 +232,11 @@ public class Woo{
 	    }
 	}
     }//end shop()
-	
-    public static void gameplay(){
-	String prints;
-	int selection;
-	boolean looper = true;
-	prints = "\nAh yes, the great outdoors. What would you like to do?";
-	prints += "\n\t1: Venture out into the woods\t2: Return to the castle\t3: Quit Game";
-	prints += "\nSelection (1, 2, or 3): ";
-	System.out.print(prints);
-
-	selection = Keyboard.readInt();
-
-	while (true){
-	    if (selection == 1){
-		System.out.println("A daring soul you are.");
-		break;
-	    }
-	    else if (selection == 2){
-		System.out.println("More of an indoors person, huh?");
-		//castle();
-		break;
-	    }
-	    //need quit game option
-	    else{
-		prints = "Please don't make my life difficult. Choose one of the given options.";
-	        prints += "\n\t1: Venture out into the woods\t2: Return to the castle";
-		prints += "\nSelection (1 or 2): ";
-		System.out.print(prints);
-		selection = Keyboard.readInt();
-	    }
-	}
-    }//end gameplay()
 
     public static void main(String[] args){
 	String prints;
 	String selection;
+	int action;
 	
 	Woo game = new Woo();
 
@@ -302,7 +275,32 @@ public class Woo{
 	    }
 	}
 
-	gameplay();
+	prints = "\nAh yes, the great outdoors. What would you like to do?";
+	prints += "\n\t1: Venture out into the woods\t2: Return to the castle\t3: Quit Game";
+	prints += "\nSelection (1, 2, or 3): ";
+	System.out.print(prints);
+
+	action = Keyboard.readInt();
+
+	while (true){
+	    if (action == 1){
+		System.out.println("A daring soul you are.");
+		break;
+	    }
+	    else if (action == 2){ //makes the player go to the shop for now
+		System.out.println("More of an indoors person, huh?");
+		game.shop();
+		break;
+	    }
+	    //need quit game option
+	    else{
+		prints = "Please don't make my life difficult. Choose one of the given options.";
+	        prints += "\n\t1: Venture out into the woods\t2: Return to the castle";
+		prints += "\nSelection (1 or 2): ";
+		System.out.print(prints);
+		action = Keyboard.readInt();
+	    }
+	}
 	
     }//end main
 }//end class Woo
