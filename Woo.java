@@ -180,10 +180,11 @@ public class Woo{
 		prints += "\nSelection(number): ";
 		System.out.print(prints);
 		buyitem = Keyboard.readInt();
-		player.addItem(inventory[0][buyitem]);
+		System.out.print(player.playerInfo());//diag
 		int cost = Integer.parseInt(inventory[1][buyitem]);
 		player.loseCurrency(cost);
-		System.out.print(player.playerInfo());
+		player.addItem(inventory[0][buyitem]);
+		System.out.print(player.playerInfo());//diag
 		//account for when player doesn't have enough funds
 		System.out.println(inventory[0][buyitem] + " has been added to your inventory!");
 		prints = "Now, what would you like to do?\n";
@@ -207,7 +208,11 @@ public class Woo{
 	        sellitem = Keyboard.readString();
 		sellitem = sellitem.toLowerCase();
 		//implementation for selling items to the shop
-		
+		System.out.print(player.playerInfo());//diag
+		player.gainCurrency(100);
+		player.sellItem(sellitem);
+		System.out.print(player.playerInfo());//diag
+
 		//account for when player doesn't have the item
 		System.out.println(sellitem + " has been sold to the shop!");
 		prints = "Now, what would you like to do?\n";
@@ -223,7 +228,6 @@ public class Woo{
 	    else{
 		prints = "This is a shop. We only buy and sell...\n";
 		prints += "What would you like to do?\n";
-		prints += "Selection (1, 2, or 3): ";
 		prints += "\t1: I would like to use some currency!\t2: I would like to gain some currency!\t3: Leave Shop\n";
 		prints += "Selection(1, 2, or 3): ";
 		System.out.print(prints);
