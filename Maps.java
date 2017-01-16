@@ -1,9 +1,8 @@
 import cs1.Keyboard;
 public abstract class Maps{
-    protected Character player;
     protected Monster monster;
     
-    public void spawn(){
+    public  void spawn(){
 	if (10 == 10){
 	    monster = new Gargoyle();
 	}
