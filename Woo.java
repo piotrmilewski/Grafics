@@ -154,7 +154,8 @@ public class Woo{
     public static void shop(){
 	String prints;
 	int selection;
-	int item; 
+	int buyitem;
+	String sellitem;
 	String[][] inventory = new String[2][4];
 	inventory[0][0] = "Item A";
 	inventory[0][1] = "Item B";
@@ -179,10 +180,10 @@ public class Woo{
 		}
 		prints += "\nSelection(number): ";
 		System.out.print(prints);
-		item = Keyboard.readInt();
+		buyitem = Keyboard.readInt();
 		//implement adding item to inventory and taking away currency
-		//include a solution for when player doesn't have enoguh funds
-		System.out.println(inventory[0][item] + " has been added to your inventory!");
+		//account for when player doesn't have enough funds
+		System.out.println(inventory[0][buyitem] + " has been added to your inventory!");
 		prints = "Now, what would you like to do?\n";
 		prints += "\t1: I would like to use some currency!\t2: I would like to gain some currency!\t3: Leave Shop\n";
 		prints += "Selection(1, 2, or 3): ";
@@ -191,8 +192,26 @@ public class Woo{
 	    }
 	    else if (selection == 2){
 		prints = "Oh joy, role reversal! What do you have for me?\n";
+		prints += "Your inventory:\n\n";
+		//prints player's inventory
+		/*for (int a = 0; a < 3; a++){
+		    for (int x = 0; x < 3; x++){
+			prints += player._inventory[a][x] + "\t";
+		    }
+		    prints += "\n";
+		    }*/
+		prints += "\nChoose an item to sell: ";
 		System.out.print(prints);
+	        sellitem = Keyboard.readString();
+		sellitem = sellitem.toLowerCase();
 		//implementation for selling items to the shop
+		//account for when player doesn't have the item
+		System.out.println(sellitem + " has been sold to the shop!");
+		prints = "Now, what would you like to do?\n";
+		prints += "\t1: I would like to use some currency!\t2: I would like to gain some currency!\t3: Leave Shop\n";
+		prints += "Selection(1, 2, or 3): ";
+		System.out.print(prints);
+		selection = Keyboard.readInt();
 	    }
 	    else if (selection == 3){
 		System.out.println("Leaving already? Alright, nice doing business with you!");
@@ -202,8 +221,10 @@ public class Woo{
 		prints = "This is a shop. We only buy and sell...\n";
 		prints += "What would you like to do?\n";
 		prints += "Selection (1, 2, or 3): ";
-		prints += "\t1: I would like to use some currency!\2:I would like to gain some currency!";
+		prints += "\t1: I would like to use some currency!\t2: I would like to gain some currency!\t3: Leave Shop\n";
+		prints += "Selection(1, 2, or 3): ";
 		System.out.print(prints);
+		selection = Keyboard.readInt();
 	    }
 	}
     }//end shop()
@@ -246,7 +267,7 @@ public class Woo{
 	
 	Woo game = new Woo();
 
-	/*prints = "Would you like to do the tutorial? (Recommended for new players)\n";
+	prints = "Would you like to do the tutorial? (Recommended for new players)\n";
 	prints += "Selection (Yes or No): ";
 	System.out.print(prints);
 	selection = Keyboard.readString();
@@ -281,8 +302,7 @@ public class Woo{
 	    }
 	}
 
-	gameplay();*/
-	shop();
+	gameplay();
 	
     }//end main
 }//end class Woo
