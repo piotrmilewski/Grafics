@@ -183,8 +183,7 @@ public class Woo{
 		player.addItem(inventory[0][buyitem]);
 		int cost = Integer.parseInt(inventory[1][buyitem]);
 		player.loseCurrency(cost);
-		System.out.print(player._inventory);
-		System.out.print(player._currency);
+		System.out.print(player.playerInfo());
 		//account for when player doesn't have enough funds
 		System.out.println(inventory[0][buyitem] + " has been added to your inventory!");
 		prints = "Now, what would you like to do?\n";

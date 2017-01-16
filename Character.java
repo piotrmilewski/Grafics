@@ -115,5 +115,6 @@ public class Character extends LivingEntity{
 	    }
 	    summary += "\n";
 	}
+	return summary;
     }
 }
