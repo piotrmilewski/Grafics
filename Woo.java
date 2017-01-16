@@ -27,7 +27,6 @@ public class Woo{
 	String prints;
 	String name = "";
 	String nameofclass = "";
-	boolean looper = true;
 
 	prints = "Welcome young warrior, to a marvelous world where you will encounter many allies and foes, challenges and obstacles, and treasures that lie beyond the grasp of mortals.\n";
 	prints += "Before we begin our journey through Kingdom Quests, may you tell me what you are called by your brethren? (Input name): ";
@@ -43,14 +42,14 @@ public class Woo{
 	nameofclass = Keyboard.readString();
 	nameofclass = nameofclass.toLowerCase();
 	
-	while (looper){
+	while (true){
 	    if (nameofclass.equals("soldier")){
 		player = new Soldier(name);
-		looper = false;
+		break;
 	    }
 	    else if (nameofclass.equals("mage")){
 		player = new Mage(name);
-		looper = false;
+		break;
 	    }
 	    /*else if (nameofclass.equals("swordsman")){
 		player = new Swordsman(name);
@@ -60,6 +59,9 @@ public class Woo{
 		prints = "Invalid choice, please try again\n";
 		prints += Character.desc();
 		prints += "Selection: ";
+		System.out.print(prints);
+		nameofclass = Keyboard.readString();
+		nameofclass = nameofclass.toLowerCase();
 	    }
 	}
         
@@ -124,11 +126,12 @@ public class Woo{
 
     //WORK IN PROGRESS
     /*public void Castle(){
-	String prints, selection;
+	String prints;
+	int selection;
 
 	prints = "Welcome to King Zbigniew's Castle. We hope you enjoy your stay.\n\n";
 	prints += "What would you like to do?\n";
-	prints += "\t1. Speak with the King\n\t2. Visit the shop\n\t3. Visit the infirmary\n\t4. Use the restrooms\n\t5. Leave the Castle\n";
+	prints += "\t1: Speak with the King\n\t2: Visit the shop\n\t3: Visit the infirmary\n\t4: Use the restrooms\n\t5. Leave the Castle\n";
 	prints += "Selection (1,2,3,4, or 5): ";
 	System.out.println(prints);
 
@@ -146,7 +149,35 @@ public class Woo{
 	}
 	}*/
 	
-	
+    public static void gameplay(){
+	String prints;
+	int selection;
+	boolean looper = true;
+	prints = "\nAh yes, the great outdoors. What would you like to do?";
+	prints += "\n\t1: Venture out into the woods\t2: Return to the castle";
+	prints += "\nSelection (1 or 2): ";
+	System.out.print(prints);
+
+	selection = Keyboard.readInt();
+
+	while (true){
+	    if (selection == 1){
+		System.out.println("A daring soul you are.");
+		break;
+	    }
+	    else if (selection == 2){
+		System.out.println("More of an indoors person, huh?");
+		break;
+	    }
+	    else{
+		prints = "Please don't make my life difficult. Choose one of the given options.";
+	        prints += "\n\t1: Venture out into the woods\t2: Return to the castle";
+		prints += "\nSelection (1 or 2): ";
+		System.out.print(prints);
+		selection = Keyboard.readInt();
+	    }
+	}
+    }
 
     public static void main(String[] args){
 	String prints;
@@ -154,29 +185,41 @@ public class Woo{
 	
 	Woo game = new Woo();
 
-	Quest1.newQuest();
 	prints = "Would you like to do the tutorial? (Recommended for new players)\n";
 	prints += "Selection (Yes or No): ";
 	System.out.print(prints);
 	selection = Keyboard.readString();
 	selection = selection.toLowerCase();
 
-	if (selection.equals("yes")){
-	    game.tutorial();
-	}
-	else{
-	    prints = "Are you sure you don't want to do the tutorial?\n";
-	    prints += "Selection (Yes or No): ";
-	    System.out.print(prints);
-	    selection = Keyboard.readString();
-	    selection = selection.toLowerCase();
-
-	    if (selection.equals("no")){
+	while (true) {
+	    if (selection.equals("yes")){
 		game.tutorial();
+		break;
+	    }
+	    else if (selection.equals("no")){
+		prints = "Are you sure you don't want to do the tutorial?\n";
+		prints += "Selection (Yes or No): ";
+		System.out.print(prints);
+		selection = Keyboard.readString();
+		selection = selection.toLowerCase();
+		
+		if (selection.equals("no")){
+		    game.tutorial();
+		}
+		else{
+		    prints = "Very well. Your first order of business will be to seek guidance from the King. He awaits your arrival.";
+		    System.out.print(prints);
+		}
+		break;
+	    }
+	    else{
+		prints = "I'm not quite sure I understood. Did you mean yes or no? ";
+		System.out.print(prints);
+		selection = Keyboard.readString();
 	    }
 	}
-	
 
+	gameplay();
+	
     }//end main
-    
 }//end class Woo
