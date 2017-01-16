@@ -4,15 +4,17 @@ public abstract class Maps{
     protected Monster monster;
     
     public void spawn(){
-	if (Math.random()*10 > 6){
+	if (10 == 10){
 	    monster = new Gargoyle();
 	}
+	/*
 	else if (Math.random()*10 > 3){
 	    monster = new Goblin();
 	}
 	else {
-	    monster = new Cyclops;
+	    monster = new Cyclops();
 	}
+	*/	
     }
 
     public void fight(){
