@@ -1,7 +1,10 @@
 public class Cyclops extends Monster{
-    protected _health = 50;
-    protected _attack = 10;
-    protected _defense = 3;
-    protected _speed = 1;
-    protected _currency = 5;
+    
+    public Cyclops(){
+	_health = 50;
+	_attack = 7;
+	_defense = 7;
+	_speed = 1;
+	_currency = 5;
+    }
 }
