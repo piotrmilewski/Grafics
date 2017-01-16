@@ -10,6 +10,10 @@ public abstract class LivingEntity{
 	return _health;
     }
 
+    public int getAttack(){
+	return _attack;
+    }
+    
     public int getDefense(){
 	return _defense;
     }

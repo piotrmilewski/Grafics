@@ -47,11 +47,11 @@ public class Woo{
 		player = new Soldier(name);
 		looper = false;
 	    }
-	    /*else if (nameofclass.equals("mage")){
+	    else if (nameofclass.equals("mage")){
 		player = new Mage(name);
 		looper = false;
 	    }
-	    else if (nameofclass.equals("swordsman")){
+	    /*else if (nameofclass.equals("swordsman")){
 		player = new Swordsman(name);
 		looper = false;
 		}*/

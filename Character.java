@@ -2,7 +2,6 @@ public abstract class Character extends LivingEntity{
 
     protected String _name;
     protected int _level;
-    protected int _spattack;
     protected int _experience;
     protected int _lvlupexp;
     protected int _maxhealth;
@@ -18,9 +17,9 @@ public abstract class Character extends LivingEntity{
     }
 
     public static String desc(){
-	String retStr = "\tSoldier: 200 health, 0 level, 10 attack, 10 defense, 10 speed, 10 special attack\n";
+	String retStr = "\tSoldier: 200 health, 0 level, 10 attack, 10 defense, 10 speed, 0 special attack\n";
 	//retStr += "\tSwordsman: ___ health, ___ level, ___ attack, ___defense, ___ speed, ___ special attack\n";
-	//retStr += "\tMage: ___ health, ___ level, ___ attack, ___defense, ___ speed, ___ special attack\n";
+	retStr += "\tMage: 200 health, 0 level, 0 attack, 5 defense, 10 speed, 10 special attack\n";
 	return retStr; 
     }
 
@@ -87,9 +86,9 @@ public abstract class Character extends LivingEntity{
     }
 
     public int parry(Monster mon){
-	int damage = (_attack - mon._defense)/2;
+	int damage = (_attack - mon.getDefense())/2;
 	if (Math.random() < 0.5){
-	    gainHP(mon._attack - _defense);
+	    gainHP(mon.getAttack() - _defense);
 	    mon.lowerHP(damage);
 	}
 	return damage;

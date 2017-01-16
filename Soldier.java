@@ -9,7 +9,6 @@ public class Soldier extends Character{
 	_attack = 10;
 	_defense = 7;
 	_speed = 10;
-	_spattack = 10;
 	_currency = 0;
     }
 }
