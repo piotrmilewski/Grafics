@@ -32,31 +32,31 @@ public abstract class Maps{
 		quit = true;
 	        break;
 	    }
-	}	    		
-	dM = monster.attack(player);
+    	    		
+	    dM = monster.attack(player);
 
-	prints = "\n" + player.getName() + " dealt " + dP + " damage to the Gargoyle.\n";
-	prints += "Gargoyle dealt " + dM + " damage to " + player.getName() + ".\n";
-	prints += "Your health is now: " + player.getHealth() + "\n";
-	prints += "Gargoyle's health is now: " + monster.getHealth() + "\n";
-	System.out.println(prints);
-    }
+	    prints = "\n" + player.getName() + " dealt " + dP + " damage to the Gargoyle.\n";
+	    prints += "Gargoyle dealt " + dM + " damage to " + player.getName() + ".\n";
+	    prints += "Your health is now: " + player.getHealth() + "\n";
+	    prints += "Gargoyle's health is now: " + monster.getHealth() + "\n";
+	    System.out.println(prints);
+	}
 
-    if (quit){
-	prints = "PLAYER IS A LOSER, HE RAN BACK TO THE CASTLE AND DROPPED SOME STUFF AND MONEY";
-    }
-    else if (!player.isAlive() && !monster.isAlive()){
-        prints = "Although " + player.getName() + " killed the monster with one last blow from his fist, the monster lashed at " + player.getName() + " with one last slash and took " + player.getName() + " down with him.\n";
-        System.out.println(prints);
-    }
-    else if (!monster.isAlive()){
-        prints = "With one last blow from his fist, " + player.getName() + " was able to take down the monster\n";
-        System.out.println(prints);
-    }
-    else if (!player.isAlive()){
-        prints = "With one last slash from its claw, the monster was able to take down the mighty " + player.getName() + "\n";
-        System.out.println(prints);
-    }
-    Castle();
+	if (quit){
+	    prints = "PLAYER IS A LOSER, HE RAN BACK TO THE CASTLE AND DROPPED SOME STUFF AND MONEY";
+	}
+	else if (!player.isAlive() && !monster.isAlive()){
+	    prints = "Although " + player.getName() + " killed the monster with one last blow from his fist, the monster lashed at " + player.getName() + " with one last slash and took " + player.getName() + " down with him.\n";
+	    System.out.println(prints);
+	}
+	else if (!monster.isAlive()){
+	    prints = "With one last blow from his fist, " + player.getName() + " was able to take down the monster\n";
+	    System.out.println(prints);
+	}
+	else if (!player.isAlive()){
+	    prints = "With one last slash from its claw, the monster was able to take down the mighty " + player.getName() + "\n";
+	    System.out.println(prints);
+	}
+	Castle();
    
-}
+    }
