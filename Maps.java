@@ -62,7 +62,7 @@ public abstract class Maps{
 	    prints = "With one last slash from its claw, the monster was able to take down the mighty " + player.getName() + "\n";
 	    System.out.println(prints);
 	}
-	Castle();
+	//Castle();
    
     }
 }
