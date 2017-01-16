@@ -16,6 +16,14 @@ public abstract class Character extends LivingEntity{
 	return getName();
     }
 
+    public int gainCurrency(int amount){
+	_currency += amount;
+    }
+
+    public int loseCurrency(int amount){
+	_currency -= amount;
+    }
+
     public static String desc(){
 	String retStr = "\tSoldier: 200 health, 0 level, 10 attack, 10 defense, 10 speed, 0 special attack\n";
 	//retStr += "\tSwordsman: ___ health, ___ level, ___ attack, ___defense, ___ speed, ___ special attack\n";
