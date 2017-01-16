@@ -6,13 +6,12 @@ public class Quest1 extends Maps{
 	    System.out.println(prints);		
 	    spawn();
 	    fight();
-	    print = "blah walk deepr";
-	    print += "oh no another one";
+	    prints = "blah walk deepr";
+	    prints += "oh no another one";
 	    System.out.println(prints);
 	    spawn();
 	    fight();      
 	}
-    public void quit(){
-    }
+ 
     
 }
