@@ -1,19 +1,18 @@
-public class Quest1 extends Maps{
-    protected _spawnrate = 5;
-    protected _waves = 3;
-
-
-    
-    public void spawn (Monster m){
-	if (Math.random()*10 > 6){
-	    Gargoyle x = new Monster;
+public class Quest1 extends Maps{	    
+	public void newQuest(){
+	    String prints;
+	    prints = "Stuff about starting quests blah walking deeper.\n";
+	    prints += "you see a monster walking towards u.\n";
+	    System.out.println(prints);		
+	    spawn();
+	    fight();
+	    print = "blah walk deepr";
+	    print += "oh no another one";
+	    System.out.println(prints);
+	    spawn();
+	    fight();      
 	}
-	else if (Math.random()*10 > 3){
-	    Goblin x = new Monster;
-	}
-	else {
-	    Cyclops x = new Monster;
-	}
+    public void quit(){
     }
-
+    
 }
