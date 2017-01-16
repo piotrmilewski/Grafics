@@ -20,7 +20,7 @@ public class Woo{
 	deathCount = 0;
 	Endgame = false;
 	inQuest = false;
-	newGame();
+	//newGame();
     }
 
     public void newGame(){
@@ -125,9 +125,10 @@ public class Woo{
     }//end tutorial()
 
     //WORK IN PROGRESS
-    /*public void Castle(){
+    /*public void castle(){
 	String prints;
 	int selection;
+	String[][]
 
 	prints = "Welcome to King Zbigniew's Castle. We hope you enjoy your stay.\n\n";
 	prints += "What would you like to do?\n";
@@ -140,6 +141,7 @@ public class Woo{
 	if (selection == 1){
 	}
 	else if (selection == 2){
+	    shop();
 	}
 	else if (selection == 3){
 	}
@@ -148,14 +150,71 @@ public class Woo{
 	else if (selection == 5){
 	}
 	}*/
+
+    public static void shop(){
+	String prints;
+	int selection;
+	int item; 
+	String[][] inventory = new String[2][4];
+	inventory[0][0] = "Item A";
+	inventory[0][1] = "Item B";
+	inventory[0][2] = "Item C";
+	inventory[0][3] = "Item D";
+	inventory[1][0] = "50";
+	inventory[1][1] = "100";
+	inventory[1][2] = "150";
+	inventory[1][3] = "200";	
+	
+	prints = "Welcome to the Shop! What would you like to do?\n";
+	prints += "\t1: I would like to use some currency!\t2: I would like to gain some currency!\t3: Leave Shop\n";
+	prints += "Selection (1, 2, or 3): ";
+	System.out.print(prints);
+	selection = Keyboard.readInt();
+
+	while (true) {
+	    if (selection == 1){
+		prints = "Wonderful! What would you like?\n\n";
+		for (int x = 0; x < 4; x++){
+		    prints +=  "\t" + x + ":  " + inventory[0][x] + "\t" + inventory[1][x] + "\n";
+		}
+		prints += "\nSelection(number): ";
+		System.out.print(prints);
+		item = Keyboard.readInt();
+		//implement adding item to inventory and taking away currency
+		//include a solution for when player doesn't have enoguh funds
+		System.out.println(inventory[0][item] + " has been added to your inventory!");
+		prints = "Now, what would you like to do?\n";
+		prints += "\t1: I would like to use some currency!\t2: I would like to gain some currency!\t3: Leave Shop\n";
+		prints += "Selection(1, 2, or 3): ";
+		System.out.print(prints);
+		selection = Keyboard.readInt();
+	    }
+	    else if (selection == 2){
+		prints = "Oh joy, role reversal! What do you have for me?\n";
+		System.out.print(prints);
+		//implementation for selling items to the shop
+	    }
+	    else if (selection == 3){
+		System.out.println("Leaving already? Alright, nice doing business with you!");
+		return;
+	    }
+	    else{
+		prints = "This is a shop. We only buy and sell...\n";
+		prints += "What would you like to do?\n";
+		prints += "Selection (1, 2, or 3): ";
+		prints += "\t1: I would like to use some currency!\2:I would like to gain some currency!";
+		System.out.print(prints);
+	    }
+	}
+    }//end shop()
 	
     public static void gameplay(){
 	String prints;
 	int selection;
 	boolean looper = true;
 	prints = "\nAh yes, the great outdoors. What would you like to do?";
-	prints += "\n\t1: Venture out into the woods\t2: Return to the castle";
-	prints += "\nSelection (1 or 2): ";
+	prints += "\n\t1: Venture out into the woods\t2: Return to the castle\t3: Quit Game";
+	prints += "\nSelection (1, 2, or 3): ";
 	System.out.print(prints);
 
 	selection = Keyboard.readInt();
@@ -167,8 +226,10 @@ public class Woo{
 	    }
 	    else if (selection == 2){
 		System.out.println("More of an indoors person, huh?");
+		//castle();
 		break;
 	    }
+	    //need quit game option
 	    else{
 		prints = "Please don't make my life difficult. Choose one of the given options.";
 	        prints += "\n\t1: Venture out into the woods\t2: Return to the castle";
@@ -177,7 +238,7 @@ public class Woo{
 		selection = Keyboard.readInt();
 	    }
 	}
-    }
+    }//end gameplay()
 
     public static void main(String[] args){
 	String prints;
@@ -185,7 +246,7 @@ public class Woo{
 	
 	Woo game = new Woo();
 
-	prints = "Would you like to do the tutorial? (Recommended for new players)\n";
+	/*prints = "Would you like to do the tutorial? (Recommended for new players)\n";
 	prints += "Selection (Yes or No): ";
 	System.out.print(prints);
 	selection = Keyboard.readString();
@@ -216,10 +277,12 @@ public class Woo{
 		prints = "I'm not quite sure I understood. Did you mean yes or no? ";
 		System.out.print(prints);
 		selection = Keyboard.readString();
+		selection = selection.toLowerCase();
 	    }
 	}
 
-	gameplay();
+	gameplay();*/
+	shop();
 	
     }//end main
 }//end class Woo
