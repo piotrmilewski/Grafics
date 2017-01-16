@@ -1,4 +1,4 @@
-import cs.Keyboard;
+import cs1.Keyboard;
 public abstract class Maps{
     protected Character player;
     protected Monster monster;
