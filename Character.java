@@ -18,10 +18,12 @@ public abstract class Character extends LivingEntity{
 
     public int gainCurrency(int amount){
 	_currency += amount;
+	return _currency;
     }
 
     public int loseCurrency(int amount){
 	_currency -= amount;
+	return _currency;
     }
 
     public static String desc(){
