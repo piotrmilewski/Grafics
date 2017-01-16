@@ -130,6 +130,17 @@ public class Woo{
 	if (selection.equals("yes")){
 	    game.tutorial();
 	}
+	else{
+	    prints = "Are you sure you don't want to do the tutorial?\n";
+	    prints += "Selection (Yes or No): ";
+	    System.out.print(prints);
+	    selection = Keyboard.readString();
+	    selection = selection.toLowerCase();
+
+	    if (selection.equals("no")){
+		game.tutorial();
+	    }
+	}
 	
 
     }//end main
