@@ -7,6 +7,7 @@ public class Woo{
     private Monster monster;
     //private Map map;
 
+    private int kingEncounters; //number of times you've spoken with the king
     private int questCount;
     private int maxQuests; //specify max number of quests in a game
     private int deathCount;
@@ -112,7 +113,39 @@ public class Woo{
 	    prints = "With one last slash from its claw, the Gargoyle was able to take down the mighty " + player.getName() + "\n";
 	    System.out.println(prints);
 	}
+
+	prints = "Well done my young apprentice. That was a battle well fought\n";
+	prints += "You are now ready to face the perils that you will encounter at Kingdom Quests. Your first order of business will be to speak to the King. He'll guide you from there.\n\n";
+	prints += "Now off you go, I'm sending you off to the Castle.\n";
+	prints += "Carl, out!";
+	System.out.println(prints);
+	
     }//end tutorial()
+
+    //WORK IN PROGRESS
+    /*public void Castle(){
+	String prints, selection;
+
+	prints = "Welcome to King Zbigniew's Castle. We hope you enjoy your stay.\n\n";
+	prints += "What would you like to do?\n";
+	prints += "\t1. Speak with the King\n\t2. Visit the shop\n\t3. Visit the infirmary\n\t4. Use the restrooms\n\t5. Leave the Castle\n";
+	prints += "Selection (1,2,3,4, or 5): ";
+	System.out.println(prints);
+
+	selection = Keyboard.readInt();
+
+	if (selection == 1){
+	}
+	else if (selection == 2){
+	}
+	else if (selection == 3){
+	}
+	else if (selection == 4){
+	}
+	else if (selection == 5){
+	}
+	}*/
+	
 	
 
     public static void main(String[] args){
@@ -120,7 +153,8 @@ public class Woo{
 	String selection;
 	
 	Woo game = new Woo();
-	
+
+	Quest1.newQuest();
 	prints = "Would you like to do the tutorial? (Recommended for new players)\n";
 	prints += "Selection (Yes or No): ";
 	System.out.print(prints);
