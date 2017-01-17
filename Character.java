@@ -133,7 +133,7 @@ public class Character extends LivingEntity{
 
     public boolean hasItem(String item){
 	for (int a = 0; a < _inventory.length; a++){
-	    for (int x = 0; _inventory[0].length; x++){
+	    for (int x = 0; x < _inventory[0].length; x++){
 		if (_inventory[a][x].equals(item)){
 		    return true;
 		}

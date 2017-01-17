@@ -277,18 +277,22 @@ public class Woo{
 	        sellitem = Keyboard.readString();
 		sellitem = sellitem.toLowerCase();
 		//implementation for selling items to the shop
-		System.out.print("BEFORE: " + player.playerInfo());//diag
-		for (int x = 0; x < inventory[0].length; x++){
-		    if (sellitem.substring(0,1).equals(inventory[0][x].substring(0,1))){
-			cost = Integer.parseInt(inventory[1][x]);
+		if (player.hasItem(sellitem)){
+		    System.out.print("BEFORE: " + player.playerInfo());//diag
+		    for (int x = 0; x < inventory[0].length; x++){
+			if (sellitem.substring(0,1).equals(inventory[0][x].substring(0,1))){
+			    cost = Integer.parseInt(inventory[1][x]);
+			}
 		    }
+		    player.gainCurrency(cost);
+		    player.sellItem(sellitem);
+		    System.out.print("AFTER: " + player.playerInfo());//diag
+		    System.out.println(sellitem + " has been sold to the shop!");
 		}
-		player.gainCurrency(cost);
-		player.sellItem(sellitem);
-		System.out.print("AFTER: " + player.playerInfo());//diag
+		else{
+		    System.out.println("Look again..you don't have that item!");
+		}
 
-		//account for when player doesn't have the item
-		System.out.println(sellitem + " has been sold to the shop!");
 		prints = "Now, what would you like to do?\n";
 		prints += "\t1: I would like to use some currency!\t2: I would like to gain some currency!\t3: Leave Shop\n";
 		prints += "Selection(1, 2, or 3): ";
