@@ -86,9 +86,9 @@ Yuyang Zhang :: Finished implementing fight(), spawn() in Maps. Created the basi
 <Member> :: <Thing member did.>
 ==============================================================
 
-yyyy-mm-dd
+2017-01-16
 --------------------------------------------------------------
 <Member> :: <Thing member did.>
-<Member> :: <Thing member did.>
+Yuyang Zhang :: Began storyline for Quest1. Attempted to print one line at a time with the use of keyboard for dialogue/storyline.
 <Member> :: <Thing member did.>
 ==============================================================
