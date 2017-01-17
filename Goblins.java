@@ -1,4 +1,4 @@
-public class Goblins extends Monsters{
+public class Goblins extends Monster{
 
     public Goblins(){
 	_health = 20;

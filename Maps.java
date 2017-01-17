@@ -3,12 +3,12 @@ public abstract class Maps{
     protected Monster monster;
     
     public  void spawn(){
-	if (Math.random*10 > 6){
+	if (Math.random()*10 > 6){
 	    monster = new Gargoyle();
 	}
 	
 	else if (Math.random()*10 > 3){
-	    monster = new Goblin();
+	    monster = new Goblins();
 	}
 	else {
 	    monster = new Cyclops();
