@@ -7,12 +7,12 @@ public class Woo{
     private Monster monster;
     //private Map map;
 
-    private int kingEncounters; //number of times you've spoken with the king
-    private int questCount;
-    private int maxQuests; //specify max number of quests in a game
-    private int deathCount;
-    private boolean Endgame;
-    private boolean inQuest; //true if in a quest
+    private int kingEncounters = 0; //number of times you've spoken with the king
+    private int questCount = 0;
+    private int maxQuests = 3; //specify max number of quests in a game
+    private int deathCount = 0;
+    private boolean Endgame = false; //true if you complete all quests and thus unlcok Endlass mode
+    private boolean inQuest = false; //true if in a quest
     
 
     public Woo(){
@@ -126,7 +126,7 @@ public class Woo{
     }//end tutorial()
 
     //WORK IN PROGRESS
-    /*public void castle(){
+    public void castle(){
 	String prints;
 	int selection;
 	String[][]
@@ -140,17 +140,72 @@ public class Woo{
 	selection = Keyboard.readInt();
 
 	if (selection == 1){
+	    king();
 	}
 	else if (selection == 2){
 	    shop();
 	}
 	else if (selection == 3){
+	    infirmary();
 	}
 	else if (selection == 4){
+	    restrooms();
 	}
 	else if (selection == 5){
 	}
-	}*/
+    }//end castle()
+
+    public void king(){
+	String prints;
+	if (kingEncounters == 0 && questCount == 0){
+	    prints = "Ahh, so this is the new recruit, well pleasure to meet you. My name is King Zbigniew, king of Kingdom Quests. So, what brings you here?\n\n";
+	    prints += "*You tell the king that you've come to protect and serve Kingdom Quests and would like to start as soon as possible*\n\n";
+	    prints += "So you fancy yourself some work ehh? Well I've got just the job for you.\n\n";
+	    //!!!!!!!!!!!!!!!!!!!!!
+	    //PUT QUEST DESCRIPTION HERE
+	    //!!!!!!!!!!!!!!!!!!!!!
+	    System.out.println(prints);
+	    questCount += 1;
+	    kingEncounters += 1;
+	    inQuest = true;
+	}
+	else if (questCount == 1 && !(inQuest)){
+	    //!!!!!!!!!!!!!!!!!!!!!
+	    //KING WELCOME + PUT QUEST DESCRIPTION HERE
+	    //!!!!!!!!!!!!!!!!!!!!!
+	    //System.out.println(prints);
+	    questCount += 1;
+	    kingEncounters += 1;
+	    inQuest = true;
+	}
+	else if (questCount == 2 && !(inQuest)){
+	    //!!!!!!!!!!!!!!!!!!!!!
+	    //KING WELCOME + PUT QUEST DESCRIPTION HERE
+	    //!!!!!!!!!!!!!!!!!!!!!
+	    //System.out.println(prints);
+	    questCount += 1;
+	    kingEncounters += 1;
+	    inQuest = true;
+	}
+	else if (questCount == 3 && !(inQuest)){
+	    prints = "Congratulations " + player.getName() + ", you saved Kingdom Quests! Without you the kingdom would long ago have perished. We deeply express our gratitude.\n";
+	    prints += "Well I have no more quests for you, however, your service will not go unrewarded. Here, this is one-tenth of the kingdom's treasury, use it wisely.\n\n";
+	    prints += "*" + player.getName() + " received 500,000 gold coins!*\n\n";
+	    prints += "I also hear news that a secret zone has been unlocked, I suggest you go check it out.\n";
+	    System.out.println(prints);
+	    player.gainCurrency(500000);
+	    Endgame = true;
+	}
+	else if (inQuest){
+	    prints = "Did you finish that quest that I assigned you already? No? Then what are you doing here go save the Kingdom!\n";
+	    System.out.println(prints);
+	}
+	else{
+	    prints = "Don't come in! I'm rather occupied with something at the moment!\n\n";
+	    prints += "*You hear a loud crash and turn back*\n";
+	    System.out.println(prints);
+	}
+    }//end king()
 
     public void shop(){
 	String prints;
@@ -240,6 +295,8 @@ public class Woo{
 	    }
 	}
     }//end shop()
+
+    
 
     public static void main(String[] args){
 	String prints;
