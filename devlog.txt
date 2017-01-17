@@ -79,10 +79,10 @@ Angel Ng :: Created Soldier.java. Created LivingEntity.java. Helped fix errors d
 *Due to Angel’s lack of configuration of email, the commits for his account did not increase despite his contribution.
 ==============================================================
 
-yyyy-mm-dd
+2017-01-15
 --------------------------------------------------------------
 <Member> :: <Thing member did.>
-<Member> :: <Thing member did.>
+Yuyang Zhang :: Finished implementing fight(), spawn() in Maps. Created the basic format for Quest1. Created basic Cyclops and Goblins.
 <Member> :: <Thing member did.>
 ==============================================================
 
