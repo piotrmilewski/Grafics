@@ -22,13 +22,18 @@ public class Character extends LivingEntity{
     }
 
     public int loseCurrency(int amount){
-	_currency -= amount;
+	if (_currency - amount < 0){
+	    _currency = 0;
+	}
+	else{
+	    _currency -= amount;
+	}
 	return _currency;
     }
 
     public static String desc(){
-	String retStr = "\tSoldier: 200 health, 0 level, 10 attack, 10 defense, 10 speed, 0 special attack\n";
-	//retStr += "\tSwordsman: ___ health, ___ level, ___ attack, ___defense, ___ speed, ___ special attack\n";
+	String retStr = "\tSoldier: 200 health, 0 level, 10 attack, 7 defense, 10 speed, 0 special attack\n";
+	retStr += "\tSwordsman: 200 health, 0 level, 10 attack, 9 defense, 5 speed, 0 special attack\n";
 	retStr += "\tMage: 200 health, 0 level, 0 attack, 5 defense, 10 speed, 10 special attack\n";
 	return retStr; 
     }

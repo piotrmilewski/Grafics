@@ -8,6 +8,7 @@ public class Woo{
     //private Map map;
 
     private int kingEncounters = 0; //number of times you've spoken with the king
+    private int infirmaryVisits = 0; //number of times you've been to the infirmary
     private int questCount = 0;
     private int maxQuests = 3; //specify max number of quests in a game
     private int deathCount = 0;
@@ -296,8 +297,56 @@ public class Woo{
 	}
     }//end shop()
 
-    
+    public void infirmary(){
+	String prints;
+	if (infirmaryVisits == 0){
+	    prints = "Why hello there, my name is Judith, the head nurse, what may I... Oh... Lemme fix you right up don't you worry about it\n\n";
+	    prints += "*Judith lays you down on the bed and treats you*\n\n";
+	    prints += "You're new here aren't you? Gosh you're cute. Not much of a talker are you? Well if you ever need your health restored then come on back. We're always open.\n";
+	    System.out.println(prints);
+	    player.gainHP(100000);
+	    infirmaryVisits += 1;
+	}
+	else if (infirmaryVisits == 1){
+	    prints = "Oh my poor child, tsk tsk, why must they send you off to fight those nasty creatures. Why don't you just stay with me? I cook, I clean, and I make the best Meatloaf in the entire kingdom.\n\n";
+	    prints += "*You consider the offer but kindly decline, Judith frowns*\n\n";
+	    prints += "Well if you ever reconsider, you know where I am\n\n";
+	    prints += "*Judith treats you and massages your lower back\n\n";
+	    prints += "There all better\n";
+	    System.out.println(prints);
+	    player.gainHP(100000);
+	    infirmaryVisits += 1;
+	}
+	else{
+	    prints = player.getName() + " why must you be such a reckless one? All the more reason to love you I guess.\n\n";
+	    prints += "*Your cheek's turn a deep scarlet and you lower your head*\n\n";
+	    prints += "Consider my previous offer, for your own sake.\n";
+	    System.out.println(prints);
+	    player.gainHP(100000);
+	    infirmaryVisits += 1;
+	}
+    }
 
+    public void restrooms(){
+	String prints;
+	int rand = Math.random() * 3;
+	if (rand == 0){
+	    prints = "*You enter the restrooms and are immediately reminded of the smell in the stuyvesant 5th floors bathroom. Reluctantly, you go in and do your business*\n\n";
+	    prints += "*On your way out of the restrooms your find 5 gold. Feels good man.\n*";
+	    System.out.println(prints);
+	    player.gainCurrency(5);
+	}
+	else if (rand == 1){
+	    prints = "*You enter the restrooms and see a rat. This triggers your musophobia and you run away. You then realize you no longer need to use the restroom and go get a new pair of pants.\n";
+	    System.out.println(prints);
+	}
+	else{
+	    prints = "*You enter the restrooms, slip on the floor and fall unconscious. When you wake up and leave the restroom you realize that you are missing 1 gold coin. You decide it isn't worth the effort to go back and get the coin and go back to the castle hall*\n";
+	    System.out.println(prints);
+	    player.loseCurrency(1);
+	}
+    }
+    
     public static void main(String[] args){
 	String prints;
 	String selection;
@@ -356,7 +405,7 @@ public class Woo{
 	    }
 	    else if (action == 2){ //makes the player go to the shop for now
 		System.out.println("More of an indoors person, huh?");
-		game.shop();
+		game.castle();
 		System.out.print(prints);
 		action = Keyboard.readInt();
 	    }
