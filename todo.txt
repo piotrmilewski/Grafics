@@ -6,7 +6,20 @@ HW57 -- ...and Keeping It Pointed Up
 2017-01-10
 
 Grafic's Next Steps:
+III. Complete the Map.java superclass
+    1. Complete Map.java subclasses
+       -Forest.java
+       -Endless.java
+       -Quests.java
+    2. Complete Quests.java subclasses
+       -Watefall.java
+       -Dungeon.java
+       -Hell.java
+IV. Complete the Driver.java main class as we work on the other classes. Should be the last class to be completed.
+V. Ensure the functionality of all the classes.
+VI. If time permits, include something we haven't learnt this year in the project.
 
+Grafic's Completed Steps:
 I. Complete the Character.java superclass
     1. Complete Character.java subclasses
       -Soldier.java
@@ -17,18 +30,7 @@ II. Complete the Monster.java superclass
        -Gargoyles.java
        -Cyclops.java
        -Goblins.java
-III. Complete the Map.java superclass
-    1. Complete Map.java subclasses
-       -Forest.java
-       -Endless.java
-       -Quests.java
-    2. Complete Quests.java subclasses
-       -WatefallQ.java
-       -DungeonQ.java
-       -HellQ.java
-IV. Complete the Driver.java main class as we work on the other classes. Should be the last class to be completed.
-V. Ensure the functionality of all the classes.
-VI. If time permits, include something we haven't learnt this year in the project.
+
 
 Extra Steps:
 I. Merge the Character and Monster superclasses into superclass LivingEntity.
