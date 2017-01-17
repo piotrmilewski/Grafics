@@ -1,6 +1,7 @@
 import cs1.Keyboard;
 public abstract class Maps{
     protected Monster monster;
+    Character player = Woo.player;
     
     public  void spawn(){
 	if (Math.random()*10 > 6){
