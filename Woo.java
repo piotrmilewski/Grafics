@@ -276,7 +276,7 @@ public class Woo{
 		System.out.print(prints);
 	        sellitem = Keyboard.readString();
 		sellitem = sellitem.toLowerCase();
-		//implementation for selling items to the shop
+
 		if (player.hasItem(sellitem)){
 		    System.out.print("BEFORE: " + player.playerInfo());//diag
 		    for (int x = 0; x < inventory[0].length; x++){
