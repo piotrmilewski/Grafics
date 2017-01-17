@@ -158,9 +158,9 @@ public class Woo{
 	int buyitem;
 	String sellitem;
 	String[][] inventory = new String[2][3];
-	inventory[0][0] = "Potion";
-	inventory[0][1] = "Weapon";
-	inventory[0][2] = "Armor";
+	inventory[0][0] = "potion";
+	inventory[0][1] = "weapon";
+	inventory[0][2] = "armor";
 	inventory[1][0] = "50";
 	inventory[1][1] = "100";
 	inventory[1][2] = "150";

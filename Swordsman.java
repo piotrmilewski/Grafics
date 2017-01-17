@@ -10,5 +10,6 @@ public class Swordsman extends Character{
 	_defense = 10;
 	_speed = 5;
 	_currency = 0;
+	fillInv();
     }
 }

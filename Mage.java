@@ -13,6 +13,7 @@ public class Mage extends Character{
 	_speed = 10;
 	_spattack = 10;
 	_currency = 0;
+	fillInv();
     }
 
     public int attack(LivingEntity x){

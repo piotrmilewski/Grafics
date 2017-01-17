@@ -10,5 +10,6 @@ public class Soldier extends Character{
 	_defense = 7;
 	_speed = 10;
 	_currency = 0;
+	fillInv();
     }
 }
