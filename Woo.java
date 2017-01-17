@@ -137,7 +137,7 @@ public class Woo{
 	    prints += "What would you like to do?\n";
 	    prints += "\t1: Speak with the King\n\t2: Visit the shop\n\t3: Visit the infirmary\n\t4: Use the restrooms\n\t5. Leave the Castle\n";
 	    prints += "Selection (1,2,3,4, or 5): ";
-	    System.out.println(prints);
+	    System.out.print(prints);
 
 	    selection = Keyboard.readInt();
 
@@ -243,13 +243,19 @@ public class Woo{
 		prints += "\nSelection(number): ";
 		System.out.print(prints);
 		buyitem = Keyboard.readInt();
-		System.out.print("BEFORE: " + player.playerInfo());//diag
+
 		cost = Integer.parseInt(inventory[1][buyitem]);
-		player.loseCurrency(cost);
-		player.addItem(inventory[0][buyitem]);
-		System.out.print("AFTER: " + player.playerInfo());//diag
-		//account for when player doesn't have enough funds
-		System.out.println(inventory[0][buyitem] + " has been added to your inventory!");
+		if (cost > player._currency){
+		    System.out.println("You don't have enough in the money pouch to buy this item!"); 
+		}
+		else{
+		    System.out.print("BEFORE: " + player.playerInfo());//diag
+		    player.loseCurrency(cost);
+		    player.addItem(inventory[0][buyitem]);
+		    System.out.print("AFTER: " + player.playerInfo());//diag
+		    System.out.println(inventory[0][buyitem] + " has been added to your inventory!");
+		}
+		//account for when player doesn't have enough funds	
 		prints = "Now, what would you like to do?\n";
 		prints += "\t1: I would like to use some currency!\t2: I would like to gain some currency!\t3: Leave Shop\n";
 		prints += "Selection(1, 2, or 3): ";
