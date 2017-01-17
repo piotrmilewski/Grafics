@@ -130,29 +130,36 @@ public class Woo{
     public void castle(){
 	String prints;
 	int selection;
-	String[][]
+	boolean flag = true;
 
-	prints = "Welcome to King Zbigniew's Castle. We hope you enjoy your stay.\n\n";
-	prints += "What would you like to do?\n";
-	prints += "\t1: Speak with the King\n\t2: Visit the shop\n\t3: Visit the infirmary\n\t4: Use the restrooms\n\t5. Leave the Castle\n";
-	prints += "Selection (1,2,3,4, or 5): ";
-	System.out.println(prints);
+	while (flag){
+	    prints = "Welcome to King Zbigniew's Castle. We hope you enjoy your stay.\n\n";
+	    prints += "What would you like to do?\n";
+	    prints += "\t1: Speak with the King\n\t2: Visit the shop\n\t3: Visit the infirmary\n\t4: Use the restrooms\n\t5. Leave the Castle\n";
+	    prints += "Selection (1,2,3,4, or 5): ";
+	    System.out.println(prints);
 
-	selection = Keyboard.readInt();
+	    selection = Keyboard.readInt();
 
-	if (selection == 1){
-	    king();
-	}
-	else if (selection == 2){
-	    shop();
-	}
-	else if (selection == 3){
-	    infirmary();
-	}
-	else if (selection == 4){
-	    restrooms();
-	}
-	else if (selection == 5){
+	    if (selection == 1){
+		king();
+	    }
+	    else if (selection == 2){
+		shop();
+	    }
+	    else if (selection == 3){
+		infirmary();
+	    }
+	    else if (selection == 4){
+		restrooms();
+	    }
+	    else if (selection == 5){
+		flag = false;
+	    }
+	    else{
+		prints = "You're only wasting your own time by not putting in one of the specified options.\n";
+		System.out.println(prints);
+	    }
 	}
     }//end castle()
 
@@ -329,7 +336,7 @@ public class Woo{
 
     public void restrooms(){
 	String prints;
-	int rand = Math.random() * 3;
+	int rand = (int)(Math.random()*3.0);
 	if (rand == 0){
 	    prints = "*You enter the restrooms and are immediately reminded of the smell in the stuyvesant 5th floors bathroom. Reluctantly, you go in and do your business*\n\n";
 	    prints += "*On your way out of the restrooms your find 5 gold. Feels good man.\n*";
