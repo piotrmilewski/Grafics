@@ -130,4 +130,16 @@ public class Character extends LivingEntity{
 	}
 	return summary;
     }
-}
+
+    public boolean hasItem(String item){
+	for (int a = 0; a < _inventory.length; a++){
+	    for (int x = 0; _inventory[0].length; x++){
+		if (_inventory[a][x].equals(item)){
+		    return true;
+		}
+	    }
+	}
+	return false; 
+    }
+
+}//end Character
