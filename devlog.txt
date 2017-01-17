@@ -81,14 +81,14 @@ Angel Ng :: Created Soldier.java. Created LivingEntity.java. Helped fix errors d
 
 2017-01-15
 --------------------------------------------------------------
-<Member> :: <Thing member did.>
+Piotr :: Added Mage to Driver, Added Swordsman subclass, Added Mage to Driver, Started working on castle method.
 Yuyang Zhang :: Finished implementing fight(), spawn() in Maps. Created the basic format for Quest1. Created basic Cyclops and Goblins.
 <Member> :: <Thing member did.>
 ==============================================================
 
 2017-01-16
 --------------------------------------------------------------
-<Member> :: <Thing member did.>
+Piotr Milewski :: Fixed Goblin and Cyclops, Fixed shop method to properly allow transactions, Added king method, Added infirmary method, Added restrooms method, Finished castle method.
 Yuyang Zhang :: Began storyline for Quest1. Attempted to print one line at a time with the use of keyboard for dialogue/storyline.
 <Member> :: <Thing member did.>
 ==============================================================
