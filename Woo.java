@@ -180,11 +180,11 @@ public class Woo{
 		prints += "\nSelection(number): ";
 		System.out.print(prints);
 		buyitem = Keyboard.readInt();
-		System.out.print(player.playerInfo());//diag
+		System.out.print("BEFORE: " + player.playerInfo());//diag
 		int cost = Integer.parseInt(inventory[1][buyitem]);
 		player.loseCurrency(cost);
 		player.addItem(inventory[0][buyitem]);
-		System.out.print(player.playerInfo());//diag
+		System.out.print("AFTER: " + player.playerInfo());//diag
 		//account for when player doesn't have enough funds
 		System.out.println(inventory[0][buyitem] + " has been added to your inventory!");
 		prints = "Now, what would you like to do?\n";
@@ -288,14 +288,20 @@ public class Woo{
 	while (true){
 	    if (action == 1){
 		System.out.println("A daring soul you are.");
-		break;
+		//implementation for forest
+		System.out.print(prints);
+		action = Keyboard.readInt();
 	    }
 	    else if (action == 2){ //makes the player go to the shop for now
 		System.out.println("More of an indoors person, huh?");
 		game.shop();
+		System.out.print(prints);
+		action = Keyboard.readInt();
+	    }
+	    else if (action == 3){
+		System.out.print("Bye Bye!!");
 		break;
 	    }
-	    //need quit game option
 	    else{
 		prints = "Please don't make my life difficult. Choose one of the given options.";
 	        prints += "\n\t1: Venture out into the woods\t2: Return to the castle";
