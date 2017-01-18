@@ -1,6 +1,6 @@
 import cs1.Keyboard;
 public class Quest1 extends Maps{	    
-    public  void newQuest(){
+    public boolean void newQuest(){
 	String prints;
 	String selection;
 	prints = "Welcome to the Caves of Anarachy. Here you will begin your first quest.\n";
@@ -27,7 +27,8 @@ public class Quest1 extends Maps{
 	    prints += "Oh no another one!\n";
 	    System.out.println(prints);
 	    spawn();
-	    fight();      
+	    fight();
+	    return false;
 	}
     
 	else{
