@@ -32,7 +32,7 @@ public class Quest1 extends Maps{
 	}
     
 	else{
-	    prints = "Returning to castle";
+	    prints = "Returning to map...";
 	    System.out.println(prints);
 	    break;
 	}
