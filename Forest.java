@@ -1,22 +1,17 @@
-
+import cs1.Keyboard;
 public class Forest extends Maps{
-    int _waves; 
-    int _spawnrate;
-
-    public Forest(){
-	_spawnrate = 1;
-	_waves = 0;
-    }
-
-    /*public void spawn(){
-        Monster Harley = new Monster();
-    }*/
-
-    public void countWave(){
+    String prints;
+    int selection;
+    public void startSpawn(){
 	if (Character.isAlive() == true){
-	    _waves += 1;
+	    spawn();
+	    fight();
+	    prints = "Would you like to continue? Yes(1) No(2)";
+	    System.out.println(prints);
+	    selection = Keyboard.readInt();
+	    if (selection == 2){
+		break;
+	    }    
 	}
-    }
-
-	     
+    }	     
 }
