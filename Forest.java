@@ -3,6 +3,9 @@ public class Forest extends Maps{
     String prints;
     int selection;
     public void startSpawn(){
+	prints = "Welcome to the forest! Sometimes I come here to relax 'cause it's beautiful here.";
+		prints += "\nWhat would you like to do?";
+
 	if (Character.isAlive() == true){
 	    spawn();
 	    fight();
