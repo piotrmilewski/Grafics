@@ -19,7 +19,7 @@ public abstract class Maps{
 
     public void fight(){
 	boolean quit = false;
-	int selection = Keyboard.readInt();
+	int action = Keyboard.readInt();
 	String prints;
 	int dM;
 	int dP;
@@ -27,10 +27,10 @@ public abstract class Maps{
 	    prints = "Would you like to attack or parry the next monster's attack during your next turn?\n";
 	    prints += "Selection (attack(1) or parry(2) or would you like to quit(3)?): ";
 	    System.out.print(prints);
-	    if (selection == 1){
+	    if (action == 1){
 		dP = player.attack(monster);
 	    }
-	    else if (selection == 2){
+	    else if (action == 2){
 		dP = player.parry(monster);
 	    }
 	    else{

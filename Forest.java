@@ -1,22 +1,22 @@
 
 public class Forest extends Maps{
+    int _waves; 
+    int _spawnrate;
 
     public Forest(){
 	_spawnrate = 1;
 	_waves = 0;
     }
 
-    public void spawn (){
-        Harley = new Monster();
-    }
+    /*public void spawn(){
+        Monster Harley = new Monster();
+    }*/
 
     public void countWave(){
 	if (Character.isAlive() == true){
-	    _wave += 1;
+	    _waves += 1;
 	}
     }
 
-    public void quit(){
-    }
 	     
 }
