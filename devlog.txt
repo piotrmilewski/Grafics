@@ -92,3 +92,10 @@ Piotr Milewski :: Fixed Goblin and Cyclops, Fixed shop method to properly allow 
 Yuyang Zhang :: Began storyline for Quest1. Attempted to print one line at a time with the use of keyboard for dialogue/storyline.
 Angel Ng :: Expanded shop() to account for if the player doesn't have enough money to purchase an item and if the player tries to sell an item that he doesn't have, added hasItem() to Character class
 ==============================================================
+
+2017-01-10
+--------------------------------------------------------------
+Piotr Milewski :: 
+Yuyang Zhang :: 
+Angel Ng :: Began to implement forest into game, corrected minor errors in Forest and Maps
+==============================================================
