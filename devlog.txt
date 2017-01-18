@@ -1,4 +1,4 @@
-Grafics
+﻿Grafics
 Piotr Milewski
 Yuyang Zhang
 Angel Ng
@@ -81,14 +81,14 @@ Angel Ng :: Created Soldier.java. Created LivingEntity.java. Helped fix errors d
 
 2017-01-15
 --------------------------------------------------------------
-Piotr :: Added Mage to Driver, Added Swordsman subclass, Added Mage to Driver, Started working on castle method.
+Piotr Milewski :: Added Mage to Driver, Added Swordsman subclass, Added Mage to Driver, Started working on castle method.
 Yuyang Zhang :: Finished implementing fight(), spawn() in Maps. Created the basic format for Quest1. Created basic Cyclops and Goblins.
-<Member> :: <Thing member did.>
+Angel Ng :: Added shop() method, added playerInfo() (for diagnostic purposes, will be expanded)
 ==============================================================
 
 2017-01-16
 --------------------------------------------------------------
 Piotr Milewski :: Fixed Goblin and Cyclops, Fixed shop method to properly allow transactions, Added king method, Added infirmary method, Added restrooms method, Finished castle method.
 Yuyang Zhang :: Began storyline for Quest1. Attempted to print one line at a time with the use of keyboard for dialogue/storyline.
-<Member> :: <Thing member did.>
+Angel Ng :: Expanded shop() to account for if the player doesn't have enough money to purchase an item and if the player tries to sell an item that he doesn't have, added hasItem() to Character class
 ==============================================================
