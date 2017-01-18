@@ -1,4 +1,4 @@
-﻿Grafics
+Grafics
 Piotr Milewski
 Yuyang Zhang
 Angel Ng
@@ -96,6 +96,6 @@ Angel Ng :: Expanded shop() to account for if the player doesn't have enough mon
 2017-01-10
 --------------------------------------------------------------
 Piotr Milewski :: 
-Yuyang Zhang :: 
+Yuyang Zhang :: Implemented instance of Character into Maps.java. Created basic format for Quest2 (similar to Quest1).
 Angel Ng :: Began to implement forest into game, corrected minor errors in Forest and Maps
 ==============================================================
