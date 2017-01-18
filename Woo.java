@@ -153,6 +153,10 @@ public class Woo{
 	    }
 	}
 	}//end forest()*/
+    public void forest(){
+	Forest woods = new Forest(); 
+	woods.startSpawn();
+    }
 
     public void castle(){
 	String prints;
@@ -443,7 +447,7 @@ public class Woo{
 	while (true){
 	    if (action == 1){
 		System.out.println("A daring soul you are.");
-		//game.forest();
+	        game.forest();
 		System.out.print(prints);
 		action = Keyboard.readInt();
 	    }
