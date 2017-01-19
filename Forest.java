@@ -13,7 +13,7 @@ public class Forest extends Maps{
 	    System.out.println(prints);
 	    selection = Keyboard.readInt();
 	    if (selection == 2){
-		break;
+		return;
 	    }    
 	}
     }	     
