@@ -24,6 +24,10 @@ public class Woo{
 	newGame();
     }
 
+    public Character getPlayer(){
+	return player;
+    }
+
     public void newGame(){
 	String prints;
 	String name = "";
