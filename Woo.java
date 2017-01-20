@@ -163,7 +163,7 @@ public class Woo{
 	prints = "Welcome to the forest! Sometimes I come here to relax 'cause it's beautiful here.";
 	prints += "\nWhat would you like to do?";
 
-	if (Character.isAlive() == true){
+	if (player.isAlive() == true){
 	    spawn();
 	    fight();
 	    prints = "Would you like to continue? Yes(1) No(2)";
