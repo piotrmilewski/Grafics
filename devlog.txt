@@ -10,24 +10,32 @@ Kingdom Quests
 ------------------------------------------
 OBSTACLES OVERCOME
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-wow we so BOSS bc...
+-Static vs. Non-static issues
+-Organizing 10+ classes so that they each work with each other
 
 UNRESOLVED ISSUES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-blah blah pesky bug...
-maybe some of these will move into the Obs.Ovrcm section...
+-Experience implementation
+-Weapon implementation
+-Currency implementation
 
 COOL STUFF LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-wow! oo!...
+-How to properly handle errors
+-Using git fetch and git rebase in order to fix merge conflicts
 
 MID-DEVELOPMENT DESIGN CHANGES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-we changed ___ to ___ bc...
+-We changed the structure of our classes (e.g. We put Quest classes under the Map superclass)
+-Removed the weapons class and made the weapons strings
+-Made the inventory a 2d String array rather than an ArrayList since it was easier to replace and add items with a 2d String array inventory.
+-Added a tutorial() to introduce the player to the game rather than starting out in the castle.
+-Removed multiple maps and replaced them with Quests since the player doesn't see the visual aspect of the map anyway and thus only needs one map (forest).
 
 LESSONS LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-tales of wisdom gained...
+-To make the MVP the priority since at first we wanted to complete all the classes except for Woo.
+-
 ||||||||||||||||||||||||||||||||||||||||||
 
 
