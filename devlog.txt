@@ -1,4 +1,4 @@
-Grafics
+﻿Grafics
 Piotr Milewski
 Yuyang Zhang
 Angel Ng
@@ -93,9 +93,16 @@ Yuyang Zhang :: Began storyline for Quest1. Attempted to print one line at a tim
 Angel Ng :: Expanded shop() to account for if the player doesn't have enough money to purchase an item and if the player tries to sell an item that he doesn't have, added hasItem() to Character class
 ==============================================================
 
-2017-01-10
+2017-01-17
 --------------------------------------------------------------
 Piotr Milewski :: 
 Yuyang Zhang :: Implemented instance of Character into Maps.java. Created basic format for Quest2 (similar to Quest1).
 Angel Ng :: Began to implement forest into game, corrected minor errors in Forest and Maps
+==============================================================
+
+2017-01-19
+--------------------------------------------------------------
+Piotr Milewski :: 
+Yuyang Zhang :: 
+Angel Ng :: Continued to grapple with implementation of forest (tried to implement forest without the use of a separate class but there is still a problem with isAlive() being referenced from a static context)
 ==============================================================
