@@ -134,16 +134,19 @@ public class Woo{
 	String prints;
 	int selection;
 	prints = "Welcome to the forest! Sometimes I come here to relax 'cause it's beautiful here.";
-	prints += "\nWhat would you like to do?";
+	prints += "\nWould you like to enter? Yes(1) No(2)";
 	System.out.println(prints);
-	while (player.isAlive() == true){
-	    spawn();
-	    fight();
-	    prints = "Would you like to continue? Yes(1) No(2)";
-	    System.out.println(prints);
-	    selection = Keyboard.readInt();
-	    if (selection == 2){
-		return;
+	selection = Keyboard.readInt();
+	if (selection == 1){	  	
+	    while (player.isAlive()){
+		spawn();
+		fight();
+		prints = "Would you like to continue? Yes(1) No(2)";
+		System.out.println(prints);
+		selection = Keyboard.readInt();
+		if (selection == 2){
+		    break;
+		}
 	    }    
 	}
     }//end forest()
@@ -163,7 +166,7 @@ public class Woo{
 
     public void fight(){
 	boolean quit = false;
-	int action = Keyboard.readInt();
+	int action;
 	String prints;
 	int dM;
 	int dP;
@@ -171,6 +174,7 @@ public class Woo{
 	    prints = "Would you like to attack or parry the next monster's attack during your next turn?\n";
 	    prints += "Selection (attack(1) or parry(2) or would you like to quit(3)?): ";
 	    System.out.print(prints);
+	    action = Keyboard.readInt();
 	    if (action == 1){
 		dP = player.attack(monster);
 	    }
