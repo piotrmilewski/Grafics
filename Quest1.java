@@ -1,6 +1,6 @@
 import cs1.Keyboard;
 public class Quest1 extends Maps{	    
-    public boolean void newQuest(){
+    public boolean newQuest(){
 	String prints;
 	String selection;
 	prints = "Welcome to the Caves of Anarachy. Here you will begin your first quest.\n";
