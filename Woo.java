@@ -130,33 +130,6 @@ public class Woo{
 	
     }//end tutorial()
 
-    /* public void forest(){
-	Forest woods = new Forest();
-	String prints;
-	int selection;
-
-	System.out.println("Welcome to the forest! Sometimes I come here to relax 'cause it's beautiful here.");
-	prints = "\nWhat would you like to do?";
-	prints += "\n\t1: Onwards!\t2: I'm outta here!";
-	prints += "\nSelection: ";
-	System.out.print(prints);
-	selection = Keyboard.readInt();
-	
-	while (true){
-	    if (selection == 1){
-	        System.out.println("Onwards we go!");
-	    }
-	    else if (selection == 2){
-		System.out.print("Already? What, were you frightened by the hoards of monsters?");
-		break;
-	    }
-	    else{
-		System.out.println("Unless I am mistaken, the only choices are 1 and 2...");
-		System.out.print(prints);
-		selection = Keyboard.readInt();
-	    }
-	}
-	}//end forest()*/
     public void forest(){
 	String prints;
 	int selection;
