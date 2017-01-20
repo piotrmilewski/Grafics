@@ -158,24 +158,97 @@ public class Woo{
 	}
 	}//end forest()*/
     public void forest(){
-	Forest woods = new Forest(); 
-	woods.startSpawn();
-    }
+	String prints;
+	int selection;
+	prints = "Welcome to the forest! Sometimes I come here to relax 'cause it's beautiful here.";
+	prints += "\nWhat would you like to do?";
 
+	if (Character.isAlive() == true){
+	    spawn();
+	    fight();
+	    prints = "Would you like to continue? Yes(1) No(2)";
+	    System.out.println(prints);
+	    selection = Keyboard.readInt();
+	    if (selection == 2){
+		return;
+	    }    
+	}
+    }//end forest()
+
+    public  void spawn(){
+	if (Math.random()*10 > 6){
+	    monster = new Gargoyle();
+	}
+	
+	else if (Math.random()*10 > 3){
+	    monster = new Goblins();
+	}
+	else {
+	    monster = new Cyclops();
+	}
+    }//end spawn()
+
+    public void fight(){
+	boolean quit = false;
+	int action = Keyboard.readInt();
+	String prints;
+	int dM;
+	int dP;
+	while (player.isAlive() && monster.isAlive()){
+	    prints = "Would you like to attack or parry the next monster's attack during your next turn?\n";
+	    prints += "Selection (attack(1) or parry(2) or would you like to quit(3)?): ";
+	    System.out.print(prints);
+	    if (action == 1){
+		dP = player.attack(monster);
+	    }
+	    else if (action == 2){
+		dP = player.parry(monster);
+	    }
+	    else{
+		quit = true;
+	        break;
+	    }
+    	    		
+	    dM = monster.attack(player);
+
+	    prints = "\n" +  player.getName() + " dealt " + dP + " damage to the Gargoyle.\n";
+	    prints += "Gargoyle dealt " + dM + " damage to " + player.getName() + ".\n";
+	    prints += "Your health is now: " + player.getHealth() + "\n";
+	    prints += "Gargoyle's health is now: " + monster.getHealth() + "\n";
+	    System.out.println(prints);
+	}
+
+	if (quit){
+	    prints = "PLAYER IS A LOSER, HE RAN BACK TO THE CASTLE AND DROPPED SOME STUFF AND MONEY";
+	}
+	else if (!player.isAlive() && !monster.isAlive()){
+	    prints = "Although " +  player.getName() + " killed the monster with one last blow from his fist, the monster lashed at " +  player.getName() + " with one last slash and took " +  player.getName() + " down with him.\n";
+	    System.out.println(prints);
+	}
+	else if (!monster.isAlive()){
+	    prints = "With one last blow from his fist, " + player.getName() + " was able to take down the monster\n";
+	    System.out.println(prints);
+	}
+	else if (!player.isAlive()){
+	    prints = "With one last slash from its claw, the monster was able to take down the mighty " + player.getName() + "\n";
+	    System.out.println(prints);
+	}
+    }//end fight()
+    
     public void castle(){
 	String prints;
 	int selection;
 	boolean flag = true;
-
+	
 	while (flag){
 	    prints = "Welcome to King Zbigniew's Castle. We hope you enjoy your stay.\n\n";
 	    prints += "What would you like to do?\n";
 	    prints += "\t1: Speak with the King\n\t2: Visit the shop\n\t3: Visit the infirmary\n\t4: Use the restrooms\n\t5. Leave the Castle\n";
 	    prints += "Selection (1,2,3,4, or 5): ";
 	    System.out.print(prints);
-
+	    
 	    selection = Keyboard.readInt();
-
+	    
 	    if (selection == 1){
 		king();
 	    }
