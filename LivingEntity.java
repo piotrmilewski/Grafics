@@ -18,7 +18,7 @@ public abstract class LivingEntity{
 	return _defense;
     }
     
-    public static boolean isAlive(){
+    public  boolean isAlive(){
 	return (getHealth() > 0);
     }
 
