@@ -32,18 +32,18 @@ public class Woo{
 	String prints;
 	String name = "";
 	String nameofclass = "";
+	String selection; 
 
 	prints = "Welcome young warrior, to a marvelous world where you will encounter many allies and foes, challenges and obstacles, and treasures that lie beyond the grasp of mortals.\n";
 	prints += "Before we begin our journey through Kingdom Quests, may you tell me what you are called by your brethren? (Input name): ";
 	System.out.print(prints);
-
+      
 	name = Keyboard.readString();
-
 	prints = name + ", what a splendid name. Now, which warrior suits your fancy? (Pick a class): \n";
 	prints += Character.desc();
 	prints += "Selection: ";
 	System.out.print(prints);
-
+ 
 	nameofclass = Keyboard.readString();
 	nameofclass = nameofclass.toLowerCase();
 	
@@ -56,10 +56,10 @@ public class Woo{
 		player = new Mage(name);
 		break;
 	    }
-	    /*else if (nameofclass.equals("swordsman")){
+	    else if (nameofclass.equals("swordsman")){
 		player = new Swordsman(name);
-		looper = false;
-		}*/
+		break;    
+	    }
 	    else{
 		prints = "Invalid choice, please try again\n";
 		prints += Character.desc();
@@ -81,8 +81,10 @@ public class Woo{
 	int dP, dM;
 	monster = new Gargoyle();
 
-	prints = "Welcome to the tutorial, my name is Carl the Guide and I will be assisting you throughout the course of the tutorial\n";
-	prints += "Here approaches a Gargoyle, prepare to battle\n";
+	prints = "Welcome to the tutorial, my name is Carl the Guide and I will be assisting you throughout the course of the tutorial (Press enter to continue)\n";
+	System.out.println(prints);
+	selection = Keyboard.readString();
+	prints = "Here approaches a Gargoyle, prepare to battle\n";
 	prints += "*" + player.getName() + " puffs out his chest and raises his fists in a cowardly manner*\n\n";
 	prints += "Well, that's a start. Now, you will have to decide what you will want to do during each cycle. You can either attack the monster for 100% damage or you can parry the monster's attack with a 50% success rate and then strike for 50% damage. Well let's not wait around, get in there\n";
 	System.out.println(prints);
@@ -492,7 +494,7 @@ public class Woo{
 	}
 
 	prints = "\nAh yes, the great outdoors. What would you like to do?";
-	prints += "\n\t1: Venture out into the woods\t2: Return to the castle\t3: Quit Game";
+	prints += "\n\t1: Venture out into the woods\n2: Return to the castle\n3: Quest1\n4: Quit Game";
 	prints += "\nSelection (1, 2, or 3): ";
 	System.out.print(prints);
 
@@ -511,14 +513,31 @@ public class Woo{
 		System.out.print(prints);
 		action = Keyboard.readInt();
 	    }
-	    else if (action == 3){
+	    else if (action = 3){
+		if (kingEncounters >= 0 && questCount >= 0){
+		    System.out.println("Onwards we go!");
+		    Quest1 quest = new Quest1();
+		    player.quest();
+		    System.out.print(prints);
+		    action = Keyboard.readInt();
+		}
+		else{
+		    prints = "Wait a second... I don't think your up for this quest yet...\n";
+		    prints = "\n What else would you like to do?";
+		    prints += "\n\t1: Venture out into the woods\n2: Return to the castle\n3: Quest1\n4: Quit Game";
+		    prints += "\nSelection (1, 2, or 3): ";	    
+		    System.out.println(prints);
+		    action = Keyboard.readInt();
+		}
+	    }
+	    else if (action == 4){
 		System.out.print("Bye Bye!!");
 		break;
 	    }
 	    else{
 		prints = "Please don't make my life difficult. Choose one of the given options.";
-	        prints += "\n\t1: Venture out into the woods\t2: Return to the castle";
-		prints += "\nSelection (1 or 2): ";
+		prints += "\n\t1: Venture out into the woods\t2: Return to the castle";
+		    prints += "\nSelection (1 or 2): ";
 		System.out.print(prints);
 		action = Keyboard.readInt();
 	    }
