@@ -34,7 +34,7 @@ public class Quest1 extends Maps{
 	else{
 	    prints = "Returning to map...";
 	    System.out.println(prints);
-	    break;
+	    return true;
 	}
     
     }

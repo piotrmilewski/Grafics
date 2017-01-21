@@ -513,7 +513,7 @@ public class Woo{
 		System.out.print(prints);
 		action = Keyboard.readInt();
 	    }
-	    else if (action = 3){
+	    else if (action == 3){
 		if (kingEncounters >= 0 && questCount >= 0){
 		    System.out.println("Onwards we go!");
 		    Quest1 quest = new Quest1();
