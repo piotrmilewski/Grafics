@@ -27,7 +27,7 @@ public class Forest {
 			player.useItem(item);
 		    }
 		    else{
-			System.out.print("\nYou don't that item. Try visiting the shop!");
+			System.out.print("\nYou don't have that item. Try visiting the shop!");
 		    }
 		}    
 	    }
