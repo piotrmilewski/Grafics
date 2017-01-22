@@ -24,30 +24,33 @@ public class Quest2{
 	prints = " Onwards we go!\n\n";
 	System.out.println(prints);  
 	try {
-	    // thread to sleep for 3 second
-	    Thread.sleep(3000);
+	    // thread to sleep for 2 second
+	    Thread.sleep(2000);
 	} catch (InterruptedException e) {}
-   
+
 	prints = "Let's hope we'll finally find her this time.\n\n";
 	System.out.println(prints);
 	try {
-	    // thread to sleep for 3 second
-	    Thread.sleep(3000);
+	    // thread to sleep for 2 second
+	    Thread.sleep(2000);
 	} catch (InterruptedException e) {}
+
 	
        	prints = "All this running around is making me kidna hungry.\n\n";
 	System.out.println(prints);
 	try {
-	    // thread to sleep for 3 second
-	    Thread.sleep(3000);
+	    // thread to sleep for 2 second
+	    Thread.sleep(2000);
 	} catch (InterruptedException e) {}
+
 
 	prints = "Gosh, how many paths are there\n\n";
 	System.out.println(prints);
 	try {
-	    // thread to sleep for 3 second
-	    Thread.sleep(3000);
+	    // thread to sleep for 2 second
+	    Thread.sleep(2000);
 	} catch (InterruptedException e) {}
+
 
 	prints = "Would you like to head east or west?";
 	prints += "Please enter 'east' or 'west'";
@@ -62,9 +65,10 @@ public class Quest2{
 	    prints = "WE HAVE BEEN SPOTTED\n\n";
 	    System.out.println(prints);
 	    try {
-		// thread to sleep for 3 second
-		Thread.sleep(3000);
+		// thread to sleep for 2 second
+		Thread.sleep(2000);
 	    } catch (InterruptedException e) {}
+
 	    woo.spawn();
 	    woo.fight();
 	    woo.spawn();
@@ -79,26 +83,27 @@ public class Quest2{
 	    prints = "Guess luck isn't in our favor\n\n";
 	    System.out.println(prints);
 	    try {
-		// thread to sleep for 3 second
-		Thread.sleep(3000);
+		// thread to sleep for 2 second
+		Thread.sleep(2000);
 	    } catch (InterruptedException e) {}
 
 	    prints = "I hope you brought enough potions";
 	    System.out.println(prints);	    
 	}
-				
+	
 	try {
-	    // thread to sleep for 3 second
-	    Thread.sleep(3000);
+	    // thread to sleep for 2 second
+	    Thread.sleep(2000);
 	} catch (InterruptedException e) {}
+
 	
 	prints = "Geez how much did Sirbow spend on this yard. It's huge.\n\n";
 	System.out.println(prints);
 
 	try {
-		// thread to sleep for 3 second
-		Thread.sleep(3000);
-	    } catch (InterruptedException e) {}
+	    // thread to sleep for 2 second
+	    Thread.sleep(2000);
+	} catch (InterruptedException e) {}
 
 
 	prints = "Hey, I think I see a shortcut!. Should we take it?\n\n";
@@ -107,10 +112,13 @@ public class Quest2{
 	System.out.println(prints);
 	selection = Keyboard.readString();
 	if (selection.equals("yes")){
+	    
 	    try {
-		// thread to sleep for 3 second
-		Thread.sleep(3000);
+		// thread to sleep for 2 second
+		Thread.sleep(2000);
 	    } catch (InterruptedException e) {}
+
+		
 	    prints = "NOT A SHORTCUT. NOT A SHORTCUT.\n\n";
 	    System.out.println(prints);
 	    woo.spawn();
@@ -122,9 +130,10 @@ public class Quest2{
 	    prints = "I'm not a big fan of shortcuts either :)";
 	    System.out.println(prints);
 	    try {
-		// thread to sleep for 3 second
-		Thread.sleep(3000);
+		// thread to sleep for 2 second
+		Thread.sleep(2000);
 	    } catch (InterruptedException e) {}
+
 
 	    prints = "Welp, I see a hooligan ahead";
 	    System.out.println(prints);
@@ -134,33 +143,35 @@ public class Quest2{
 	       	    	    	
 	prints = "I see the prison ahead!\n\n";
 	System.out.println(prints);
-
 	try {
-	    // thread to sleep for 3 second
-	    Thread.sleep(3000);
+	    // thread to sleep for 2 second
+	    Thread.sleep(2000);
 	} catch (InterruptedException e) {}
+
     
 	prints = "The princess should be in there!\n\n";
 	System.out.println(prints);
 	try {
-	    // thread to sleep for 3 second
-	    Thread.sleep(3000);
+	    // thread to sleep for 2 second
+	    Thread.sleep(2000);
 	} catch (InterruptedException e) {}
+
     
 	prints = "*You trip*\n\n";
 	System.out.println(prints);
 	try {
-	    // thread to sleep for 3 second
-	    Thread.sleep(3000);
+	    // thread to sleep for 2 second
+	    Thread.sleep(2000);
 	} catch (InterruptedException e) {}
+
     
 	prints = "Oh no, minions!\n\n";
 	System.out.println(prints);
-
 	try {
-	    // thread to sleep for 3 second
-	    Thread.sleep(3000);
+	    // thread to sleep for 2 second
+	    Thread.sleep(2000);
 	} catch (InterruptedException e) {}
+
     
 	woo.spawn();
 	woo.fight();
@@ -172,46 +183,51 @@ public class Quest2{
 	prints = "LETS GO. LETS GO.\n\n";
 	System.out.println(prints);
 	try {
-	    // thread to sleep for 3 second
-	    Thread.sleep(3000);
+	    // thread to sleep for 2 second
+	    Thread.sleep(2000);
 	} catch (InterruptedException e) {}
+
 
 	prints = "THEY'RE CATCHING UP\n\n";
 	System.out.println(prints);
 	try {
-	    // thread to sleep for 3 second
-	    Thread.sleep(3000);
+	    // thread to sleep for 2 second
+	    Thread.sleep(2000);
 	} catch (InterruptedException e) {}
+
 
 	prints = "Would you go down the left path or the right path?\n\n";
 	System.out.println(prints);
 	try {
-	    // thread to sleep for 3 second
-	    Thread.sleep(3000);
+	    // thread to sleep for 2 second
+	    Thread.sleep(2000);
 	} catch (InterruptedException e) {}
+
+	
 	prints = "Please enter 'left' or 'right'";
 	System.out.println(prints);
 	selection = Keyboard.readString();
 	if (selection.equals("left")){
 	    prints = "Okay I think we lost most of them.\n\n";
 	    System.out.println(prints);
+	    try {
+		// thread to sleep for 2 second
+		Thread.sleep(2000);
+	    } catch (InterruptedException e) {}
 
-	    	try {
-	    // thread to sleep for 3 second
-	    Thread.sleep(3000);
-	} catch (InterruptedException e) {}
 
-		prints = "Lets handle these two and move along";
-		System.out.println(prints);
+	    prints = "Lets handle these two and move along";
+	    System.out.println(prints);
 
 	    woo.spawn();
 	    woo.fight();
 	    woo.spawn();
 	    woo.fight();    
 	    try {
-		// thread to sleep for 3 second
-		Thread.sleep(3000);
+		// thread to sleep for 2 second
+		Thread.sleep(2000);
 	    } catch (InterruptedException e) {}
+
 	    prints = "Alright time is money, time is money.\n\n";
 	    System.out.println(prints);
 	}
@@ -220,17 +236,19 @@ public class Quest2{
 	    prints = "Okay we lost them.\n\n";
 	    System.out.println(prints);
 	    try {
-		// thread to sleep for 3 second
-		Thread.sleep(3000);
-	    } catch (InterruptedException e) {}    
+		// thread to sleep for 2 second
+		Thread.sleep(2000);
+	    } catch (InterruptedException e) {}
+   
 	}
 
 	prints = "Is that the princess ahead!?\n\n";
 	System.out.println(prints);
 	try {
-	    // thread to sleep for 3 second
-	    Thread.sleep(3000);
+	    // thread to sleep for 2 second
+	    Thread.sleep(2000);
 	} catch (InterruptedException e) {}
+
 	return false;      
     }
 }
