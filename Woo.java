@@ -143,8 +143,8 @@ public class Woo{
 	selection = Keyboard.readInt();
 	if (selection == 1){	  	
 	    while (player.isAlive()){
-		map.spawn(monster);
-		map.fight(monster);
+		map.spawn();
+		map.fight();
 		prints = "Would you like to continue? Yes(1) No(2)";
 		System.out.println(prints);
 		selection = Keyboard.readInt();
