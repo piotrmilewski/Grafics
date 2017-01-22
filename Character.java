@@ -64,6 +64,16 @@ public class Character extends LivingEntity{
 	return _health;
     }
 
+    public int gainAttack(int atk){
+	_attack += atk;
+	return _attack;
+    }
+
+    public int gainDefense(int def){
+	_defense += def;
+	return _defense;
+    }
+
     public void fillInv(){
 	for (int x = 0; x < _inventory.length; x++){
 	    for (int y = 0; y < _inventory[0].length; y++){
@@ -86,7 +96,8 @@ public class Character extends LivingEntity{
     public void sellItem(String name){
 	for (int a = 0; a < _inventory.length; a++){
 	    for (int x = 0; x < _inventory[0].length; x++){
-		if (_inventory[a][x].equals(name)){
+		String playeritem = _inventory[a][x].toLowerCase();
+		if (playeritem.equals(name)){
 			_inventory[a][x] = "No_Item";
 			return;
 		}
@@ -126,12 +137,18 @@ public class Character extends LivingEntity{
     public boolean hasItem(String item){
 	for (int a = 0; a < _inventory.length; a++){
 	    for (int x = 0; x < _inventory[0].length; x++){
-		if (_inventory[a][x].equals(item)){
+		String playeritem = _inventory[a][x].toLowerCase();
+		if (playeritem.equals(item)){
 		    return true;
 		}
 	    }
 	}
 	return false; 
     }
-
+    
+    public void useItem(String item){
+	
+    }
+	
+    
 }//end Character
