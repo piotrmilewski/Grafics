@@ -37,7 +37,7 @@ public class Maps{
 	        break;
 	    }
     	    		
-	    dM = monster.attack(player);
+	    dM = monster.attack(Woo.getPlayer());
 
 	    prints = "\n" +  Woo.getPlayer().getName() + " dealt " + dP + " damage to the Gargoyle.\n";
 	    prints += "Gargoyle dealt " + dM + " damage to " + Woo.getPlayer().getName() + ".\n";
@@ -61,7 +61,6 @@ public class Maps{
 	    prints = "With one last slash from its claw, the monster was able to take down the mighty " + Woo.getPlayer().getName() + "\n";
 	    System.out.println(prints);
 	}
-	//Castle();
    
     }
 }
