@@ -249,6 +249,8 @@ public class Quest2{
 	    Thread.sleep(2000);
 	} catch (InterruptedException e) {}
 
+	Monster monster = new Mirak();
+	woo.fight();
 	return false;      
     }
 }
