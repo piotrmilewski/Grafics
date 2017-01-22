@@ -23,7 +23,7 @@ public class Woo{
 	deathCount = 0;
 	Endgame = false;
 	inQuest = false;
-	newGame();
+
     }
 
     public static Character getPlayer(){
@@ -143,8 +143,8 @@ public class Woo{
 	selection = Keyboard.readInt();
 	if (selection == 1){	  	
 	    while (player.isAlive()){
-		map.spawn();
-		map.fight();
+		spawn();
+		fight();
 		prints = "Would you like to continue? Yes(1) No(2)";
 		System.out.println(prints);
 		selection = Keyboard.readInt();
@@ -154,8 +154,8 @@ public class Woo{
 	    }    
 	}
     }//end forest()
-    /*
-    public  void spawn(){
+    
+    public void spawn(){
 	if ((Math.random()*3) > 2){
 	    monster = new Gargoyle();
 	    monName = monster + "";
@@ -220,7 +220,7 @@ public class Woo{
 	}
     }//end fight()
     
-    */
+    
     public void castle(){
 	String prints;
 	int selection;
@@ -464,6 +464,8 @@ public class Woo{
 	int action;
 	
 	Woo game = new Woo();
+	game.newGame();
+
 
 	prints = "Would you like to do the tutorial? (Recommended for new players)\n";
 	prints += "Selection (Yes or No): ";

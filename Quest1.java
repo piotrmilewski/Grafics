@@ -1,5 +1,6 @@
 import cs1.Keyboard;
 public class Quest1 extends Maps{
+    Woo woo = new Woo();
     public boolean newQuest(){
 
 	String prints;
@@ -32,8 +33,8 @@ public class Quest1 extends Maps{
 	    prints = "To your left, watch out!\n";
 	    System.out.println(prints);	
 	    */	
-	    super.spawn();
-	    super.fight();
+	    woo.spawn();
+	    woo.fight();
 	    prints = "That was a rather close one, now wasn't it (Press enter to continue)\n";
 	    System.out.println(prints);
 	    selection = Keyboard.readString();
