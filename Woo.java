@@ -148,14 +148,14 @@ public class Woo{
 	System.out.println(prints);	
 	try {
 	    // thread to sleep for 3 second
-	    Thread.sleep(3000);
+	    Thread.sleep(2000);
 	} catch (InterruptedException e) {}
 	    
 	prints = "You are now ready to face the perils that you will encounter at Kingdom Quests. Your first order of business will be to speak to the King. He'll guide you from there.\n\n";
 	System.out.println(prints);	
 	try {
 	    // thread to sleep for 3 second
-	    Thread.sleep(3000);
+	    Thread.sleep(2000);
 	} catch (InterruptedException e) {}
 
 	   	    
@@ -163,7 +163,7 @@ public class Woo{
 		
 	try {
 	    // thread to sleep for 3 second
-	    Thread.sleep(3000);
+	    Thread.sleep(2000);
 	} catch (InterruptedException e) {}
 	    
 	prints = "Carl, out!\n\n";
@@ -172,7 +172,7 @@ public class Woo{
 			
 	try {
 	    // thread to sleep for 3 second
-	    Thread.sleep(3000);
+	    Thread.sleep(2000);
 	} catch (InterruptedException e) {}
 	
     }//end tutorial()
