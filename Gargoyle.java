@@ -6,5 +6,6 @@ public class Gargoyle extends Monster{
 	_defense = 5;
 	_speed = 5;
 	_currency = 5;
+	fillItems();
     }
 }
