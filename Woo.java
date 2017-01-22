@@ -255,7 +255,17 @@ public class Woo{
 	
 	while (flag){
 	    prints = "Welcome to King Zbigniew's Castle. We hope you enjoy your stay.\n\n";
-	    prints += "What would you like to do?\n";
+	    try {
+		// thread to sleep for 2 second
+		Thread.sleep(2000);
+	    } catch (InterruptedException e) {}
+	    System.out.println(prints);
+	    prints = "What would you like to do?\n";
+	    System.out.println(prints);
+	    try {
+		// thread to sleep for 2 second
+		Thread.sleep(2000);
+	    } catch (InterruptedException e) {}
 	    prints += "\t1: Speak with the King\n\t2: Visit the shop\n\t3: Visit the infirmary\n\t4: Use the restrooms\n\t5. Leave the Castle\n";
 	    prints += "Selection (1,2,3,4, or 5): ";
 	    System.out.print(prints);
@@ -288,12 +298,60 @@ public class Woo{
 	String prints;
 	if (kingEncounters == 0 && questCount == 0){
 	    prints = "Ahh, so this is the new recruit, well pleasure to meet you. My name is King Zbigniew, king of Kingdom Quests. So, what brings you here?\n\n";
-	    prints += "*You tell the king that you've come to protect and serve Kingdom Quests and would like to start as soon as possible*\n\n";
-	    prints += "So you fancy yourself some work ehh? Well I've got just the job for you.\n\n";
-	    //!!!!!!!!!!!!!!!!!!!!!
-	    //PUT QUEST DESCRIPTION HERE
-	    //!!!!!!!!!!!!!!!!!!!!!
 	    System.out.println(prints);
+	    try {
+		// thread to sleep for 2 second
+		Thread.sleep(2000);
+	    } catch (InterruptedException e) {}
+	    prints = "*You tell the king that you've come to protect and serve Kingdom Quests and would like to start as soon as possible*\n\n";
+	    System.out.println(prints);
+	    try {
+		// thread to sleep for 2 second
+		Thread.sleep(2000);
+	    } catch (InterruptedException e) {}
+	    
+	    prints = "So you fancy yourself some work ehh? Well I've got just the job for you.\n\n";
+	    System.out.println(prints);
+	    try {
+		// thread to sleep for 2 second
+		Thread.sleep(2000);
+	    } catch (InterruptedException e) {}
+		
+	    prints = "So recently, my daughter, Peony, had been kidnapped by the evil Sirbow.\n\n";
+	    System.out.println(prints);
+	    try {
+		// thread to sleep for 2 second
+		Thread.sleep(2000);
+	    } catch (InterruptedException e) {}
+	    
+	    prints = "Personally, I don't really mind, she didn't really do much at home either.\n\n";
+	    System.out.println(prints);
+	    try {
+		// thread to sleep for 2 second
+		Thread.sleep(2000);
+	    } catch (InterruptedException e) {}
+
+	    prints = "However my wife insists that we get her back.\n\n";
+	    System.out.println(prints);
+	    try {
+		// thread to sleep for 2 second
+		Thread.sleep(2000);
+	    } catch (InterruptedException e) {}
+
+	    prints = "So now the job is placed upon you.\n\n";
+	    System.out.println(prints);
+	    try {
+		// thread to sleep for 2 second
+		Thread.sleep(2000);
+	    } catch (InterruptedException e) {}
+
+	    prints = "Have fun finding the brat.\n\n";
+	    System.out.println(prints);
+	    try {
+		// thread to sleep for 2 second
+		Thread.sleep(2000);
+	    } catch (InterruptedException e) {}
+		 
 	    questCount += 1;
 	    kingEncounters += 1;
 	    inQuest = true;

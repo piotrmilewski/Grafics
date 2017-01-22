@@ -28,7 +28,7 @@ public class Quest1{
 	    Thread.sleep(3000);
 	} catch (InterruptedException e) {}
    
-	prints = "Here, within the Caves of Anarchy, we will find Princess Zara.\n\n";
+	prints = "Here, within the Caves of Anarchy, we will find Princess Peony.\n\n";
 	System.out.println(prints);
 	try {
 	    // thread to sleep for 3 second
@@ -163,14 +163,3 @@ public class Quest1{
    
     }
 }
-
-	   
-	    
-   
-	    
-	   
-
-	    
-   
-	    
- 
