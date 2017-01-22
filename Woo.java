@@ -36,15 +36,21 @@ public class Woo{
 	String nameofclass = "";
 	String selection; 
 
-	prints = "Welcome young warrior, to a marvelous world where you will encounter many allies and foes, challenges and obstacles, and treasures that lie beyond the grasp of mortals.\n";
-	prints += "Before we begin our journey through Kingdom Quests, may you tell me what you are called by your brethren? (Input name): ";
+	prints = "Welcome young warrior, to a marvelous world where you will encounter many allies and foes, challenges and obstacles, and treasures that lie beyond the grasp of mortals.\n\n";
 	System.out.print(prints);
-      
+			
+	try {
+	    // thread to sleep for 2 second
+	    Thread.sleep(2000);
+	} catch (InterruptedException e) {}
+	prints = "Before we begin our journey through Kingdom Quests, may you tell me what you are called by your brethren? (Input name): ";
+	System.out.println(prints);     
 	name = Keyboard.readString();
+
 	prints = name + ", what a splendid name. Now, which warrior suits your fancy? (Pick a class): \n";
 	prints += Character.desc();
 	prints += "Selection: ";
-	System.out.print(prints);
+	System.out.println(prints);
  
 	nameofclass = Keyboard.readString();
 	nameofclass = nameofclass.toLowerCase();
@@ -66,15 +72,20 @@ public class Woo{
 		prints = "Invalid choice, please try again\n";
 		prints += Character.desc();
 		prints += "Selection: ";
-		System.out.print(prints);
+		System.out.println(prints);
 		nameofclass = Keyboard.readString();
 		nameofclass = nameofclass.toLowerCase();
 	    }
 	}
         
-	prints = "A valiant choice, " + name + "\n";
-	prints += "Now, we are ready to begin our journey. Ready? Well, I sure am.\n";
-	System.out.print(prints);
+	prints = "A valiant choice, " + name + "\n\n";
+	System.out.println(prints);
+			
+	try {
+	    Thread.sleep(2000);
+	} catch (InterruptedException e) {}
+	prints = "Now, we are ready to begin our journey. Ready? Well, I sure am.\n\n";
+	System.out.println(prints);
 
     }//end newGame()
 
@@ -83,54 +94,87 @@ public class Woo{
 	int dP, dM;
 	monster = new Gargoyle();
 
-	prints = "Welcome to the tutorial, my name is Carl the Guide and I will be assisting you throughout the course of the tutorial (Press enter to continue)\n";
+	prints = "Welcome to the tutorial, my name is Carl the Guide and I will be assisting you throughout the course of the tutorial\n\n";
 	System.out.println(prints);
-	selection = Keyboard.readString();
-	prints = "Here approaches a Gargoyle, prepare to battle\n";
-	prints += "*" + player.getName() + " puffs out his chest and raises his fists in a cowardly manner*\n\n";
-	prints += "Well, that's a start. Now, you will have to decide what you will want to do during each cycle. You can either attack the monster for 100% damage or you can parry the monster's attack with a 50% success rate and then strike for 50% damage. Well let's not wait around, get in there\n";
+       	
+	try {
+	    Thread.sleep(2000);
+	} catch (InterruptedException e) {}
+	    
+
+	prints = "Here approaches a Gargoyle, prepare to battle\n\n";
 	System.out.println(prints);
 
-	while (player.isAlive() && monster.isAlive()){
-	    prints = "Would you like to attack or parry the next monster's attack during your next turn?\n";
-	    prints += "Selection (attack or parry): ";
-	    System.out.print(prints);
-	    selection = Keyboard.readString();
-	    selection = selection.toLowerCase();
-
-	    if (selection.equals("attack")){
-		dP = player.attack(monster);
-	    }
-	    else{
-		dP = player.parry(monster);
-	    }
-	    dM = monster.attack(player);
-
-	    prints = "\n" + player.getName() + " dealt " + dP + " damage to the Gargoyle.\n";
-	    prints += "Gargoyle dealt " + dM + " damage to " + player.getName() + ".\n";
-	    prints += "Your health is now: " + player.getHealth() + "\n";
-	    prints += "Gargoyle's health is now: " + monster.getHealth() + "\n";
-	    System.out.println(prints);
-	}
-
-	if (!player.isAlive() && !monster.isAlive()){
-	    prints = "Although " + player.getName() + " killed the Gargoyle with one last blow from his fist, the Gargoyle lashed at " + player.getName() + " with one last slash and took " + player.getName() + " down with him.\n";
-	    System.out.println(prints);
-	}
-	else if (!monster.isAlive()){
-	    prints = "With one last blow from his fist, " + player.getName() + " was able to take down the Gargoyle\n";
-	    System.out.println(prints);
-	}
-	else if (!player.isAlive()){
-	    prints = "With one last slash from its claw, the Gargoyle was able to take down the mighty " + player.getName() + "\n";
-	    System.out.println(prints);
-	}
-
-	prints = "Well done my young apprentice. That was a battle well fought\n";
-	prints += "You are now ready to face the perils that you will encounter at Kingdom Quests. Your first order of business will be to speak to the King. He'll guide you from there.\n\n";
-	prints += "Now off you go, I'm sending you off to the Castle.\n";
-	prints += "Carl, out!";
+		
+	try {
+	    Thread.sleep(2000);
+	} catch (InterruptedException e) {}
+	    
+	prints = "*" + player.getName() + " puffs out his chest and raises his fists in a cowardly manner*\n\n";
 	System.out.println(prints);
+
+		
+	try {
+
+	    Thread.sleep(2000);
+	} catch (InterruptedException e) {}
+	    
+	prints = "Well, that's a start. Now, you will have to decide what you will want to do during each cycle.\n\n";
+	System.out.println(prints);
+
+		
+	try {
+	    Thread.sleep(2000);
+	} catch (InterruptedException e) {}
+	    
+	prints = "You can either attack the monster for 100% damage or you can parry the monster's attack with a 50% success rate and then strike for 50% damage.\n\n";
+	System.out.println(prints);
+
+		
+	try {
+	    Thread.sleep(2000);
+	} catch (InterruptedException e) {}
+	    
+	prints = "Well let's not wait around, get in there\n\n";
+	System.out.println(prints);
+
+		
+	try {
+	    Thread.sleep(2000);
+	} catch (InterruptedException e) {}
+	
+        fight();
+
+	prints = "Well done my young apprentice. That was a battle well fought\n\n";
+	System.out.println(prints);	
+	try {
+	    // thread to sleep for 3 second
+	    Thread.sleep(3000);
+	} catch (InterruptedException e) {}
+	    
+	prints = "You are now ready to face the perils that you will encounter at Kingdom Quests. Your first order of business will be to speak to the King. He'll guide you from there.\n\n";
+	System.out.println(prints);	
+	try {
+	    // thread to sleep for 3 second
+	    Thread.sleep(3000);
+	} catch (InterruptedException e) {}
+
+	   	    
+	prints += "Now off you go, I'm sending you off to the Castle.\n\n";
+		
+	try {
+	    // thread to sleep for 3 second
+	    Thread.sleep(3000);
+	} catch (InterruptedException e) {}
+	    
+	prints = "Carl, out!\n\n";
+	System.out.println(prints);
+
+			
+	try {
+	    // thread to sleep for 3 second
+	    Thread.sleep(3000);
+	} catch (InterruptedException e) {}
 	
     }//end tutorial()
    
