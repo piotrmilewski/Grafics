@@ -1,8 +1,7 @@
 import cs1.Keyboard;
 public class Maps{
-    protected Monster monster; 
     protected String monName;
-    public  void spawn(){
+    public void spawn(Monster monster){
 	if ((Math.random()*3) > 2){
 	    monster = new Gargoyle();
 	    monName = monster + "";
@@ -21,7 +20,7 @@ public class Maps{
       	
 
 
-    public void fight(){
+    public void fight(Monster monster){
 	boolean quit = false;
 	int action = Keyboard.readInt();
 	String prints;

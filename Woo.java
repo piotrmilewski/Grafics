@@ -5,7 +5,7 @@ public class Woo{
     private static Character player;
     //private String name;
     private Monster monster;
-    //private Map map;
+    Maps map = new Maps();
     
 
     private static int kingEncounters = 0; //number of times you've spoken with the king
@@ -143,8 +143,8 @@ public class Woo{
 	selection = Keyboard.readInt();
 	if (selection == 1){	  	
 	    while (player.isAlive()){
-		spawn();
-		fight();
+		map.spawn(monster);
+		map.fight(monster);
 		prints = "Would you like to continue? Yes(1) No(2)";
 		System.out.println(prints);
 		selection = Keyboard.readInt();
@@ -154,7 +154,7 @@ public class Woo{
 	    }    
 	}
     }//end forest()
-
+    /*
     public  void spawn(){
 	if ((Math.random()*3) > 2){
 	    monster = new Gargoyle();
@@ -220,6 +220,7 @@ public class Woo{
 	}
     }//end fight()
     
+    */
     public void castle(){
 	String prints;
 	int selection;

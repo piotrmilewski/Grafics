@@ -1,6 +1,5 @@
 import cs1.Keyboard;
 public class Quest1 extends Maps{
-    protected Monster monster;
     public boolean newQuest(){
 
 	String prints;
