@@ -297,13 +297,22 @@ public class Woo{
 	int selection, buyitem;
 	int cost = 0;;
 	String sellitem;
-	String[][] inventory = new String[2][3];
-	inventory[0][0] = "potion";
-	inventory[0][1] = "weapon";
-	inventory[0][2] = "armor";
-	inventory[1][0] = "50";
-	inventory[1][1] = "100";
-	inventory[1][2] = "150";
+	String[][] inventory = new String[3][5];
+	inventory[0][0] = "Potion";
+	inventory[0][1] = "Max Potion";
+	inventory[0][2] = "Attack Up";
+	inventory[0][3] = "Defense Up";
+	inventory[0][4] = "Rare Sweet";
+	inventory[1][0] = "Restores health by 50";
+	inventory[1][1] = "Restores health to max";
+	inventory[1][2] = "Increases attack by 2";
+	inventory[1][3] = "Increases defense by 2";
+	inventory[1][4] = "Raises level by 1";
+	inventory[2][0] = "50";
+	inventory[2][1] = "200";
+	inventory[2][2] = "100";
+	inventory[2][3] = "100";
+	inventory[2][4] = "500";
 	
 	prints = "Welcome to the Shop! What would you like to do?\n";
 	prints += "\t1: I would like to use some currency!\t2: I would like to gain some currency!\t3: Leave Shop\n";
@@ -314,14 +323,14 @@ public class Woo{
 	while (true) {
 	    if (selection == 1){
 		prints = "Wonderful! What would you like?\n\n";
-		for (int x = 0; x < 3; x++){
-		    prints +=  "\t" + x + ":  " + inventory[0][x] + "\t" + inventory[1][x] + "\n";
+		for (int x = 0; x < inventory[0].length; x++){
+		    prints +=  "\t" + x + ":  " + inventory[0][x] + "\t\t" + inventory[1][x] + "\t\t" + inventory[2][x] + "\n";
 		}
 		prints += "\nSelection(number): ";
 		System.out.print(prints);
 		buyitem = Keyboard.readInt();
 
-		cost = Integer.parseInt(inventory[1][buyitem]);
+		cost = Integer.parseInt(inventory[2][buyitem]);
 		if (cost > player._currency){
 		    System.out.println("You don't have enough in the money pouch to buy this item!"); 
 		}
@@ -332,7 +341,7 @@ public class Woo{
 		    System.out.print("AFTER: " + player.playerInfo());//diag
 		    System.out.println(inventory[0][buyitem] + " has been added to your inventory!");
 		}
-		//account for when player doesn't have enough funds	
+
 		prints = "Now, what would you like to do?\n";
 		prints += "\t1: I would like to use some currency!\t2: I would like to gain some currency!\t3: Leave Shop\n";
 		prints += "Selection(1, 2, or 3): ";
@@ -343,8 +352,8 @@ public class Woo{
 		prints = "Oh joy, role reversal! What do you have for me?\n";
 		prints += "Your inventory:\n\n";
 		//prints player's inventory
-		for (int a = 0; a < 3; a++){
-		    for (int x = 0; x < 3; x++){
+		for (int a = 0; a < player._inventory.length; a++){
+		    for (int x = 0; x < player._inventory[0].length; x++){
 			prints += "\t" + player._inventory[a][x];
 		    }
 		    prints += "\n";
@@ -353,12 +362,13 @@ public class Woo{
 		System.out.print(prints);
 	        sellitem = Keyboard.readString();
 		sellitem = sellitem.toLowerCase();
+		sellitem = sellitem.substring(0, 1).toUpperCase() + sellitem.substring(1);
 
 		if (player.hasItem(sellitem)){
 		    System.out.print("BEFORE: " + player.playerInfo());//diag
 		    for (int x = 0; x < inventory[0].length; x++){
-			if (sellitem.substring(0,1).equals(inventory[0][x].substring(0,1))){
-			    cost = Integer.parseInt(inventory[1][x]);
+			if (sellitem.equals(inventory[0][x])){
+			    cost = Integer.parseInt(inventory[2][x]);
 			}
 		    }
 		    player.gainCurrency(cost);
