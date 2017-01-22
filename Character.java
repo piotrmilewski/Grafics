@@ -41,7 +41,7 @@ public class Character extends LivingEntity{
 
      public int levelUp(int exp){
 	_experience += exp;
-	if (_experience > _lvlupexp){
+	if (_experience >= _lvlupexp){
 	    _level += 1;
 	    _experience = _experience - _lvlupexp;
 	    _lvlupexp += 5;
@@ -125,7 +125,6 @@ public class Character extends LivingEntity{
 	prints += "Defense: " + _defense + "\n";
 	prints += "Speed: " + _speed + "\n";
 	prints += "Currency: " + _currency + "\n";
-	
 	return prints;
     }
 
@@ -157,19 +156,25 @@ public class Character extends LivingEntity{
     public void useItem(String item){
 	if (item.equals("potion")){
 	    gainHP(50);
-	    System.out.print(_name + " gained 50 HP!\n");
+	    System.out.print("\n" + _name + " gained 50 HP!\n");
 	}
 	else if (item.equals("max potion")){
 	    gainHP(_maxhealth);
-	    System.out.print(_name + "'s health has been restored!\n");
+	    System.out.print("\n" + _name + "'s health has been restored!\n");
 	}
 	else if (item.equals("attackup")){
 	    gainAttack(2);
-	    System.out.print(_name + "'s attack increased by 2!\n");
+	    System.out.print("\n" + _name + "'s attack increased by 2!\n");
 	}
 	else if (item.equals("defenseup")){
 	    gainDefense(2);
-	    System.out.print(_name + "'s defense increased by 2!\n");
+	    System.out.print("\n" + _name + "'s defense increased by 2!\n");
+	}
+	else if (item.equals("rare sweet")){
+	    int exp = _experience;
+	    levelUp(_lvlupexp);
+	    _experience = exp;
+	    System.out.print("\n" + _name + " is now Level " + _level);
 	}
     }
 	
