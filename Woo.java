@@ -494,12 +494,12 @@ public class Woo{
 	while (true){
 	    if (action == 1){
 		System.out.println("A daring soul you are.");
-	        Forest trees = new Forest();
-		trees.forest();
+	        Forest woods = new Forest();
+		woods.forest();
 		System.out.print(prints);
 		action = Keyboard.readInt();
 	    }
-	    else if (action == 2){ //makes the player go to the shop for now
+	    else if (action == 2){
 		System.out.println("More of an indoors person, huh?");
 		game.castle();
 		System.out.print(prints);
@@ -510,7 +510,6 @@ public class Woo{
 		    System.out.println("Onwards we go!");
 		    Quest1 quest = new Quest1();
 		    quest.newQuest();
-		   
 		    System.out.print(prints);
 		    action = Keyboard.readInt();
 		}
