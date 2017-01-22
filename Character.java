@@ -71,7 +71,7 @@ public class Character extends LivingEntity{
 	    }
 	}
     }
-    
+	
     public void insertInv(String name, int a){
 	for (int x = 0; x < _inventory[a].length; x++){
 	    if (_inventory[a][x].equals("No_Item")){
