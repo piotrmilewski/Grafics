@@ -484,9 +484,9 @@ public class Woo{
 	    }
 	}
 
-	prints = "\nAh yes, the great outdoors. What would you like to do?";
-	prints += "\n1: Venture out into the woods\n2: Return to the castle\n3: Quest1\n4: Tell me about me!\n5: Quit Game";
-	prints += "\nSelection (1, 2, 3, 4, or 5): ";
+prints = "\nAh yes, the great outdoors. What would you like to do?";
+	prints += "\n\t1: Venture out into the woods\n2: Return to the castle\n3: Quest1\n4:Tell me about me\n5: Quit Game";
+	prints += "\nSelection (1, 2, 3, 4, 5, 6, or 7): ";	  	
 	System.out.print(prints);
 
 	action = Keyboard.readInt();
@@ -517,25 +517,66 @@ public class Woo{
 		    prints = "Wait a second... I don't think your up for this quest yet...\n";
 		    prints += "\n What else would you like to do?";
 		    prints += "\n\t1: Venture out into the woods\n2: Return to the castle\n3: Quest1\n4:Tell me about me\n5: Quit Game";
-		    prints += "\nSelection (1, 2, 3, 4, or 5): ";	    
+		    prints += "\nSelection (1, 2, 3, 4, 5, 6, or 7): ";	      
 		    System.out.println(prints);
 		    action = Keyboard.readInt();
 		   
 		}
-	    }	     
+	    }
+
 	    else if (action == 4){
+		if (kingEncounters >= 1 && questCount >= 1){
+		    System.out.println("Vamonos!");
+		    Quest2 quest2 = new Quest2();
+		    quest2.newQuest();
+		   
+		    System.out.print(prints);
+		    action = Keyboard.readInt();
+		}
+		else {
+		    prints = "One step at a time...this quest is not unlocked yet\n";
+		    prints += "\n What else would you like to do?";
+		    prints += "\n\t1: Venture out into the woods\n2: Return to the castle\n3: Quest1\n4:Tell me about me\n5: Quit Game";
+		    prints += "\nSelection (1, 2, 3, 4, 5, 6, or 7): ";	     
+		    System.out.println(prints);
+		    action = Keyboard.readInt();
+		   
+		}
+	    }
+
+	    else if (action == 5){
+		if (kingEncounters >= 2 && questCount >= 2){
+		    System.out.println("Let's go!");
+		    Quest3 quest3 = new Quest3();
+		    quest3.newQuest();
+		   
+		    System.out.print(prints);
+		    action = Keyboard.readInt();
+		}
+		else {
+		    prints = "Oh no...this quest is not unlocked yet\n";
+		    prints += "\n What else would you like to do?";
+		    prints += "\n\t1: Venture out into the woods\n2: Return to the castle\n3: Quest1\n4:Tell me about me\n5: Quit Game";
+		    prints += "\nSelection (1, 2, 3, 4, 5, 6, or 7): ";	    
+		    System.out.println(prints);
+		    action = Keyboard.readInt();
+		   
+		}
+	    }
+	    
+	    else if (action == 6){
 		System.out.print(player.playerInfo());
 		System.out.print(prints);
 		action = Keyboard.readInt();
 	    }
-	    else if (action == 5){
+	    else if (action == 7){
 		System.out.print("Bye Bye!!");
 		break;
 	    }
 	    else{
 		prints = "Please don't make my life difficult. Choose one of the given options.";
-		prints += "\n\t1: Venture out into the woods\n2: Return to the castle\n3: Quest1\n4: Tell me about me \n5: Quit Game";
-		prints += "\nSelection (1, 2, 3, 4, or 5): ";	 
+		prints += "\n\t1: Venture out into the woods\n2: Return to the castle\n3: Quest1\n4:Tell me about me\n5: Quit Game";
+		prints += "\nSelection (1, 2, 3, 4, 5, 6, or 7): ";	   
 		System.out.print(prints);
 		action = Keyboard.readInt();
 	    }

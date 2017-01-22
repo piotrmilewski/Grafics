@@ -36,8 +36,8 @@ public class Quest1{
 	    woo.spawn();
 	    woo.fight();
 	    prints = "That was a rather close one, now wasn't it (Press enter to continue)\n";
-	    System.out.println(prints);
-	    selection = Keyboard.readString();
+	    // System.out.println(prints);
+	    // selection = Keyboard.readString();
 	    prints += "Oh no another one!\n";
 	    System.out.println(prints);
 	    woo.spawn();
@@ -50,6 +50,11 @@ public class Quest1{
 
 
 	   
+	    
+   
+	    
+	   
+
 	    
    
 	    

@@ -10,7 +10,7 @@ public class Maps{
 	}
 	
 	else if ((Math.random()*3) > 1){
-	    monster = new Goblins();
+	    monster = new Goblin();
 	    monName = monster + "";
 	}
 	else {

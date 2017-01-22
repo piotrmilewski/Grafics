@@ -33,22 +33,26 @@ public class Character extends LivingEntity{
     }
 
     public static String desc(){
-	String retStr = "\tSoldier: 200 health, 0 level, 10 attack, 7 defense, 10 speed, 0 special attack\n";
-	retStr += "\tSwordsman: 200 health, 0 level, 10 attack, 9 defense, 5 speed, 0 special attack\n";
-	retStr += "\tMage: 200 health, 0 level, 0 attack, 5 defense, 10 speed, 10 special attack\n";
+	String retStr = "\tSoldier: 200 health, 0 level, 10 attack, 7 defense, 10 speed\n";
+	retStr += "\tSwordsman: 200 health, 0 level, 10 attack, 9 defense, 5 speed\n";
+	retStr += "\tMage: 200 health, 10 level, 0 attack, 5 defense, 10 speed\n";
 	return retStr; 
     }
 
-    public int levelUp(int exp){
+     public int levelUp(int exp){
 	_experience += exp;
 	if (_experience > _lvlupexp){
 	    _level += 1;
 	    _experience = _experience - _lvlupexp;
-	    _lvlupexp += 50;
-	    System.out.println("You have leveled up");
+	    _lvlupexp += 5;
+	    _health += 10;
+	    _attack += 2;
+	    _defense += 2;
+	    _speed += 2;	   
 	}
 	return _level;
     }
+
 
     public int gainHP(int hp){
 	if (_health + hp > _maxhealth){

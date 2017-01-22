@@ -1,40 +1,49 @@
 import cs1.Keyboard;
-public class Quest2 extends Maps{
-     public  void newQuest(){
+public class Quest2{
+    Woo woo = new Woo();
+    public boolean newQuest(){
+
 	String prints;
 	String selection;
-	prints = "Welcome to the Bathroom. Here you will begin your second quest.\n";
+	prints = "Welcome to the Quest 2. Here you will begin your first quest.\n";
 	prints += "Are you sure you would like to continue? (yes) or (no)";
 	System.out.println(prints);
 	selection = Keyboard.readString();
-	if (selection.toLowerCase() == "yes"){		
-	    prints = "eh heuid gow odher ubhoal eijfi ju (Press enter to continue)\n";
-	    System.out.println(prints);  
-	    selection = Keyboard.readString(); 
-	    prints = "eh heuid gow odher ubhoal eijfi jn (Press enter to continue)\n";
+
+	if (selection.toLowerCase().equals("yes")){
+	    prints = "Alright, let's begin";
 	    System.out.println(prints);
-	    selection = Keyboard.readString();
-	    prints = "eh heuid gow odher ubhoal eijfi j(Press enter to continue)\n";
+	}	
+	else if(selection.toLowerCase().equals("no")) {
+	    prints = "Returning to map...";
 	    System.out.println(prints);
-	    selection = Keyboard.readString();
-	    prints ="eh heuid gow odher ubhoal eijfi j\n";
-	    System.out.println(prints);		
-	    spawn();
-	    fight();
-	    prints = "eh heuid gow odher ubhoal eijfi j (Press enter to continue)\n";
-	    System.out.println(prints);
-	    selection = Keyboard.readString();
-	    prints += "eh heuid gow odher ubhoal eijfi j\n";
-	    System.out.println(prints);
-	    spawn();
-	    fight();      
+	    return true;
 	}
-    
-	else{
-	    prints = "Returning to castle";
+
+	    
+	    prints = "As any brave fighter, a Quest 2 must be needed (Press enter to continue)\n";
+	    //    System.out.println(prints);  
+	    //  selection = Keyboard.readString(); 
+	    prints += "Here, within the Caves of Anarachy, you will be able to find your chosen weapon (Press enter to continue)\n";
 	    System.out.println(prints);
-	    break;
-	}
-    
+	    // selection = Keyboard.readString();
+	    // prints = "However, the Caves of Anarachy is a rather dangerous area, where many monsters hidden (Press enter to continue)\n";
+	    // System.out.println(prints);
+	    //  selection = Keyboard.readString();
+	    // prints = "To your left, watch out!\n";
+	    // System.out.println(prints);	
+	    	
+	    woo.spawn();
+	    woo.fight();
+	    prints = "That was a rather close one, now wasn't it (Press enter to continue)\n";
+	    System.out.println(prints);
+	    selection = Keyboard.readString();
+	    prints += "Oh no another one!\n";
+	    System.out.println(prints);
+	    woo.spawn();
+	    woo.fight();
+	    return false;
+      
+   
     }
 }
