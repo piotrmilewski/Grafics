@@ -23,7 +23,6 @@ public class Woo{
 	deathCount = 0;
 	Endgame = false;
 	inQuest = false;
-
     }
 
     public static Character getPlayer(){
@@ -402,8 +401,8 @@ public class Woo{
 	String[][] inventory = new String[3][5];
 	inventory[0][0] = "Potion";
 	inventory[0][1] = "Max Potion";
-	inventory[0][2] = "Attack Up";
-	inventory[0][3] = "Defense Up";
+	inventory[0][2] = "AttackUp";
+	inventory[0][3] = "DefenseUp";
 	inventory[0][4] = "Rare Sweet";
 	inventory[1][0] = "Restores health by 50";
 	inventory[1][1] = "Restores health to max";
@@ -464,7 +463,6 @@ public class Woo{
 		System.out.print(prints);
 	        sellitem = Keyboard.readString();
 		sellitem = sellitem.toLowerCase();
-		sellitem = sellitem.substring(0, 1).toUpperCase() + sellitem.substring(1);
 
 		if (player.hasItem(sellitem)){
 		    System.out.print("BEFORE: " + player.playerInfo());//diag
