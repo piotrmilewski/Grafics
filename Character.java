@@ -45,7 +45,8 @@ public class Character extends LivingEntity{
 	    _level += 1;
 	    _experience = _experience - _lvlupexp;
 	    _lvlupexp += 5;
-	    _health += 10;
+	    _maxhealth += 10;
+	    _health = _maxhealth;
 	    _attack += 2;
 	    _defense += 2;
 	    _speed += 2;	   
@@ -124,7 +125,13 @@ public class Character extends LivingEntity{
 	prints += "Defense: " + _defense + "\n";
 	prints += "Speed: " + _speed + "\n";
 	prints += "Currency: " + _currency + "\n";
-	prints += "Inventory:\n";
+	
+	return prints;
+    }
+
+    public String printInventory(){
+	String prints;
+	prints = "Inventory:\n";
 	for (int a = 0; a < _inventory.length; a++){
 	    for (int x = 0; x < _inventory[0].length; x++){
 		prints += "\t" + _inventory[a][x];
@@ -133,6 +140,7 @@ public class Character extends LivingEntity{
 	}
 	return prints;
     }
+	
 
     public boolean hasItem(String item){
 	for (int a = 0; a < _inventory.length; a++){
@@ -147,7 +155,22 @@ public class Character extends LivingEntity{
     }
     
     public void useItem(String item){
-	
+	if (item.equals("potion")){
+	    gainHP(50);
+	    System.out.print(_name + " gained 50 HP!\n");
+	}
+	else if (item.equals("max potion")){
+	    gainHP(_maxhealth);
+	    System.out.print(_name + "'s health has been restored!\n");
+	}
+	else if (item.equals("attackup")){
+	    gainAttack(2);
+	    System.out.print(_name + "'s attack increased by 2!\n");
+	}
+	else if (item.equals("defenseup")){
+	    gainDefense(2);
+	    System.out.print(_name + "'s defense increased by 2!\n");
+	}
     }
 	
     
