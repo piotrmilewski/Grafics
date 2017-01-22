@@ -2,18 +2,18 @@ import cs1.Keyboard;
 
 public class Woo{
 
-    private Character player;
+    private static Character player;
     //private String name;
     private Monster monster;
     //private Map map;
 
-    private int kingEncounters = 0; //number of times you've spoken with the king
-    private int infirmaryVisits = 0; //number of times you've been to the infirmary
-    private int questCount = 0;
-    private int maxQuests = 3; //specify max number of quests in a game
-    private int deathCount = 0;
-    private boolean Endgame = false; //true if you complete all quests and thus unlcok Endlass mode
-    private boolean inQuest = false; //true if in a quest
+    private static int kingEncounters = 0; //number of times you've spoken with the king
+    private static int infirmaryVisits = 0; //number of times you've been to the infirmary
+    private static int questCount = 0;
+    private static int maxQuests = 3; //specify max number of quests in a game
+    private static int deathCount = 0;
+    private static boolean Endgame = false; //true if you complete all quests and thus unlcok Endlass mode
+    private static boolean inQuest = false; //true if in a quest
     
 
     public Woo(){
@@ -24,7 +24,7 @@ public class Woo{
 	newGame();
     }
 
-    public Character getPlayer(){
+    public static Character getPlayer(){
 	return player;
     }
 
@@ -517,7 +517,7 @@ public class Woo{
 		if (kingEncounters >= 0 && questCount >= 0){
 		    System.out.println("Onwards we go!");
 		    Quest1 quest = new Quest1();
-		    player.quest();
+		    quest.newQuest();
 		    System.out.print(prints);
 		    action = Keyboard.readInt();
 		}
