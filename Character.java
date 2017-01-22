@@ -117,20 +117,28 @@ public class Character extends LivingEntity{
 	return damage;
     }
 
-    //returns currency and inventory
     public String playerInfo(){
-	String summary;
-	summary = "Currency: " + _currency + "\n";
-	summary += "Inventory:\n";
+	String prints;
+	prints = "Name: " + _name + "\n";
+	prints += "Level: " + _level + "\n";
+	prints += "Experience: " + _experience + "\n";
+	prints += "Health: " + _health + "\n";
+	prints += "Attack: " + _attack + "\n";
+	prints += "Defense: " + _defense + "\n";
+	prints += "Speed: " + _speed + "\n";
+	prints += "Currency: " + _currency + "\n";
+	prints += "Inventory:\n";
 	for (int a = 0; a < 3; a++){
 	    for (int x = 0; x < 3; x++){
-		summary += "\t" + _inventory[a][x];
+		prints += "\t" + _inventory[a][x];
 	    }
-	    summary += "\n";
+	    prints += "\n";
 	}
-	return summary;
+	return prints;
     }
 
+
+    
     public boolean hasItem(String item){
 	for (int a = 0; a < _inventory.length; a++){
 	    for (int x = 0; x < _inventory[0].length; x++){
