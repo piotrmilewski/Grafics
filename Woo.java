@@ -413,7 +413,7 @@ public class Woo{
 	inventory[2][1] = "10";
 	inventory[2][2] = "10";
 	inventory[2][3] = "10";
-	inventory[2][4] = "400";
+	inventory[2][4] = "10";
 	
 	prints = "Welcome to the Shop! What would you like to do?\n";
 	prints += "\t1: I would like to use some currency!\t2: I would like to gain some currency!\t3: Leave Shop\n";
