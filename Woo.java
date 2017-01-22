@@ -494,7 +494,7 @@ public class Woo{
 	}
 
 	prints = "\nAh yes, the great outdoors. What would you like to do?";
-	prints += "\n\t1: Venture out into the woods\n2: Return to the castle\n3: Quest1\n4: Quit Game";
+	prints += "\n1: Venture out into the woods\n2: Return to the castle\n3: Quest1\n4: Quit Game";
 	prints += "\nSelection (1, 2, or 3): ";
 	System.out.print(prints);
 
@@ -525,7 +525,7 @@ public class Woo{
 		    prints = "Wait a second... I don't think your up for this quest yet...\n";
 		    prints = "\n What else would you like to do?";
 		    prints += "\n\t1: Venture out into the woods\n2: Return to the castle\n3: Quest1\n4: Quit Game";
-		    prints += "\nSelection (1, 2, or 3): ";	    
+		    prints += "\nSelection (1, 2, 3, or 4): ";	    
 		    System.out.println(prints);
 		    action = Keyboard.readInt();
 		}
