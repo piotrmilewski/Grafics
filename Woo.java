@@ -485,8 +485,8 @@ public class Woo{
 	    }
 	}
 
-prints = "\nAh yes, the great outdoors. What would you like to do?";
-	prints += "\n\t1: Venture out into the woods\n2: Return to the castle\n3: Quest1\n4:Tell me about me\n5: Quit Game";
+	prints = "\nAh yes, the great outdoors. What would you like to do?";
+	prints += "\n\t1: Venture out into the woods\n\t2: Return to the castle\n\t3: Quest 1\n\t4: Quest 2\n\t5: Quest 3\n\t6: Tell me about me\n\t7: Quit Game";
 	prints += "\nSelection (1, 2, 3, 4, 5, 6, or 7): ";	  	
 	System.out.print(prints);
 
