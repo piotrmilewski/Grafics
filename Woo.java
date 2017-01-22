@@ -159,17 +159,17 @@ public class Woo{
     public void spawn(){
 	if ((Math.random()*3) > 2){
 	    monster = new Gargoyle();
-	    monName = monster + "";
+	    monName = monster.getClass().getSimpleName();
 	    
 	}
 	
 	else if ((Math.random()*10) > 3){
-	    monster = new Goblins();
-	      monName = monster + "";
+	    monster = new Goblin();
+	    monName = monster.getClass().getSimpleName();
 	}
 	else {
 	    monster = new Cyclops();
-	      monName = monster + "";
+	    monName = monster.getClass().getSimpleName();
 	}
     }//end spawn()
 
@@ -197,7 +197,7 @@ public class Woo{
     	    		
 	    dM = monster.attack(player);
 
-	    prints = "\n" +  player.getName() + " dealt " + dP + " damage to the" + monName + ".\n";
+	    prints = "\n" +  player.getName() + " dealt " + dP + " damage to the " + monName + ".\n";
 	    prints +=  monName + " dealt " + dM + " damage to " + player.getName() + ".\n";
 	    prints += "Your health is now: " + player.getHealth() + "\n";
 	    prints += monName + "'s health is now: " + monster.getHealth() + "\n";
