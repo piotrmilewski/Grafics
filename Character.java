@@ -3,19 +3,20 @@ public class Character extends LivingEntity{
     protected String _name;
     protected int _level;
     protected int _experience;
-    protected int _lvlupexp;
+    protected int _lvlupexp = 10;
     protected int _maxhealth;
     protected String[][] _inventory = new String[3][3];
     
     public String getName(){
 	return _name;
     }
-
+  
     public String setName(String name){
 	_name = name;
 	return getName();
     }
-
+  
+    
     public int gainCurrency(int amount){
 	_currency += amount;
 	return _currency;
@@ -43,7 +44,8 @@ public class Character extends LivingEntity{
 	if (_experience > _lvlupexp){
 	    _level += 1;
 	    _experience = _experience - _lvlupexp;
-	    _lvlupexp += 200;
+	    _lvlupexp += 50;
+	    System.out.println("You have leveled up");
 	}
 	return _level;
     }

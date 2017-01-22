@@ -133,28 +133,7 @@ public class Woo{
 	System.out.println(prints);
 	
     }//end tutorial()
-    /*
-    public void forest(){
-	String prints;
-	int selection;
-	prints = "Welcome to the forest! Sometimes I come here to relax 'cause it's beautiful here.";
-	prints += "\nWould you like to enter? Yes(1) No(2)";
-	System.out.println(prints);
-	selection = Keyboard.readInt();
-	if (selection == 1){	  	
-	    while (player.isAlive()){
-		spawn();
-		fight();
-		prints = "Would you like to continue? Yes(1) No(2)";
-		System.out.println(prints);
-		selection = Keyboard.readInt();
-		if (selection == 2){
-		    break;
-		}
-	    }    
-	}
-    }//end forest()
-    */
+   
     
     public void spawn(){
 	if ((Math.random()*3) > 2){
@@ -212,7 +191,9 @@ public class Woo{
 	    System.out.println(prints);
 	}
 	else if (!monster.isAlive()){
+	    player.levelUp(5);
 	    prints = "With one last blow from his fist, " + player.getName() + " was able to take down the monster\n";
+	    prints += player.getName() + " gained 5 experience points";
 	    System.out.println(prints);
 	}
 	else if (!player.isAlive()){
