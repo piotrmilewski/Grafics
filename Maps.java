@@ -44,9 +44,9 @@ public class Maps{
     	    		
 	    dM = monster.attack(Woo.getPlayer());
 
-	    prints = "\n" + player.getName() + " dealt " + dP + " damage to the Gargoyle.\n";
-	    prints += "Gargoyle dealt " + dM + " damage to " + player.getName() + ".\n";
-	    prints += "Your health is now: " + player.getHealth() + "\n";
+	    prints = "\n" + Woo.getPlayer().getName() + " dealt " + dP + " damage to the Gargoyle.\n";
+	    prints += "Gargoyle dealt " + dM + " damage to " + Woo.getPlayer().getName() + ".\n";
+	    prints += "Your health is now: " + Woo.getPlayer().getHealth() + "\n";
 	    prints += "Gargoyle's health is now: " + monster.getHealth() + "\n";
 	    System.out.println(prints);
 	}
