@@ -5,7 +5,7 @@ public class Character extends LivingEntity{
     protected int _experience;
     protected int _lvlupexp = 10;
     protected int _maxhealth;
-    protected String[][] _inventory = new String[3][3];
+    protected String[][] _inventory = new String[2][5];
     
     public String getName(){
 	return _name;
@@ -72,45 +72,25 @@ public class Character extends LivingEntity{
 	}
     }
 	
-    public void insertInv(String name, int a){
-	for (int x = 0; x < _inventory[a].length; x++){
-	    if (_inventory[a][x].equals("No_Item")){
-		_inventory[a][x] = name;
-		break;
-	    }
-	}
-    }
-
-    public void removeInv(String name, int a){
-	for (int x = 0; x < _inventory[a].length; x++){
-	    if (_inventory[a][x].equals(name)){
-		_inventory[a][x] = "No_Item";
-		break;
-	    }
-	}
-    }
-
     public void addItem(String name){
-	if (name.substring(0,1).equals("p")){
-	    insertInv(name, 0);
-	}
-	if (name.substring(0,1).equals("w")){
-	    insertInv(name, 1);
-	}
-	if (name.substring(0,1).equals("a")){
-	    insertInv(name, 2);
+	for (int a = 0; a < _inventory.length; a++){
+	    for (int x = 0; x < _inventory[0].length; x++){
+		if (_inventory[a][x].equals("No_Item")){
+			_inventory[a][x] = name;
+			return;
+		}
+	    }
 	}
     }
-
+    
     public void sellItem(String name){
-	if (name.substring(0,1).equals("p")){
-	    removeInv(name, 0);
-	}
-	if (name.substring(0,1).equals("w")){
-	    removeInv(name, 1);
-	}
-	if (name.substring(0,1).equals("a")){
-	    removeInv(name, 2);
+	for (int a = 0; a < _inventory.length; a++){
+	    for (int x = 0; x < _inventory[0].length; x++){
+		if (_inventory[a][x].equals(name)){
+			_inventory[a][x] = "No_Item";
+			return;
+		}
+	    }
 	}
     }
 
@@ -134,8 +114,8 @@ public class Character extends LivingEntity{
 	prints += "Speed: " + _speed + "\n";
 	prints += "Currency: " + _currency + "\n";
 	prints += "Inventory:\n";
-	for (int a = 0; a < 3; a++){
-	    for (int x = 0; x < 3; x++){
+	for (int a = 0; a < _inventory.length; a++){
+	    for (int x = 0; x < _inventory[0].length; x++){
 		prints += "\t" + _inventory[a][x];
 	    }
 	    prints += "\n";
@@ -143,8 +123,6 @@ public class Character extends LivingEntity{
 	return prints;
     }
 
-
-    
     public boolean hasItem(String item){
 	for (int a = 0; a < _inventory.length; a++){
 	    for (int x = 0; x < _inventory[0].length; x++){
