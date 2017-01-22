@@ -7,7 +7,7 @@ public class Quest1 extends Maps{
 	prints += "Are you sure you would like to continue? (yes) or (no)";
 	System.out.println(prints);
 	selection = Keyboard.readString();
-	if (selection.toLowerCase() == "yes"){		
+	if (selection.toLowerCase().equals("yes")){		
 	    prints = "As any brave fighter, a weapon must be needed (Press enter to continue)\n";
 	    System.out.println(prints);  
 	    selection = Keyboard.readString(); 
