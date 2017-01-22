@@ -486,7 +486,7 @@ public class Woo{
 	}
 
 	prints = "\nAh yes, the great outdoors. What would you like to do?";
-	prints += "\n\t1: Venture out into the woods\n\t2: Return to the castle\n\t3: Quest 1\n\t4: Quest 2\n\t5: Quest 3\n\t6: Tell me about me\n\t7: Quit Game";
+	prints += "\n1: Venture out into the woods\n\t2: Return to the castle\n\t3: Quest 1\n\t4: Quest 2\n\t5: Quest 3\n\t6: Tell me about me\n\t7: Quit Game";
 	prints += "\nSelection (1, 2, 3, 4, 5, 6, or 7): ";	  	
 	System.out.print(prints);
 
@@ -517,8 +517,8 @@ public class Woo{
 		else {
 		    prints = "Wait a second... I don't think your up for this quest yet...\n";
 		    prints += "\n What else would you like to do?";
-		    prints += "\n\t1: Venture out into the woods\n2: Return to the castle\n3: Quest1\n4:Tell me about me\n5: Quit Game";
-		    prints += "\nSelection (1, 2, 3, 4, 5, 6, or 7): ";	      
+		    prints += "\n1: Venture out into the woods\n\t2: Return to the castle\n\t3: Quest 1\n\t4: Quest 2\n\t5: Quest 3\n\t6: Tell me about me\n\t7: Quit Game";
+		    prints += "\nSelection (1, 2, 3, 4, 5, 6, or 7): ";   
 		    System.out.println(prints);
 		    action = Keyboard.readInt();
 		   
@@ -537,8 +537,8 @@ public class Woo{
 		else {
 		    prints = "One step at a time...this quest is not unlocked yet\n";
 		    prints += "\n What else would you like to do?";
-		    prints += "\n\t1: Venture out into the woods\n2: Return to the castle\n3: Quest1\n4:Tell me about me\n5: Quit Game";
-		    prints += "\nSelection (1, 2, 3, 4, 5, 6, or 7): ";	     
+		    prints += "\n1: Venture out into the woods\n\t2: Return to the castle\n\t3: Quest 1\n\t4: Quest 2\n\t5: Quest 3\n\t6: Tell me about me\n\t7: Quit Game";
+		    prints += "\nSelection (1, 2, 3, 4, 5, 6, or 7): ";  
 		    System.out.println(prints);
 		    action = Keyboard.readInt();
 		   
@@ -557,8 +557,8 @@ public class Woo{
 		else {
 		    prints = "Oh no...this quest is not unlocked yet\n";
 		    prints += "\n What else would you like to do?";
-		    prints += "\n\t1: Venture out into the woods\n2: Return to the castle\n3: Quest1\n4:Tell me about me\n5: Quit Game";
-		    prints += "\nSelection (1, 2, 3, 4, 5, 6, or 7): ";	    
+		    prints += "\n1: Venture out into the woods\n\t2: Return to the castle\n\t3: Quest 1\n\t4: Quest 2\n\t5: Quest 3\n\t6: Tell me about me\n\t7: Quit Game";
+		    prints += "\nSelection (1, 2, 3, 4, 5, 6, or 7): ";   
 		    System.out.println(prints);
 		    action = Keyboard.readInt();
 		   
@@ -576,7 +576,7 @@ public class Woo{
 	    }
 	    else{
 		prints = "Please don't make my life difficult. Choose one of the given options.";
-		prints += "\n\t1: Venture out into the woods\n2: Return to the castle\n3: Quest1\n4:Tell me about me\n5: Quit Game";
+		prints += "\n1: Venture out into the woods\n\t2: Return to the castle\n\t3: Quest 1\n\t4: Quest 2\n\t5: Quest 3\n\t6: Tell me about me\n\t7: Quit Game";
 		prints += "\nSelection (1, 2, 3, 4, 5, 6, or 7): ";	   
 		System.out.print(prints);
 		action = Keyboard.readInt();
