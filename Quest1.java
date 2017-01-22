@@ -1,5 +1,6 @@
 import cs1.Keyboard;
-public class Quest1 extends Maps{	    
+public class Quest1 extends Maps{
+    protected Monster monster;
     public boolean newQuest(){
 
 	String prints;
@@ -8,7 +9,17 @@ public class Quest1 extends Maps{
 	prints += "Are you sure you would like to continue? (yes) or (no)";
 	System.out.println(prints);
 	selection = Keyboard.readString();
+
 	if (selection.toLowerCase().equals("yes")){
+	    prints = "Alright, let's begin";
+	    System.out.println(prints);
+	}	
+	else if(selection.toLowerCase().equals("no")) {
+	    prints = "Returning to map...";
+	    System.out.println(prints);
+	    return true;
+	}
+
 	    /*
 	    prints = "As any brave fighter, a weapon must be needed (Press enter to continue)\n";
 	    System.out.println(prints);  
@@ -32,13 +43,14 @@ public class Quest1 extends Maps{
 	    spawn();
 	    fight();
 	    return false;
-	}
-    
-	else{
-	    prints = "Returning to map...";
-	    System.out.println(prints);
-	    return true;
-	}
-    
+      
+   
     }
 }
+
+
+	   
+	    
+   
+	    
+	   

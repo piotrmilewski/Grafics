@@ -550,7 +550,7 @@ public class Woo{
 	    else{
 		prints = "Please don't make my life difficult. Choose one of the given options.";
 		prints += "\n\t1: Venture out into the woods\n2: Return to the castle\n3: Quest1\n4: Tell me about me \n5: Quit Game";
-		prints += "\nSelection (1, 2, 3, or 4): ";	 
+		prints += "\nSelection (1, 2, 3, 4, or 5): ";	 
 		System.out.print(prints);
 		action = Keyboard.readInt();
 	    }
