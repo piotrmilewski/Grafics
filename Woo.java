@@ -518,6 +518,7 @@ public class Woo{
 		    System.out.println("Onwards we go!");
 		    Quest1 quest = new Quest1();
 		    quest.newQuest();
+		   
 		    System.out.print(prints);
 		    action = Keyboard.readInt();
 		}
@@ -528,8 +529,10 @@ public class Woo{
 		    prints += "\nSelection (1, 2, 3, or 4): ";	    
 		    System.out.println(prints);
 		    action = Keyboard.readInt();
+		   
 		}
-	    }
+		    
+	    }	  
 	    else if (action == 4){
 		System.out.print("Bye Bye!!");
 		break;
@@ -537,10 +540,11 @@ public class Woo{
 	    else{
 		prints = "Please don't make my life difficult. Choose one of the given options.";
 		prints += "\n\t1: Venture out into the woods\t2: Return to the castle";
-		    prints += "\nSelection (1 or 2): ";
+		prints += "\nSelection (1 or 2): ";
 		System.out.print(prints);
 		action = Keyboard.readInt();
 	    }
+
 	}
 	
     }//end main
