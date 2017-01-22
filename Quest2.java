@@ -249,8 +249,99 @@ public class Quest2{
 	    Thread.sleep(2000);
 	} catch (InterruptedException e) {}
 
-	Monster monster = new Mirak();
-	woo.fight();
-	return false;      
+	prints = "*Floor begins to rumble*\n\n";
+	System.out.println(prints);
+	 try {
+		// thread to sleep for 2 second
+		Thread.sleep(2000);
+	    } catch (InterruptedException e) {}
+   
+
+	prints = "Oh god. What now!?\n\n";
+	System.out.println(prints);
+	 try {
+		// thread to sleep for 2 second
+		Thread.sleep(2000);
+	    } catch (InterruptedException e) {}
+   
+
+	 prints = "Mysterious voice: You...\n\n";
+	 System.out.println(prints);
+	 try {
+	     // thread to sleep for 2 second
+	     Thread.sleep(2000);
+	 } catch (InterruptedException e) {}
+   
+	 prints = "Mysterious voice: Stop right there.\n\n";
+	 System.out.println(prints);
+	 try {
+	     // thread to sleep for 2 second
+	     Thread.sleep(2000);
+	 } catch (InterruptedException e) {}
+   
+	 prints = "Giovanni?\n\n";
+	 System.out.println(prints);
+	 try {
+	     // thread to sleep for 2 second
+	     Thread.sleep(2000);
+	 } catch (InterruptedException e) {}
+   
+
+	 prints = "Mysterious voice: Haha, you wish I was Giovanni.\n\n";
+	 System.out.println(prints);
+	 try {
+	     // thread to sleep for 2 second
+	     Thread.sleep(2000);
+	 } catch (InterruptedException e) {}
+   
+		
+	 prints = "Mysterious voice: My name is Mirak.\n\n";
+	 System.out.println(prints);
+	 try {
+	     // thread to sleep for 2 second
+	     Thread.sleep(2000);
+	 } catch (InterruptedException e) {}
+   
+
+	 prints = "Mirak: Defeat me if you want to save this dear princess of yours\n\n";
+	 System.out.println(prints);
+	 try {
+	     // thread to sleep for 2 second
+	     Thread.sleep(2000);
+	 } catch (InterruptedException e) {}
+
+	 prints = "One more fight won't hurt, right?";
+	 System.out.println(prints);
+
+	 Monster monster = new Mirak();
+	 woo.fight();
+
+	 prints = "Mirak: NOOOOOOOOOO.\n\n";
+	 System.out.println(prints);
+	 try {
+	     // thread to sleep for 2 second
+	     Thread.sleep(2000);
+	 } catch (InterruptedException e) {}
+   
+		
+	 prints = "*Mirak vanishes*\n\n";
+	 System.out.println(prints);
+	 try {
+	     // thread to sleep for 2 second
+	     Thread.sleep(2000);
+	 } catch (InterruptedException e) {}
+   
+
+	 prints = "Dang it. The princess isn't here...";
+	 System.out.println(prints);
+	 try {
+	     // thread to sleep for 2 second
+	     Thread.sleep(2000);
+	 } catch (InterruptedException e) {}
+
+	 prints = "Guess we gotta go back and tell the king...again...\n\n";
+	 System.out.println(prints);
+	 
+	 return false;      
     }
 }
