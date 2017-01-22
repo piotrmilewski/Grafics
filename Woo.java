@@ -6,6 +6,7 @@ public class Woo{
     //private String name;
     private Monster monster;
     //private Map map;
+    
 
     private static int kingEncounters = 0; //number of times you've spoken with the king
     private static int infirmaryVisits = 0; //number of times you've been to the infirmary
@@ -14,6 +15,7 @@ public class Woo{
     private static int deathCount = 0;
     private static boolean Endgame = false; //true if you complete all quests and thus unlcok Endlass mode
     private static boolean inQuest = false; //true if in a quest
+    private String monName;
     
 
     public Woo(){
@@ -154,15 +156,19 @@ public class Woo{
     }//end forest()
 
     public  void spawn(){
-	if (Math.random()*10 > 6){
+	if ((Math.random()*3) > 2){
 	    monster = new Gargoyle();
+	    monName = monster + "";
+	    
 	}
 	
-	else if (Math.random()*10 > 3){
+	else if ((Math.random()*10) > 3){
 	    monster = new Goblins();
+	      monName = monster + "";
 	}
 	else {
 	    monster = new Cyclops();
+	      monName = monster + "";
 	}
     }//end spawn()
 
@@ -190,10 +196,10 @@ public class Woo{
     	    		
 	    dM = monster.attack(player);
 
-	    prints = "\n" +  player.getName() + " dealt " + dP + " damage to the Gargoyle.\n";
-	    prints += "Gargoyle dealt " + dM + " damage to " + player.getName() + ".\n";
+	    prints = "\n" +  player.getName() + " dealt " + dP + " damage to the" + monName + ".\n";
+	    prints +=  monName + " dealt " + dM + " damage to " + player.getName() + ".\n";
 	    prints += "Your health is now: " + player.getHealth() + "\n";
-	    prints += "Gargoyle's health is now: " + monster.getHealth() + "\n";
+	    prints += monName + "'s health is now: " + monster.getHealth() + "\n";
 	    System.out.println(prints);
 	}
 

@@ -1,20 +1,25 @@
 import cs1.Keyboard;
 public class Maps{
-    protected Monster monster;
-    
+    protected Monster monster; 
+    protected String monName;
     public  void spawn(){
-	if (Math.random()*10 > 6){
+	if ((Math.random()*3) > 2){
 	    monster = new Gargoyle();
+	    monName = monster + "";
+	    
 	}
 	
-	else if (Math.random()*10 > 3){
+	else if ((Math.random()*3) > 1){
 	    monster = new Goblins();
+	    monName = monster + "";
 	}
 	else {
 	    monster = new Cyclops();
+	    monName = monster + "";
 	}
-      	
     }
+      	
+
 
     public void fight(){
 	boolean quit = false;
@@ -39,9 +44,9 @@ public class Maps{
     	    		
 	    dM = monster.attack(Woo.getPlayer());
 
-	    prints = "\n" +  Woo.getPlayer().getName() + " dealt " + dP + " damage to the Gargoyle.\n";
-	    prints += "Gargoyle dealt " + dM + " damage to " + Woo.getPlayer().getName() + ".\n";
-	    prints += "Your health is now: " + Woo.getPlayer().getHealth() + "\n";
+	    prints = "\n" + player.getName() + " dealt " + dP + " damage to the Gargoyle.\n";
+	    prints += "Gargoyle dealt " + dM + " damage to " + player.getName() + ".\n";
+	    prints += "Your health is now: " + player.getHealth() + "\n";
 	    prints += "Gargoyle's health is now: " + monster.getHealth() + "\n";
 	    System.out.println(prints);
 	}
