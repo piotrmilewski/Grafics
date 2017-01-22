@@ -133,7 +133,7 @@ public class Woo{
 	System.out.println(prints);
 	
     }//end tutorial()
-
+    /*
     public void forest(){
 	String prints;
 	int selection;
@@ -154,6 +154,7 @@ public class Woo{
 	    }    
 	}
     }//end forest()
+    */
     
     public void spawn(){
 	if ((Math.random()*3) > 2){
@@ -512,7 +513,8 @@ public class Woo{
 	while (true){
 	    if (action == 1){
 		System.out.println("A daring soul you are.");
-	        game.forest();
+	        Forest trees = new Forest();
+		trees.forest();
 		System.out.print(prints);
 		action = Keyboard.readInt();
 	    }
