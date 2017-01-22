@@ -155,11 +155,29 @@ public class Quest1{
 	    Thread.sleep(3000);
 	} catch (InterruptedException e) {}
 
+	prints = "Mysterious voice: Not so fast.\n\n";
+	System.out.println(prints);
 
-	    
-    
-	return false;
-      
-   
+	prints = "Who is that!?\n\n";
+	System.out.println(prints);
+
+	prints = "Mysterious voice: My name is Giovanni.\n\n";
+	System.out.println(prints);
+
+	prints = "Giovanni: I believe you're looking for the princess, yes?\n\n";
+	System.out.println(prints);
+
+	prints = "Giovanni: Well, sorry to tell you this but she's not here.\n\n";
+	System.out.println(prints);
+
+	prints = "Giovanni: But if you want to get our here alive, you're going to have to defeat me,\n\n";
+	System.out.println(prints);
+
+	prints = "Welp, guess we gotta do what we gotta do\n\n";
+	System.out.println(prints);
+
+        Monster monster = new Giovanni();
+	woo.fight();   
+	return false;    
     }
 }
