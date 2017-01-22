@@ -7,7 +7,7 @@ public class Quest3{
 	String selection;
 	prints = "Welcome to the Quest 3.\n";
 	prints += "Are you sure you would like to continue? (yes) or (no)";
-	System.out.printn(prints);
+	System.out.println(prints);
 	selection = Keyboard.readString();
 
 	if (selection.toLowerCase().equals("yes")){
@@ -100,7 +100,7 @@ public class Quest3{
 	prints = "Please enter 'left' or 'right'";
 	System.out.println(prints);
 	selection = Keyboard.readString();
-	selection = selection.toLowerCase()
+	selection = selection.toLowerCase();
 	if (selection.equals("left")){
 	    prints = "Don't these guys have hobbies or something?!";
 	    System.out.println(prints);
@@ -161,13 +161,8 @@ public class Quest3{
 	System.out.println(prints);
 	selection = Keyboard.readString();
 	//if (selection.equals("yes")){
-	//}
-    
+	//
 	return false;
-      
-   
-    }
-}
+    }//end newQuest()
+}//end class Quest3
 
-    }
-}
