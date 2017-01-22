@@ -409,11 +409,11 @@ public class Woo{
 	inventory[1][2] = "Increases attack by 2";
 	inventory[1][3] = "Increases defense by 2";
 	inventory[1][4] = "Raises level by 1";
-	inventory[2][0] = "50";
-	inventory[2][1] = "200";
-	inventory[2][2] = "100";
-	inventory[2][3] = "100";
-	inventory[2][4] = "500";
+	inventory[2][0] = "10";
+	inventory[2][1] = "10";
+	inventory[2][2] = "10";
+	inventory[2][3] = "10";
+	inventory[2][4] = "400";
 	
 	prints = "Welcome to the Shop! What would you like to do?\n";
 	prints += "\t1: I would like to use some currency!\t2: I would like to gain some currency!\t3: Leave Shop\n";
