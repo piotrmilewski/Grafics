@@ -500,7 +500,7 @@ public class Woo{
 	}
 
 	prints = "\nAh yes, the great outdoors. What would you like to do?";
-	prints += "\n1: Venture out into the woods\n2: Return to the castle\n3: Quest1\n4: Quit Game";
+	prints += "\n1: Venture out into the woods\n2: Return to the castle\n3: Quest1\n4: Tell me about me!\n5: Quit Game";
 	prints += "\nSelection (1, 2, or 3): ";
 	System.out.print(prints);
 
@@ -519,7 +519,7 @@ public class Woo{
 		System.out.print(prints);
 		action = Keyboard.readInt();
 	    }
-	    else if (action == 3){
+	    /*	    else if (action == 3){
 		if (kingEncounters >= 0 && questCount >= 0){
 		    System.out.println("Onwards we go!");
 		    Quest1 quest = new Quest1();
@@ -538,8 +538,13 @@ public class Woo{
 		   
 		}
 		    
-	    }	  
+		}*/
 	    else if (action == 4){
+		System.out.print(player.playerInfo());
+		System.out.print(prints);
+		action = Keyboard.readInt();
+	    }
+	    else if (action == 5){
 		System.out.print("Bye Bye!!");
 		break;
 	    }
