@@ -220,7 +220,7 @@ public class Woo{
 	int dM; //damage to player
 	int dP; // damage to monster
 	while (player.isAlive() && monster.isAlive()){ // battle will continue if both are alive
-	    prints = "What would you like to do? 1: Attack 2: Parry 3: Use Item 4: Run (ONLY FOR FOREST)\n"; 
+	    prints = "What would you like to do? 1: Attack 2: Parry 3: Use Item 4: Run (Lose money & may not get away)\n"; 
 	    prints += "Selection:  ";
 	    System.out.print(prints);
 	    action = Keyboard.readInt();
@@ -263,16 +263,24 @@ public class Woo{
 		}
 	    }
 	    else if (action == 4){ //quits game
-		quit = true;
-	        break;
+		if (Math.random() < 0.5){
+		    System.out.println("Successful Getaway!\n");
+		    quit = true;
+		    break;}
+		else{
+		    System.out.println("Couldn't get away, lose 50 currency trying to run away.\n");
+		    if (player.getCurrency() > 50){ //only if the player has enough money to lose, will they lose money
+			player.loseCurrency(50);
+		    }
+		}
 	    }
 	}
 
 	if (quit){
-	    if (player.getCurrency() > 10){ //only if the player has enough money to lose, will they lose money
-		player.loseCurrency(10);
+	    if (player.getCurrency() > 50){ //only if the player has enough money to lose, will they lose money
+		player.loseCurrency(50);
 	    }
-	    prints = "PLAYER IS A LOSER, HE RAN BACK TO THE CASTLE AND DROPPED MONEY";
+	    System.out.println("Wow what a loser, running from a fight like that. You lost 50 currency while running away.\n");
 	}
 	else if (!player.isAlive() && !monster.isAlive()){ //both die at the same time
 	    prints = "Although " +  player.getName() + " killed the monster with one last blow from his fist, the monster lashed at " +  player.getName() + " with one last slash and took " +  player.getName() + " down with him.\n";
