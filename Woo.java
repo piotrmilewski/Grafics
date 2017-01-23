@@ -315,7 +315,7 @@ public class Woo{
 		// thread to sleep for 2 second
 		Thread.sleep(2000);
 	    } catch (InterruptedException e) {}
-	    prints += "\t1: Speak with the King\n\t2: Visit the shop\n\t3: Visit the infirmary\n\t4: Use the restrooms\n\t5. Leave the Castle\n";
+	    prints = "\t1: Speak with the King\n\t2: Visit the shop\n\t3: Visit the infirmary\n\t4: Use the restrooms\n\t5. Leave the Castle\n";
 	    prints += "Selection (1,2,3,4, or 5): ";
 	    System.out.print(prints);
 	    
@@ -555,16 +555,21 @@ public class Woo{
 		System.out.print(prints);
 		buyitem = Keyboard.readInt();
 
-		cost = Integer.parseInt(inventory[2][buyitem]);
-		if (cost > player._currency){
-		    System.out.println("You don't have enough in the money pouch to buy this item!"); 
+		if (buyitem < 5){
+		    cost = Integer.parseInt(inventory[2][buyitem]);
+		    if (cost > player._currency){
+			System.out.println("You don't have enough in the money pouch to buy this item!"); 
+		    }
+		    else{
+			System.out.print("BEFORE: " + player.playerInfo());//diag
+			player.loseCurrency(cost);
+			player.addItem(inventory[0][buyitem]);
+			System.out.print("AFTER: " + player.playerInfo());//diag
+			System.out.println(inventory[0][buyitem] + " has been added to your inventory!");
+		    }
 		}
 		else{
-		    System.out.print("BEFORE: " + player.playerInfo());//diag
-		    player.loseCurrency(cost);
-		    player.addItem(inventory[0][buyitem]);
-		    System.out.print("AFTER: " + player.playerInfo());//diag
-		    System.out.println(inventory[0][buyitem] + " has been added to your inventory!");
+		    System.out.println("That's not an item we sell here buddy, get outta here\n");
 		}
 
 		prints = "Now, what would you like to do?\n";
