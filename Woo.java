@@ -202,28 +202,46 @@ public class Woo{
 	int dM;
 	int dP;
 	while (player.isAlive() && monster.isAlive()){
-	    prints = "Would you like to attack or parry the next monster's attack during your next turn?\n";
-	    prints += "Selection (attack(1) or parry(2) or would you like to quit(3)?): ";
+	    prints = "What would you like to do? 1: Attack 2: Parry 3: Use Item 4: Run \n";
+	    prints += "Selection:  ";
 	    System.out.print(prints);
 	    action = Keyboard.readInt();
 	    if (action == 1){
 		dP = player.attack(monster);
+		dM = monster.attack(player);
+		
+		prints = "\n" +  player.getName() + " dealt " + dP + " damage to the " + monName + ".\n";
+		prints +=  monName + " dealt " + dM + " damage to " + player.getName() + ".\n";
+		prints += "Your health is now: " + player.getHealth() + "\n";
+		prints += monName + "'s health is now: " + monster.getHealth() + "\n";
+		System.out.print(prints);
+
 	    }
 	    else if (action == 2){
 		dP = player.parry(monster);
+		dM = monster.attack(player);
+		
+		prints = "\n" +  player.getName() + " dealt " + dP + " damage to the " + monName + ".\n";
+		prints +=  monName + " dealt " + dM + " damage to " + player.getName() + ".\n";
+		prints += "Your health is now: " + player.getHealth() + "\n";
+		prints += monName + "'s health is now: " + monster.getHealth() + "\n";
+		System.out.print(prints);
 	    }
-	    else{
+	    else if (action == 3){
+		System.out.print(player.printInventory());
+		System.out.print("\nWhich item would you like to use?");
+		String item = Keyboard.readString().toLowerCase();
+		if (player.hasItem(item)){
+		    player.useItem(item);
+		}
+		else{
+		    System.out.print("\nYou don't have that item. Try visiting the shop when you find time!");
+		}
+	    }
+	    else if (action == 4){
 		quit = true;
 	        break;
 	    }
-    	    		
-	    dM = monster.attack(player);
-
-	    prints = "\n" +  player.getName() + " dealt " + dP + " damage to the " + monName + ".\n";
-	    prints +=  monName + " dealt " + dM + " damage to " + player.getName() + ".\n";
-	    prints += "Your health is now: " + player.getHealth() + "\n";
-	    prints += monName + "'s health is now: " + monster.getHealth() + "\n";
-	    System.out.println(prints);
 	}
 
 	if (quit){
