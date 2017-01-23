@@ -1,4 +1,4 @@
-﻿Grafics
+Grafics
 Piotr Milewski
 Yuyang Zhang
 Angel Ng
@@ -18,11 +18,11 @@ UNRESOLVED ISSUES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 -Although we technically do not need this anymore, we are still unsure of how enter a blank input with Keyboard.
 -Weapon implementation
-
+- Run simply quits back to maps in forest. Running in quest will simply avoid the battle. However, we changed it so we lose money instead of quitting the quest.
 COOL STUFF LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
--How to properly handle errors
--Using git fetch and git rebase in order to fix merge conflicts
+-How to properly handle errors.
+-Using git fetch and git rebase in order to fix merge conflicts.
 -The ability to slow down the rate in which the line is being read.
 
 MID-DEVELOPMENT DESIGN CHANGES
@@ -119,27 +119,25 @@ Angel Ng :: Continued to grapple with implementation of forest (tried to impleme
 2017-01-20
 --------------------------------------------------------------
 Piotr Milewski :: Updated Quest1.java and devlog.txt
-Yuyang Zhang :: 
-Angel Ng :: 
+Yuyang Zhang :: Minor changes from Character to player. Modified fight method.
+Angel Ng :: Removed unnecessary code.
 ==============================================================
 
 2017-01-21
 --------------------------------------------------------------
-Piotr Milewski :: 
-Yuyang Zhang :: 
-Angel Ng :: 
+Yuyang Zhang :: Began adding Quest 1. Updated spawn and fight in woo. Implementation of forest.java.
+Angel Ng :: Modifying instance variables to static. Created method to print all stats. Minor error fixes.
 ==============================================================
 
 2017-01-22
 --------------------------------------------------------------
 Piotr Milewski :: Fixed questCount variable on Woo so that you can access more quests
-Yuyang Zhang :: 
-Angel Ng :: 
+Yuyang Zhang :: Attempted to implement experience. Display level and gain experience. Fixed options. Created items for monster. Created story for Quest 1 and 2. Aided with story in Quest 3. Inserted descriptions of quest into Woo. Implemented bosses for quests. Implemented dropping and picking up currency. Debugged/tested. Added comments to files.
+Angel Ng :: Fixed printing a monster’s name. Modified fight and forest. Created story for Quest 3. Aided with story in Quest 1 and 2. Implemented items into shop. Implemented the gaining of stats. Modified Forest class. Implemented dropping and picking up items. Debugged/tested. Added comments to file.
 ==============================================================
 
 2017-01-23
 --------------------------------------------------------------
 Piotr Milewski :: Fixed Woo.java, fixed the shop method, and added text for the text scene in the forest.
-Yuyang Zhang :: 
-Angel Ng :: 
+Yuyang Zhang :: Created story for null. Updated README.
 ==============================================================
