@@ -233,7 +233,7 @@ public class Quest1{
         woo.spawnBoss(1);
 	woo.fight();
 	if (!player.isAlive()){
-	    System.out.print("\nReturning to map...");
+	    System.out.print("\nYou have lost to the boss. Returning to map...");
 	    return true;
 	}
 	
