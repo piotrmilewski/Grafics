@@ -14,6 +14,7 @@ public class Forest {
 	    selection = Keyboard.readInt();
 	    
 	    if (selection == 1){ //initiates an encounter with a monster	  	
+		System.out.println("Wild monster appears. Initiate fighting sequence.\n");
 		woo.spawn();
 		woo.fight();
 		if (!player.isAlive()){ //player is sent back to the map if he dies
