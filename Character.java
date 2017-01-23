@@ -33,9 +33,9 @@ public class Character extends LivingEntity{
     }
 
     public static String desc(){
-	String retStr = "\tSoldier: 200 health, 10 attack, 7 defense, 10 speed\n";
-	retStr += "\tSwordsman: 200 health, 10 attack, 9 defense, 5 speed\n";
-	retStr += "\tMage: 200 health, 10 attack, 5 defense, 10 speed\n";
+	String retStr = "\tSoldier: 200 health, 10 attack, 7 defense\n";
+	retStr += "\tSwordsman: 200 health, 10 attack, 9 defense\n";
+	retStr += "\tMage: 200 health, 10 attack, 5 defense\n";
 	return retStr; 
     }
 
@@ -49,7 +49,6 @@ public class Character extends LivingEntity{
 	    _health = _maxhealth;
 	    _attack += 2;
 	    _defense += 2;
-	    _speed += 2;	   
 	}
 	return _level;
     }
@@ -123,7 +122,6 @@ public class Character extends LivingEntity{
 	prints += "Health: " + _health + "\n";
 	prints += "Attack: " + _attack + "\n";
 	prints += "Defense: " + _defense + "\n";
-	prints += "Speed: " + _speed + "\n";
 	prints += "Currency: " + _currency + "\n";
 	return prints;
     }

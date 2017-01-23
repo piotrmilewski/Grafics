@@ -3,7 +3,6 @@ public abstract class LivingEntity{
     protected int _health;
     protected int _attack;
     protected int _defense;
-    protected int _speed;
     protected int _currency;
 
     public int getHealth(){
