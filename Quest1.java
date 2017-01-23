@@ -196,7 +196,7 @@ public class Quest1{
 	    Thread.sleep(2000);
 	} catch (InterruptedException e) {}
 
-	prints = "Giovanni: But if you want to get our here alive, you're going to have to defeat me.\n\n";
+	prints = "Giovanni: But if you want to get out here alive, you're going to have to defeat me.\n\n";
 	System.out.println(prints);
 
 	try {
@@ -207,7 +207,7 @@ public class Quest1{
 	prints = "Welp, guess we gotta do what we gotta do\n\n";
 	System.out.println(prints);
 
-        Monster monster = new Giovanni();
+        woo.spawnBoss(1);
 	woo.fight();
 	
 	try {
