@@ -18,7 +18,9 @@ UNRESOLVED ISSUES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 -Although we technically do not need this anymore, we are still unsure of how enter a blank input with Keyboard.
 -Weapon implementation
-- Run simply quits back to maps in forest. Running in quest will simply avoid the battle. However, we changed it so we lose money instead of quitting the quest.
+- Run should quit back to maps. Running in quest will simply avoid the battle. However, we changed it so we lose money and quitting battle instead of quitting the quest.
+-Running from battle is available even if the player does not have enough money.
+
 COOL STUFF LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 -How to properly handle errors.
@@ -27,9 +29,10 @@ COOL STUFF LEARNED
 
 MID-DEVELOPMENT DESIGN CHANGES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
--We changed the structure of our classes (e.g. We put Quest classes under the Map superclass)
+-We changed the structure of our classes 
+-Maps.java no longer exists
 -Removed the weapons class and made the weapons strings
--Made the inventory a 2d String array rather than an ArrayList since it was easier to replace and add items with a 2d String array inventory.
+-Made the inventory a 2d String array rather than an ArrayList since it was easier to replace and add items with a 2d String array inventory (ArrayList is still used for Monsters).
 -Added a tutorial() to introduce the player to the game rather than starting out in the castle.
 -Removed multiple maps and replaced them with Quests since the player doesn't see the visual aspect of the map anyway and thus only needs one map (forest).
 
@@ -37,6 +40,8 @@ LESSONS LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 -To make the MVP the priority since at first we wanted to complete all the classes except for Woo.
 -The UML diagram and flow chart come in handy.
+-It is important to working daily and create deadlines.
+
 ||||||||||||||||||||||||||||||||||||||||||
 
 
