@@ -1,4 +1,4 @@
-Grafics
+﻿Grafics
 Piotr Milewski
 Yuyang Zhang
 Angel Ng
@@ -104,7 +104,7 @@ Angel Ng :: Expanded shop() to account for if the player doesn't have enough mon
 
 2017-01-17
 --------------------------------------------------------------
-Piotr Milewski :: 
+Piotr Milewski :: Updated devlog.txt, todo.txt, and README.md
 Yuyang Zhang :: Implemented instance of Character into Maps.java. Created basic format for Quest2 (similar to Quest1).
 Angel Ng :: Began to implement forest into game, corrected minor errors in Forest and Maps
 ==============================================================
@@ -114,4 +114,32 @@ Angel Ng :: Began to implement forest into game, corrected minor errors in Fores
 Piotr Milewski :: 
 Yuyang Zhang :: 
 Angel Ng :: Continued to grapple with implementation of forest (tried to implement forest without the use of a separate class but there is still a problem with isAlive() being referenced from a static context)
+==============================================================
+
+2017-01-20
+--------------------------------------------------------------
+Piotr Milewski :: Updated Quest1.java and devlog.txt
+Yuyang Zhang :: 
+Angel Ng :: 
+==============================================================
+
+2017-01-21
+--------------------------------------------------------------
+Piotr Milewski :: 
+Yuyang Zhang :: 
+Angel Ng :: 
+==============================================================
+
+2017-01-22
+--------------------------------------------------------------
+Piotr Milewski :: Fixed questCount variable on Woo so that you can access more quests
+Yuyang Zhang :: 
+Angel Ng :: 
+==============================================================
+
+2017-01-23
+--------------------------------------------------------------
+Piotr Milewski :: Fixed Woo.java, fixed the shop method, and added text for the text scene in the forest.
+Yuyang Zhang :: 
+Angel Ng :: 
 ==============================================================
