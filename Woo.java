@@ -744,7 +744,7 @@ public class Woo{
 		if (kingEncounters > 0 && questCount > 0){
 		    System.out.println("Onwards we go!");
 		    Quest1 quest = new Quest1();
-		    quest.newQuest();
+		    inQuest = quest.newQuest();
 		    System.out.print(prints);
 		    action = Keyboard.readInt();
 		}
@@ -763,7 +763,7 @@ public class Woo{
 		if (kingEncounters > 1 && questCount > 1){
 		    System.out.println("Vamonos!");
 		    Quest2 quest2 = new Quest2();
-		    quest2.newQuest();
+		    inQuest = quest2.newQuest();
 		   
 		    System.out.print(prints);
 		    action = Keyboard.readInt();
@@ -783,7 +783,7 @@ public class Woo{
 		if (kingEncounters > 2 && questCount > 2){
 		    System.out.println("Let's go!");
 		    Quest3 quest3 = new Quest3();
-		    quest3.newQuest();
+		    inQuest = quest3.newQuest();
 		   
 		    System.out.print(prints);
 		    action = Keyboard.readInt();
