@@ -753,7 +753,7 @@ public class Woo{
 		    action = Keyboard.readInt();
 		}
 		else { //quest is not unlocked yet
-		    prints = "Wait a second... I don't think your up for this quest yet...\n";
+		    prints = "Wait a second... I don't think you're up for this quest yet...\n";
 		    prints += "\n What else would you like to do?";
 		    prints += "\n\t1: Venture out into the woods\n\t2: Return to the castle\n\t3: Quest 1\n\t4: Quest 2\n\t5: Quest 3\n\t6: Tell me about me\n\t7: Quit Game";
 		    prints += "\nSelection (1, 2, 3, 4, 5, 6, or 7): ";   
