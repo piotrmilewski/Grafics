@@ -334,13 +334,13 @@ public class Woo{
     public void king(){
 	String prints;
 	if (kingEncounters == 0 && questCount == 0){
-	    prints = "Ahh, so this is the new recruit, well pleasure to meet you. My name is King Zbigniew, king of Kingdom Quests. So, what brings you here?\n\n";
+	    prints = "Ahh, so this is the new recruit, well pleasure to meet you. My name is King Zbigniew, king of Lorule. So, what brings you here?\n\n";
 	    System.out.println(prints);
 	    try {
 		// thread to sleep for 2 second
 		Thread.sleep(2000);
 	    } catch (InterruptedException e) {}
-	    prints = "*You tell the king that you've come to protect and serve Kingdom Quests and would like to start as soon as possible*\n\n";
+	    prints = "*You tell the king that you've come to protect and serve Lorule and would like to start as soon as possible*\n\n";
 	    System.out.println(prints);
 	    try {
 		// thread to sleep for 2 second
@@ -394,25 +394,86 @@ public class Woo{
 	    inQuest = true;
 	}
 	else if (questCount == 1 && !(inQuest)){
-	    //!!!!!!!!!!!!!!!!!!!!!
-	    //KING WELCOME + PUT QUEST DESCRIPTION HERE
-	    //!!!!!!!!!!!!!!!!!!!!!
-	    //System.out.println(prints);
+	    prints = "Well, I heard you weren't able to retrieve my daughter.\n\n";
+	    System.out.println(prints);
+	    try {
+		// thread to sleep for 2 second
+		Thread.sleep(2000);
+	    } catch (InterruptedException e) {}
+		 
+	    
+	    prints = "That's good news for me...but once again, my wife is not happy.\n\n";
+	    System.out.println(prints);
+	    try {
+		// thread to sleep for 2 second
+		Thread.sleep(2000);
+	    } catch (InterruptedException e) {}
+		 
+
+	    prints = "Rumor has it, my daughter has been found never the Yard of Sirbow.\n\n";
+	    System.out.println(prints);
+	    try {
+		// thread to sleep for 2 second
+		Thread.sleep(2000);
+	    } catch (InterruptedException e) {}
+		 
+
+	    prints = "Why don't you check there? Consider this your second quest.\n\n";
+	    System.out.println(prints);
+	    try {
+		// thread to sleep for 2 second
+		Thread.sleep(2000);
+	    } catch (InterruptedException e) {}
+		 	
 	    questCount += 1;
 	    kingEncounters += 1;
 	    inQuest = true;
 	}
 	else if (questCount == 2 && !(inQuest)){
-	    //!!!!!!!!!!!!!!!!!!!!!
-	    //KING WELCOME + PUT QUEST DESCRIPTION HERE
-	    //!!!!!!!!!!!!!!!!!!!!!
-	    //System.out.println(prints);
+	        prints = "You know it'll be great if you could get my daughter back before dinner.\n\n";
+	    System.out.println(prints);
+	    try {
+		// thread to sleep for 2 second
+		Thread.sleep(2000);
+	    } catch (InterruptedException e) {}
+		 
+	    
+	    prints = "My wife's advice.\n\n";
+	    System.out.println(prints);
+	    try {
+		// thread to sleep for 2 second
+		Thread.sleep(2000);
+	    } catch (InterruptedException e) {}
+		 
+
+	    prints = "My soldiers reported back saying she is in Sirbow's Castle.\n\n";
+	    System.out.println(prints);
+	    try {
+		// thread to sleep for 2 second
+		Thread.sleep(2000);
+	    } catch (InterruptedException e) {}
+		 
+
+	    prints = "This will be your last chance to retrieve her back.\n\n";
+	    System.out.println(prints);
+	    try {
+		// thread to sleep for 2 second
+		Thread.sleep(2000);
+	    } catch (InterruptedException e) {}
+
+	       prints = "Good luck.\n\n";
+	    System.out.println(prints);
+	    try {
+		// thread to sleep for 2 second
+		Thread.sleep(2000);
+	    } catch (InterruptedException e) {}
+	    
 	    questCount += 1;
 	    kingEncounters += 1;
 	    inQuest = true;
 	}
 	else if (questCount == 3 && !(inQuest)){
-	    prints = "Congratulations " + player.getName() + ", you saved Kingdom Quests! Without you the kingdom would long ago have perished. We deeply express our gratitude.\n";
+	    prints = "Congratulations " + player.getName() + ", you saved my daughter! Without you my wife would've killed me. I suppose here is a thank you.\n\n";
 	    prints += "Well I have no more quests for you, however, your service will not go unrewarded. Here, this is one-tenth of the kingdom's treasury, use it wisely.\n\n";
 	    prints += "*" + player.getName() + " received 500,000 gold coins!*\n\n";
 	    prints += "I also hear news that a secret zone has been unlocked, I suggest you go check it out.\n";
@@ -421,7 +482,7 @@ public class Woo{
 	    Endgame = true;
 	}
 	else if (inQuest){
-	    prints = "Did you finish that quest that I assigned you already? No? Then what are you doing here go save the Kingdom!\n";
+	    prints = "Did you finish that quest that I assigned you already? No? Then what are you doing here, go save my daughter!\n";
 	    System.out.println(prints);
 	}
 	else{
