@@ -3,7 +3,7 @@ public class Character extends LivingEntity{
     protected String _name;
     protected int _level;
     protected int _experience;
-    protected int _lvlupexp = 10;
+    protected int _lvlupexp = 50;
     protected int _maxhealth;
     protected String[][] _inventory = new String[2][5];
     
@@ -43,7 +43,7 @@ public class Character extends LivingEntity{
 	if (_experience >= _lvlupexp){
 	    _level += 1;
 	    _experience = _experience - _lvlupexp;
-	    _lvlupexp += 5;
+	    _lvlupexp += 10;
 	    _maxhealth += 10;
 	    _health = _maxhealth; //heals player
 	    _attack += 2;
