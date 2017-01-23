@@ -396,7 +396,7 @@ public class Quest2{
 	 prints = "One more fight won't hurt, right?";
 	 System.out.println(prints);
 
-	 Monster monster = new Mirak();
+	 woo.spawnBoss(2);
 	 woo.fight();
 	 if (!player.isAlive()){
 	     System.out.print("\nReturning to map...");
