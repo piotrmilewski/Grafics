@@ -245,14 +245,20 @@ public class Woo{
 		System.out.print(prints);
 	    }
 	    else if (action == 3){ //uses items
-		System.out.print(player.printInventory());
-		System.out.print("\nWhich item would you like to use?");
-		String item = Keyboard.readString().toLowerCase();
-		if (player.hasItem(item)){ //only if the item exist, may it be used
-		    player.useItem(item);
-		}
-		else{
-		    System.out.print("\nYou don't have that item. Try visiting the shop when you find time!");
+		while (true){
+		    System.out.print(player.printInventory());
+		    System.out.print("\nWhich item would you like to use? (Enter quit to leave inventory)");
+		    System.out.print("\nSelection: ");
+		    String item = Keyboard.readString().toLowerCase();
+		    if (item.equals("quit")){
+			break;
+		    }
+		    if (player.hasItem(item)){ //only if the item exists, may it be used
+			player.useItem(item);
+		    }
+		    else{
+			System.out.print("\nYou don't have that item. Try visiting the shop when you find time!");
+		    }
 		}
 	    }
 	    else if (action == 4){ //quits game
