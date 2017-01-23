@@ -5,7 +5,7 @@ public class Woo{
     private static Character player;
     //private String name;
     private Monster monster;
-    Maps map = new Maps();
+ 
     
 
     private static int kingEncounters = 0; //number of times you've spoken with the king
