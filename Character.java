@@ -16,12 +16,12 @@ public class Character extends LivingEntity{
 	return getName();
     }
 
-     public int gainCurrency(int amount){
+    public int gainCurrency(int amount){ //used when player defeats monster
 	_currency += amount;
 	return _currency;
     }
 
-    public int loseCurrency(int amount){
+    public int loseCurrency(int amount){ //used when player dies
 	if (_currency - amount < 0){
 	    _currency = 0;
 	}
@@ -31,21 +31,21 @@ public class Character extends LivingEntity{
 	return _currency;
     }
 
-    public static String desc(){
+    public static String desc(){ //gives original stats 
 	String retStr = "\tSoldier: 175 health, 10 attack, 7 defense\n";
 	retStr += "\tSwordsman: 200 health, 10 attack, 9 defense\n";
 	retStr += "\tMage: 200 health, 10 attack, 5 defense\n";
 	return retStr; 
     }
 
-     public int levelUp(int exp){
+    public int levelUp(int exp){ //updates stats when leveling up
 	_experience += exp;
 	if (_experience >= _lvlupexp){
 	    _level += 1;
 	    _experience = _experience - _lvlupexp;
 	    _lvlupexp += 5;
 	    _maxhealth += 10;
-	    _health = _maxhealth;
+	    _health = _maxhealth; //heals player
 	    _attack += 2;
 	    _defense += 2;
 	}
@@ -53,7 +53,7 @@ public class Character extends LivingEntity{
     }
 
 
-    public int gainHP(int hp){
+    public int gainHP(int hp){ //used for items
 	if (_health + hp > _maxhealth){
 	    _health = _maxhealth;
 	}
@@ -63,17 +63,17 @@ public class Character extends LivingEntity{
 	return _health;
     }
 
-    public int gainAttack(int atk){
+    public int gainAttack(int atk){ //used for items
 	_attack += atk;
 	return _attack;
     }
 
-    public int gainDefense(int def){
+    public int gainDefense(int def){ //used for items
 	_defense += def;
 	return _defense;
     }
 
-    public void fillInv(){
+    public void fillInv(){ //creates inventory
 	for (int x = 0; x < _inventory.length; x++){
 	    for (int y = 0; y < _inventory[0].length; y++){
 		_inventory[x][y] = "No_Item";
@@ -81,7 +81,7 @@ public class Character extends LivingEntity{
 	}
     }
 	
-    public void addItem(String name){
+    public void addItem(String name){ //gains item
 	for (int a = 0; a < _inventory.length; a++){
 	    for (int x = 0; x < _inventory[0].length; x++){
 		if (_inventory[a][x].equals("No_Item")){
@@ -92,7 +92,7 @@ public class Character extends LivingEntity{
 	}
     }
     
-    public void sellItem(String name){
+    public void sellItem(String name){ //gives up item
 	for (int a = 0; a < _inventory.length; a++){
 	    for (int x = 0; x < _inventory[0].length; x++){
 		String playeritem = _inventory[a][x].toLowerCase();
@@ -104,7 +104,7 @@ public class Character extends LivingEntity{
 	}
     }
 
-    public int parry(Monster mon){
+    public int parry(Monster mon){ //50% of dodging an attack
 	int damage = (_attack - mon.getDefense())/2;
 	if (Math.random() < 0.5){
 	    gainHP(mon.getAttack() - _defense);
@@ -113,7 +113,7 @@ public class Character extends LivingEntity{
 	return damage;
     }
 
-    public String playerInfo(){
+    public String playerInfo(){ //displays current stats
 	String prints;
 	prints = "Name: " + _name + "\n";
 	prints += "Level: " + _level + "\n";
@@ -125,7 +125,7 @@ public class Character extends LivingEntity{
 	return prints;
     }
 
-    public String printInventory(){
+    public String printInventory(){ //displays inventory
 	String prints;
 	prints = "Inventory:\n";
 	for (int a = 0; a < _inventory.length; a++){
@@ -138,7 +138,7 @@ public class Character extends LivingEntity{
     }
 	
 
-    public boolean hasItem(String item){
+    public boolean hasItem(String item){ //to check if player has an item
 	for (int a = 0; a < _inventory.length; a++){
 	    for (int x = 0; x < _inventory[0].length; x++){
 		String playeritem = _inventory[a][x].toLowerCase();
@@ -150,7 +150,7 @@ public class Character extends LivingEntity{
 	return false; 
     }
     
-    public void useItem(String item){
+    public void useItem(String item){ //used in battle
 	if (item.equals("potion")){
 	    gainHP(50);
 	    System.out.print("\n" + _name + " gained 50 HP!\n");
