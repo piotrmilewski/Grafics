@@ -2,6 +2,7 @@ import java.lang.*;
 import cs1.Keyboard;
 public class Quest1{
     Woo woo = new Woo();
+    Character player = Woo.getPlayer();
     public boolean newQuest(){
 
 	String prints;
@@ -47,6 +48,10 @@ public class Quest1{
 	    	
 	woo.spawn();
 	woo.fight();
+	if (!player.isAlive()){
+	    System.out.print("\nReturning to map...");
+	    return true;
+	}
 	prints = "That was a rather close one, now wasn't it.\n\n";
 	System.out.println(prints);
 	try {
@@ -78,7 +83,10 @@ public class Quest1{
     
 	woo.spawn();
 	woo.fight();
-
+	if (!player.isAlive()){
+	    System.out.print("\nReturning to map...");
+	    return true;
+	}
 	prints = "Oh man, the amount of surprises we're finding today\n\n";
 	System.out.println(prints);
 	try {
@@ -107,10 +115,22 @@ public class Quest1{
 	    System.out.println(prints);
 	    woo.spawn();
 	    woo.fight();
+	    if (!player.isAlive()){
+		System.out.print("\nReturning to map...");
+		return true;
+	    }
 	    woo.spawn();
 	    woo.fight();
+	    if (!player.isAlive()){
+		System.out.print("\nReturning to map...");
+		return true;
+	    }
 	    woo.spawn();
 	    woo.fight();
+	    if (!player.isAlive()){
+		System.out.print("\nReturning to map...");
+		return true;
+	    }
 	    try {
 		// thread to sleep for 2 second
 		Thread.sleep(2000);
@@ -134,7 +154,10 @@ public class Quest1{
 	    } catch (InterruptedException e) {}
 	    woo.spawn();
 	    woo.fight();
-		
+	    if (!player.isAlive()){
+		System.out.print("\nReturning to map...");
+		return true;
+	    }
 	    try {
 		// thread to sleep for 2 second
 		Thread.sleep(2000);
@@ -209,6 +232,10 @@ public class Quest1{
 
         woo.spawnBoss(1);
 	woo.fight();
+	if (!player.isAlive()){
+	    System.out.print("\nReturning to map...");
+	    return true;
+	}
 	
 	try {
 	    // thread to sleep for 2 second
