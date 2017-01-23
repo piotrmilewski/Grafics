@@ -31,10 +31,10 @@ COOL STUFF LEARNED
 
 MID-DEVELOPMENT DESIGN CHANGES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
--We changed the structure of our classes 
--Maps.java no longer exists
--Removed the weapons class and made the weapons strings
--Made the inventory a 2d String array rather than an ArrayList since it was easier to replace and add items with a 2d String array inventory (ArrayList is still used for Monsters).
+-We changed the structure of our classes (Certain superclasses/methods were not necessary)
+-Maps.java no longer exists (Not necessary)
+-Removed the weapons class and made the weapons strings (weapons are no longer used)
+-Made the inventory a 2d String array rather than an ArrayList since it was easier to replace and add items with a 2d String array inventory (ArrayList is still used for Monsters as we do not see their inventory).
 -Added a tutorial() to introduce the player to the game rather than starting out in the castle.
 -Removed multiple maps and replaced them with Quests since the player doesn't see the visual aspect of the map anyway and thus only needs one map (forest).
 
