@@ -22,7 +22,7 @@ public class Character extends LivingEntity{
     }
 
     public int loseCurrency(int amount){ //used when player dies
-	if (_currency - amount < 0){
+	if (_currency - amount <= 0){
 	    _currency = 0;
 	}
 	else{
