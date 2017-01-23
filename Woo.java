@@ -18,18 +18,18 @@ public class Woo{
     private String monName;
     
 
-    public Woo(){
+    public Woo(){ //constructor
 	questCount = 0;
 	deathCount = 0;
 	Endgame = false;
 	inQuest = false;
     }
 
-    public static Character getPlayer(){
+    public static Character getPlayer(){ //used to refer to player in other classes
 	return player;
     }
 
-    public void newGame(){
+    public void newGame(){ //allows you to create a character
 	String prints;
 	String name = "";
 	String nameofclass = "";
@@ -54,7 +54,7 @@ public class Woo{
 	nameofclass = Keyboard.readString();
 	nameofclass = nameofclass.toLowerCase();
 	
-	while (true){
+	while (true){ //this will force you to choose one of the three characters.
 	    if (nameofclass.equals("soldier")){
 		player = new Soldier(name);
 		break;
@@ -88,7 +88,7 @@ public class Woo{
 
     }//end newGame()
 
-    public void tutorial(){
+    public void tutorial(){ //essentially a regular battle but with directions
 	String prints, selection;
 	int dP, dM;
 	monster = new Gargoyle();
@@ -178,7 +178,7 @@ public class Woo{
     }//end tutorial()
    
     
-    public void spawn(){
+    public void spawn(){ //used to spawn the 3 generic monsters
 	if ((Math.random()*3) > 2){
 	    monster = new Gargoyle();
 	    monName = monster.getClass().getSimpleName();
@@ -196,7 +196,7 @@ public class Woo{
     }//end spawn()
 
     
-    public void spawnBoss(int a){
+    public void spawnBoss(int a){ //used to spawn the three bosses
 	if (a == 1){
 	    monster = new Giovanni();
 	    monName = monster.getClass().getSimpleName();
@@ -212,14 +212,14 @@ public class Woo{
     }
 	
 
-    public void fight(){
+    public void fight(){ //used to fight in battle
 	boolean quit = false;
 	int action;
 	String prints;
-	int dM;
-	int dP;
-	while (player.isAlive() && monster.isAlive()){
-	    prints = "What would you like to do? 1: Attack 2: Parry 3: Use Item 4: Run (ONLY FOR FOREST)\n";
+	int dM; //damage to player
+	int dP; // damage to monster
+	while (player.isAlive() && monster.isAlive()){ // battle will continue if both are alive
+	    prints = "What would you like to do? 1: Attack 2: Parry 3: Use Item 4: Run (ONLY FOR FOREST)\n"; 
 	    prints += "Selection:  ";
 	    System.out.print(prints);
 	    action = Keyboard.readInt();
@@ -229,12 +229,12 @@ public class Woo{
 		
 		prints = "\n" +  player.getName() + " dealt " + dP + " damage to the " + monName + ".\n";
 		prints +=  monName + " dealt " + dM + " damage to " + player.getName() + ".\n";
-		prints += "Your health is now: " + player.getHealth() + "\n";
+		prints += "Your health is now: " + player.getHealth() + "\n"; //displays health
 		prints += monName + "'s health is now: " + monster.getHealth() + "\n";
 		System.out.print(prints);
 
 	    }
-	    else if (action == 2){
+	    else if (action == 2){ //similar to attack but has a chance of not getting hit
 		dP = player.parry(monster);
 		dM = monster.attack(player);
 		
@@ -244,49 +244,50 @@ public class Woo{
 		prints += monName + "'s health is now: " + monster.getHealth() + "\n";
 		System.out.print(prints);
 	    }
-	    else if (action == 3){
+	    else if (action == 3){ //uses items
 		System.out.print(player.printInventory());
 		System.out.print("\nWhich item would you like to use?");
 		String item = Keyboard.readString().toLowerCase();
-		if (player.hasItem(item)){
+		if (player.hasItem(item)){ //only if the item exist, may it be used
 		    player.useItem(item);
 		}
 		else{
 		    System.out.print("\nYou don't have that item. Try visiting the shop when you find time!");
 		}
 	    }
-	    else if (action == 4){
+	    else if (action == 4){ //quits game
 		quit = true;
 	        break;
 	    }
 	}
 
 	if (quit){
-	    if (player.getCurrency() > 10){
+	    if (player.getCurrency() > 10){ //only if the player has enough money to lose, will they lose money
 		player.loseCurrency(10);
 	    }
 	    prints = "PLAYER IS A LOSER, HE RAN BACK TO THE CASTLE AND DROPPED MONEY";
 	}
-	else if (!player.isAlive() && !monster.isAlive()){
+	else if (!player.isAlive() && !monster.isAlive()){ //both die at the same time
 	    prints = "Although " +  player.getName() + " killed the monster with one last blow from his fist, the monster lashed at " +  player.getName() + " with one last slash and took " +  player.getName() + " down with him.\n";
 	    System.out.println(prints);
 	}
-	else if (!monster.isAlive()){
+	else if (!monster.isAlive()){ //monster dies
 	    player.levelUp(5);
 	    prints = "With one last blow from his fist, " + player.getName() + " was able to take down the monster\n";
 	    prints += player.getName() + " gained 5 experience points!";
 	    System.out.println(prints);
 	    System.out.println("Your level is now " + player.levelUp(5));
 	    String dropped = monster.drop();
-	    player.addItem(dropped);
+	    player.addItem(dropped); //pick up item
 	    System.out.print("\n" + player.getName() + " picked up 1 " + dropped + "!\n");
-	    int money = player.gainCurrency(monster.getCurrency());
+	    int money = monster.getCurrency();
+	    player.gainCurrency(money); //pick up money
 	    System.out.print("\n" + player.getName() + " gained " + monster.getCurrency() + " dollars!\n");
 	}
 	else if (!player.isAlive()){
 	    prints = "With one last slash from its claw, the monster was able to take down the mighty " + player.getName() + "\n";
 	    System.out.println(prints);
-	    if (player.getCurrency() > 10){
+	    if (player.getCurrency() > 10){ //lose money
 		player.loseCurrency(10);
 	    }
 	    System.out.println(player.getName() + " dropped 10 dollars on his way back to the castle");		
@@ -294,7 +295,7 @@ public class Woo{
     }//end fight()
     
     
-    public void castle(){
+    public void castle(){ 
 	String prints;
 	int selection;
 	boolean flag = true;
@@ -340,7 +341,7 @@ public class Woo{
 	}
     }//end castle()
 
-    public void king(){
+    public void king(){ //Used to figure out what quest you are on
 	String prints;
 	if (kingEncounters == 0 && questCount == 0){
 	    prints = "Zbigniew: Ahh, so this is the new recruit, well pleasure to meet you. My name is King Zbigniew, king of Lorule. So, what brings you here?\n\n";
@@ -398,11 +399,11 @@ public class Woo{
 		Thread.sleep(2000);
 	    } catch (InterruptedException e) {}
 		 
-	    questCount += 1;
+	    questCount += 1; //assuming you talk to the king once after every quest, your questCount and kingEncounters will increase to fit the quest requirement.
 	    kingEncounters += 1;
 	    inQuest = true;
 	}
-	else if (questCount == 1 && !(inQuest)){
+	else if (questCount == 1 && !(inQuest)){ //quest 2 talk
 	    prints = "Zbigniew: Well, I heard you weren't able to retrieve my daughter.\n\n";
 	    System.out.println(prints);
 	    try {
@@ -438,7 +439,7 @@ public class Woo{
 	    kingEncounters += 1;
 	    inQuest = true;
 	}
-	else if (questCount == 2 && !(inQuest)){
+	else if (questCount == 2 && !(inQuest)){ //quest 3 talk
 	        prints = "Zbigniew: You know it'll be great if you could get my daughter back before dinner.\n\n";
 	    System.out.println(prints);
 	    try {
@@ -481,7 +482,7 @@ public class Woo{
 	    kingEncounters += 1;
 	    inQuest = true;
 	}
-	else if (questCount == 3 && !(inQuest)){
+	else if (questCount == 3 && !(inQuest)){ //post quests talk
 	    prints = "Zbigniew: Congratulations " + player.getName() + ", you saved my daughter! Without you my wife would've killed me. I suppose here is a thank you.\n\n";
 	    System.out.println(prints);
 	    try {
@@ -503,7 +504,7 @@ public class Woo{
 	    player.gainCurrency(500000);
 	    Endgame = true;
 	}
-	else if (inQuest){
+	else if (inQuest){ // unable to receive new quest talk as you are assigned a specific task
 	    prints = "Did you finish that quest that I assigned you already? No? Then what are you doing here, go save my daughter!\n";
 	    System.out.println(prints);
 	}
@@ -514,10 +515,10 @@ public class Woo{
 	}
     }//end king()
 
-    public void shop(){
+    public void shop(){ //used to buy items with currency
 	String prints;
 	int selection, buyitem;
-	int cost = 0;;
+	int cost = 0;
 	String sellitem;
 	String[][] inventory = new String[3][5];
 	inventory[0][0] = "Potion";
@@ -622,7 +623,7 @@ public class Woo{
 	}
     }//end shop()
 
-    public void infirmary(){
+    public void infirmary(){ //used to heal up
 	String prints;
 	if (infirmaryVisits == 0){
 	    prints = "Why hello there, my name is Judith, the head nurse, what may I... Oh... Lemme fix you right up don't you worry about it\n\n";
@@ -632,7 +633,7 @@ public class Woo{
 	    player.gainHP(100000);
 	    infirmaryVisits += 1;
 	}
-	else if (infirmaryVisits == 1){
+	else if (infirmaryVisits == 1){ //different message depending on how many time you visited
 	    prints = "Oh my poor child, tsk tsk, why must they send you off to fight those nasty creatures. Why don't you just stay with me? I cook, I clean, and I make the best Meatloaf in the entire kingdom.\n\n";
 	    prints += "*You consider the offer but kindly decline, Judith frowns*\n\n";
 	    prints += "Well if you ever reconsider, you know where I am\n\n";
@@ -652,7 +653,7 @@ public class Woo{
 	}
     }
 
-    public void restrooms(){
+    public void restrooms(){ //just for fun
 	String prints;
 	int rand = (int)(Math.random()*3.0);
 	if (rand == 0){
@@ -677,8 +678,8 @@ public class Woo{
 	String selection;
 	int action;
 	
-	Woo game = new Woo();
-	game.newGame();
+	Woo game = new Woo(); //sets up
+	game.newGame(); //sets character 
 
 
 	prints = "Would you like to do the tutorial? (Recommended for new players)\n";
@@ -687,12 +688,12 @@ public class Woo{
 	selection = Keyboard.readString();
 	selection = selection.toLowerCase();
 
-	while (true) {
-	    if (selection.equals("yes")){
+	while (true) { 
+	    if (selection.equals("yes")){ //plays tutorial
 		game.tutorial();
 		break;
 	    }
-	    else if (selection.equals("no")){
+	    else if (selection.equals("no")){ //goes straight to map
 		prints = "Are you sure you don't want to do the tutorial?\n";
 		prints += "Selection (Yes or No): ";
 		System.out.print(prints);
@@ -724,20 +725,20 @@ public class Woo{
 	action = Keyboard.readInt();
 
 	while (true){
-	    if (action == 1){
+	    if (action == 1){ //goes into forest
 		System.out.println("A daring soul you are.");
 	        Forest woods = new Forest();
 		woods.forest();
 		System.out.print(prints);
 		action = Keyboard.readInt();
 	    }
-	    else if (action == 2){
+	    else if (action == 2){ //goes back into caslte
 		System.out.println("More of an indoors person, huh?");
 		game.castle();
 		System.out.print(prints);
 		action = Keyboard.readInt();
 	    }
-	    else if (action == 3){
+	    else if (action == 3){ //quest1 
 		if (kingEncounters >= 0 && questCount >= 0){
 		    System.out.println("Onwards we go!");
 		    Quest1 quest = new Quest1();
@@ -745,7 +746,7 @@ public class Woo{
 		    System.out.print(prints);
 		    action = Keyboard.readInt();
 		}
-		else {
+		else { //quest is not unlocked yet
 		    prints = "Wait a second... I don't think your up for this quest yet...\n";
 		    prints += "\n What else would you like to do?";
 		    prints += "\n\t1: Venture out into the woods\n\t2: Return to the castle\n\t3: Quest 1\n\t4: Quest 2\n\t5: Quest 3\n\t6: Tell me about me\n\t7: Quit Game";
@@ -756,7 +757,7 @@ public class Woo{
 		}
 	    }
 
-	    else if (action == 4){
+	    else if (action == 4){ //quest 2
 		if (kingEncounters >= 1 && questCount >= 1){
 		    System.out.println("Vamonos!");
 		    Quest2 quest2 = new Quest2();
@@ -765,7 +766,7 @@ public class Woo{
 		    System.out.print(prints);
 		    action = Keyboard.readInt();
 		}
-		else {
+		else { //quest is not unlocked yet
 		    prints = "One step at a time...this quest is not unlocked yet\n";
 		    prints += "\n What else would you like to do?";
 		    prints += "\n\t1: Venture out into the woods\n\t2: Return to the castle\n\t3: Quest 1\n\t4: Quest 2\n\t5: Quest 3\n\t6: Tell me about me\n\t7: Quit Game";
@@ -776,7 +777,7 @@ public class Woo{
 		}
 	    }
 
-	    else if (action == 5){
+	    else if (action == 5){ //quest 3
 		if (kingEncounters >= 2 && questCount >= 2){
 		    System.out.println("Let's go!");
 		    Quest3 quest3 = new Quest3();
@@ -785,7 +786,7 @@ public class Woo{
 		    System.out.print(prints);
 		    action = Keyboard.readInt();
 		}
-		else {
+		else { //quest is not unlocked yet
 		    prints = "Oh no...this quest is not unlocked yet\n";
 		    prints += "\n What else would you like to do?";
 		    prints += "\n\t1: Venture out into the woods\n\t2: Return to the castle\n\t3: Quest 1\n\t4: Quest 2\n\t5: Quest 3\n\t6: Tell me about me\n\t7: Quit Game";
@@ -796,12 +797,12 @@ public class Woo{
 		}
 	    }
 	    
-	    else if (action == 6){
+	    else if (action == 6){ //displays all info
 		System.out.print(player.playerInfo());
 		System.out.print(prints);
 		action = Keyboard.readInt();
 	    }
-	    else if (action == 7){
+	    else if (action == 7){ //quits game
 		System.out.print("Bye Bye!!");
 		break;
 	    }
