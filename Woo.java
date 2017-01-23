@@ -241,7 +241,7 @@ public class Woo{
 	    System.out.println("Your level is now " + player.levelUp(5));
 	    String dropped = monster.drop();
 	    player.addItem(dropped);
-	    System.out.print("\n" + player.getName() + " picked up 1 " + dropped + "!");
+	    System.out.print("\n" + player.getName() + " picked up 1 " + dropped + "!\n");
 	}
 	else if (!player.isAlive()){
 	    prints = "With one last slash from its claw, the monster was able to take down the mighty " + player.getName() + "\n";
