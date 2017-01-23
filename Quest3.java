@@ -1,6 +1,8 @@
 import cs1.Keyboard;
 public class Quest3{
     Woo woo = new Woo();
+    Character player = woo.getPlayer();
+    
     public boolean newQuest(){
 
 	String prints;
@@ -8,18 +10,26 @@ public class Quest3{
 	prints = "Welcome to the Quest 3.\n";
 	prints += "Are you sure you would like to continue? (yes) or (no)";
 	System.out.println(prints);
-	selection = Keyboard.readString();
-
-	if (selection.toLowerCase().equals("yes")){
-	    prints = "Alright, let's begin";
-	    System.out.println(prints);
-	}	
-	else if(selection.toLowerCase().equals("no")) {
-	    prints = "Returning to map...";
-	    System.out.println(prints);
-	    return true;
+	while (true){
+	    System.out.print("\nSelection: ");
+	    selection = Keyboard.readString();
+	    selection = selection.toLowerCase();
+	    
+	    if (selection.toLowerCase().equals("yes")){
+		prints = "Alright, let's begin";
+		System.out.println(prints);
+		break;
+	    }	
+	    else if(selection.toLowerCase().equals("no")) {
+		prints = "Returning to map...";
+		System.out.println(prints);
+		return true;
+	    }
+	    else{
+		System.out.print("\nIt's like you never learn. Yes or no?");
+	    }
 	}
-
+	
 	try {
 	    // thread to sleep for 2 second
 	    Thread.sleep(2000);
@@ -44,6 +54,10 @@ public class Quest3{
 	    	
 	woo.spawn();
 	woo.fight();
+	if (!player.isAlive()){
+	    System.out.print("\nReturning to map...");
+	    return true;
+	}
 	
 	prints = "Easy peasy lemon squeezy. You're a natural, kid.\n\n";
 	System.out.println(prints);
@@ -76,6 +90,10 @@ public class Quest3{
     
 	woo.spawn();
 	woo.fight();
+	if (!player.isAlive()){
+	    System.out.print("\nReturning to map...");
+	    return true;
+	}
 
 	prints = "Man, these guys just keep coming!\n\n";
 	System.out.println(prints);
@@ -99,49 +117,78 @@ public class Quest3{
 	} catch (InterruptedException e) {}
 	prints = "Please enter 'left' or 'right'";
 	System.out.println(prints);
-	selection = Keyboard.readString();
-	selection = selection.toLowerCase();
-	if (selection.equals("left")){
-	    prints = "Don't these guys have hobbies or something?!\n\n";
-	    System.out.println(prints);
-	    woo.spawn();
-	    woo.fight();
-	    woo.spawn();
-	    woo.fight();
-	    woo.spawn();
-	    woo.fight();
-	    woo.spawn();
-	    woo.fight();
-	    try {
-		// thread to sleep for 2 second
-		Thread.sleep(2000);
-	    } catch (InterruptedException e) {}
-	    prints = "Let's hurry up. I can't miss the season finale of Lorule's Got Talent.\n\n";
-	    System.out.println(prints);
-	}
-	else if (selection.equals("right")){
-	    prints = "Oh hey, there's only one of them here. Lucky you.\n\n";
-	    System.out.println(prints);
-	    try {
-		// thread to sleep for 2 second
-		Thread.sleep(2000);
-	    } catch (InterruptedException e) {}
 
-	    prints = "Let's take him out real quick.\n\n";
-	    System.out.println(prints);
-	    try {
-		// thread to sleep for 2 second
-		Thread.sleep(2000);
-	    } catch (InterruptedException e) {}
-	    woo.spawn();
-	    woo.fight();
+	while (true){
+	    System.out.print("\nSelection: ");
+	    selection = Keyboard.readString();
+	    selection = selection.toLowerCase();
+	    if (selection.equals("left")){
+		prints = "Don't these guys have hobbies or something?!\n\n";
+		System.out.println(prints);
+		woo.spawn();
+		woo.fight();
+		if (!player.isAlive()){
+		    System.out.print("\nReturning to map...");
+		    return true;
+		}
+		woo.spawn();
+		woo.fight();
+		if (!player.isAlive()){
+		    System.out.print("\nReturning to map...");
+		    return true;
+		}
+		woo.spawn();
+		woo.fight();
+		if (!player.isAlive()){
+		    System.out.print("\nReturning to map...");
+		    return true;
+		}
+		woo.spawn();
+		woo.fight();
+		if (!player.isAlive()){
+		    System.out.print("\nReturning to map...");
+		    return true;
+		}
+		try {
+		    // thread to sleep for 2 second
+		    Thread.sleep(2000);
+		} catch (InterruptedException e) {}
+		prints = "Let's hurry up. I can't miss the season finale of Lorule's Got Talent.\n\n";
+		System.out.println(prints);
+		break;
+	    }
+	    else if (selection.equals("right")){
+		prints = "Oh hey, there's only one of them here. Lucky you.\n\n";
+		System.out.println(prints);
+		try {
+		    // thread to sleep for 2 second
+		    Thread.sleep(2000);
+		} catch (InterruptedException e) {}
+
+		prints = "Let's take him out real quick.\n\n";
+		System.out.println(prints);
+		try {
+		    // thread to sleep for 2 second
+		    Thread.sleep(2000);
+		} catch (InterruptedException e) {}
+		woo.spawn();
+		woo.fight();
+		if (!player.isAlive()){
+		    System.out.print("\nReturning to map...");
+		    return true;
+		}
 		
-	    try {
-		// thread to sleep for 2 second
-		Thread.sleep(2000);
-	    } catch (InterruptedException e) {}
-	    prints = "I think we have different definitions of 'real quick.'\n\n";
-	    System.out.println(prints);
+		try {
+		    // thread to sleep for 2 second
+		    Thread.sleep(2000);
+		} catch (InterruptedException e) {}
+		prints = "I think we have different definitions of 'real quick.'\n\n";
+		System.out.println(prints);
+		break;
+	    }
+	    else{
+		System.out.print("\nI'm not even gonna say anything.");
+	    }
 	}
 	
 	try {
@@ -200,8 +247,13 @@ public class Quest3{
 
 	prints = "For Lorule am I right?\n\n";
 	System.out.println(prints);
-	Monster monster = new Sirbow();
+
+	woo.spawnBoss(3);
 	woo.fight();
+	if (!player.isAlive()){
+	    System.out.print("\nReturning to map...");
+	    return true;
+	}
 
 	prints = "Sirbow: *Cough* I suppose you win.\n\n";
 	System.out.println(prints);
