@@ -96,11 +96,16 @@ public class Woo{
 	    Thread.sleep(2000);
 	} catch (InterruptedException e) {}
 	    
-
-	prints = "Here approaches a Gargoyle, prepare to battle\n\n";
+	prints = "Here approaches my creation, NULL, prepare to battle\n\n";
 	System.out.println(prints);
-
 		
+	try {
+	    Thread.sleep(2000);
+	} catch (InterruptedException e) {}
+
+        prints = "Lets face that fact that you're probably not ready to fight any real monsters yet\n\n";
+	System.out.println(prints);
+       	
 	try {
 	    Thread.sleep(2000);
 	} catch (InterruptedException e) {}
