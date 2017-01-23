@@ -150,6 +150,7 @@ public class Quest1{
 		} catch (InterruptedException e) {}
 		prints = "Phew that wasn't fun now was it\n\n";
 		System.out.println(prints);
+		break;
 	    }
 	    else if (selection.equals("right")){
 		prints = "Dang theres one monster ahead\n\n";
@@ -177,9 +178,10 @@ public class Quest1{
 		} catch (InterruptedException e) {}
 		prints = "Alright, not bad\n\n";
 		System.out.println(prints);
+		break;
 	    }
 	    else{
-		System.outprint("\nOh come on, man. Left or right?");
+		System.out.print("\nOh come on, man. Left or right?");
 	    }
 	}
 	
