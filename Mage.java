@@ -31,26 +31,4 @@ public class Mage extends Character{
 	}
 	return damage;
     }
-
-        public String playerInfo(){
-	String prints;
-	prints = "Name: " + _name + "\n";
-	prints += "Level: " + _level + "\n";
-	prints += "Experience: " + _experience + "\n";
-	prints += "Health: " + _health + "\n";
-	prints += "Attack: " + _attack + "\n";
-	prints += "Defense: " + _defense + "\n";
-	prints += "Speed: " + _speed + "\n";
-	prints += "Currency: " + _currency + "\n";
-	prints += "Inventory:\n";
-	for (int a = 0; a < 3; a++){
-	    for (int x = 0; x < 3; x++){
-		prints += "\t" + _inventory[a][x];
-	    }
-	    prints += "\n";
-	}
-	return prints;
-    }
-
-
 }
