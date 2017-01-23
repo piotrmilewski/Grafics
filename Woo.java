@@ -19,10 +19,6 @@ public class Woo{
     
 
     public Woo(){ //constructor
-	questCount = 0;
-	deathCount = 0;
-	Endgame = false;
-	inQuest = false;
     }
 
     public static Character getPlayer(){ //used to refer to player in other classes
@@ -349,7 +345,7 @@ public class Woo{
 
     public void king(){ //Used to figure out what quest you are on
 	String prints;
-	if (kingEncounters == 0 && questCount == 0){
+	if (questCount == 0){
 	    prints = "Zbigniew: Ahh, so this is the new recruit, well pleasure to meet you. My name is King Zbigniew, king of Lorule. So, what brings you here?\n\n";
 	    System.out.println(prints);
 	    try {
@@ -745,7 +741,7 @@ public class Woo{
 		action = Keyboard.readInt();
 	    }
 	    else if (action == 3){ //quest1 
-		if (kingEncounters >= 0 && questCount >= 0){
+		if (kingEncounters > 0 && questCount > 0){
 		    System.out.println("Onwards we go!");
 		    Quest1 quest = new Quest1();
 		    quest.newQuest();
@@ -764,7 +760,7 @@ public class Woo{
 	    }
 
 	    else if (action == 4){ //quest 2
-		if (kingEncounters >= 1 && questCount >= 1){
+		if (kingEncounters > 1 && questCount > 1){
 		    System.out.println("Vamonos!");
 		    Quest2 quest2 = new Quest2();
 		    quest2.newQuest();
@@ -784,7 +780,7 @@ public class Woo{
 	    }
 
 	    else if (action == 5){ //quest 3
-		if (kingEncounters >= 2 && questCount >= 2){
+		if (kingEncounters > 2 && questCount > 2){
 		    System.out.println("Let's go!");
 		    Quest3 quest3 = new Quest3();
 		    quest3.newQuest();
