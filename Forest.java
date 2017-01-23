@@ -22,14 +22,20 @@ public class Forest {
 		}
 	    }
 	    else if (selection == 2){
-		System.out.print(player.printInventory());
-		System.out.print("\nWhich item would you like to use?");
-		String item = Keyboard.readString().toLowerCase();
-		if (player.hasItem(item)){
-		    player.useItem(item);
-		}
-		else{
-		    System.out.print("\nYou don't have that item. Try visiting the shop!");
+		while (true){
+		    System.out.print(player.printInventory());
+		    System.out.print("\nWhich item would you like to use? (Enter quit to leave inventory)");
+		    System.out.print("\nSelection: ");
+		    String item = Keyboard.readString().toLowerCase();
+		    if (item.equals("quit")){
+			break;
+		    }
+		    if (player.hasItem(item)){
+			player.useItem(item);
+		    }
+		    else{
+			System.out.print("\nYou don't have that item. Try visiting the shop!");
+		    }
 		}
 	    }
 	    else if (selection == 3){
