@@ -268,9 +268,12 @@ public class Woo{
 		    quit = true;
 		    break;}
 		else{
-		    System.out.println("Couldn't get away, lose 50 currency trying to run away.\n");
 		    if (player.getCurrency() >= 50){ //only if the player has enough money to lose, will they lose money
 			player.loseCurrency(50);
+			System.out.println("Couldn't get away, lose 50 currency trying to run away.\n");
+		    }
+		    else{
+			System.out.println("Couldn't get away.\n");
 		    }
 		}
 	    }
@@ -279,8 +282,11 @@ public class Woo{
 	if (quit){
 	    if (player.getCurrency() >= 50){ //only if the player has enough money to lose, will they lose money
 		player.loseCurrency(50);
+		System.out.println("Wow what a loser, running from a fight like that. You lost 50 currency while running away.\n");
 	    }
-	    System.out.println("Wow what a loser, running from a fight like that. You lost 50 currency while running away.\n");
+	    else{
+		System.out.println("Wow what a loser, running from a fight like that.\n");
+	    }
 	}
 	else if (!player.isAlive() && !monster.isAlive()){ //both die at the same time
 	    prints = "Although " +  player.getName() + " killed the monster with one last blow from his fist, the monster lashed at " +  player.getName() + " with one last slash and took " +  player.getName() + " down with him.\n";
