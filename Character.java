@@ -16,9 +16,7 @@ public class Character extends LivingEntity{
 	return getName();
     }
 
- 
-    
-    public int gainCurrency(int amount){
+     public int gainCurrency(int amount){
 	_currency += amount;
 	return _currency;
     }
@@ -175,6 +173,7 @@ public class Character extends LivingEntity{
 	    _experience = exp;
 	    System.out.print("\n" + _name + " is now Level " + _level);
 	}
+	sellItem(item);
     }
 	
     
