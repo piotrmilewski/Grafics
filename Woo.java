@@ -195,6 +195,23 @@ public class Woo{
 	}
     }//end spawn()
 
+    
+    public void spawnBoss(int a){
+	if (a == 1){
+	    monster = new Giovanni();
+	    monName = monster.getClass().getSimpleName();
+	}
+	else if (a == 2){
+	    monster = new Mirak();
+	    monName = monster.getClass().getSimpleName();
+	}
+	else{
+	    monster = new Sirbow();
+	    monName = monster.getClass().getSimpleName();
+	}
+    }
+	
+
     public void fight(){
 	boolean quit = false;
 	int action;
