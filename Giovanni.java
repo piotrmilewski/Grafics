@@ -1,6 +1,6 @@
 public class Giovanni extends Monster{
 
-    public Giovanni(){
+    public Giovanni(){ //creates Giovanni/boss1
 	_health = 300;
 	_attack = 10;
 	_defense = 10;

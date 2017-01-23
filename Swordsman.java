@@ -1,6 +1,6 @@
 public class Swordsman extends Character{
 
-    public Swordsman(String name){
+    public Swordsman(String name){ //creates Swordman
 	_name = name;
 	_level = 0;
 	_experience = 0;

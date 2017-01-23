@@ -1,4 +1,5 @@
 import cs1.Keyboard;
+//similar to Quest 1 and Quest 2
 public class Quest3{
     Woo woo = new Woo();
     Character player = woo.getPlayer();
@@ -248,7 +249,7 @@ public class Quest3{
 	prints = "For Lorule am I right?\n\n";
 	System.out.println(prints);
 
-	woo.spawnBoss(3);
+	woo.spawnBoss(3); //spawns third boss
 	woo.fight();
 	if (!player.isAlive()){
 	    System.out.print("\nReturning to map...");
@@ -283,7 +284,7 @@ public class Quest3{
 	    Thread.sleep(2000);
 	} catch (InterruptedException e) {}
 
-	return false;
+	return false; //false so you may talk to king  
     }//end newQuest()
 }//end class Quest3
 

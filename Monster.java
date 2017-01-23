@@ -2,7 +2,7 @@ import java.util.ArrayList;
 public abstract class Monster extends LivingEntity{
     protected ArrayList<String> _inventory;
 
-    public void fillItems(){
+    public void fillItems(){ //used to fill inventory of monster
 	_inventory = new ArrayList<String>();
 	for (int x = 0; x < 3; x+=1){
 	    if (Math.random() < 0.25){

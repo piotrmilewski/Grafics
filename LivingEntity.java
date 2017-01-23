@@ -3,9 +3,9 @@ public  class LivingEntity{
     protected int _health;
     protected int _attack;
     protected int _defense;
-    protected int _currency;
+    protected int _currency; //used to pick/drop
 
-    public int getHealth(){
+    public int getHealth(){ 
 	return _health;
     }
 
@@ -25,7 +25,7 @@ public  class LivingEntity{
 	return (getHealth() > 0);
     }
 
-    public int lowerHP(int damage){
+    public int lowerHP(int damage){ //used in battle
 	if ((_health - damage) > 0){
 	   _health -= damage;
 	}
@@ -35,7 +35,7 @@ public  class LivingEntity{
 	return _health;
     }
 
-    public int attack(LivingEntity x){
+    public int attack(LivingEntity x){ //both monsters/player use attack
 	int damage = (int)((Math.random()*10) + _attack)  - x.getDefense();
 	if (damage < 0) damage = 0;
 	x.lowerHP(damage);

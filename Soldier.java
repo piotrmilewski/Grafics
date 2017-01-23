@@ -1,6 +1,6 @@
 public class Soldier extends Character{
     
-    public Soldier(String name){
+    public Soldier(String name){ //creates Soldier
 	_name = name;
 	_level = 1;
 	_experience = 0;

@@ -2,7 +2,7 @@ import java.lang.*;
 import cs1.Keyboard;
 public class Quest1{
     Woo woo = new Woo();
-    Character player = Woo.getPlayer();
+    Character player = Woo.getPlayer(); //takes player from Woo
     public boolean newQuest(){
 
 	String prints;
@@ -16,7 +16,7 @@ public class Quest1{
 	    selection = Keyboard.readString();
 	    selection = selection.toLowerCase();
 	    
-	    if (selection.toLowerCase().equals("yes")){
+	    if (selection.toLowerCase().equals("yes")){ //confirms if you would like to start
 		prints = "Alright, let's begin\n\n";
 		System.out.println(prints);
 		break;
@@ -30,7 +30,7 @@ public class Quest1{
 		System.out.print("\nThat isn't an option. Yes or no?");
 	    }
 	}
-	    
+	//begins story for quest	    
 	prints = " Onwards we go!\n\n";
 	System.out.println(prints);  
 	try {
@@ -57,7 +57,7 @@ public class Quest1{
 	    	
 	woo.spawn();
 	woo.fight();
-	if (!player.isAlive()){
+	if (!player.isAlive()){ //when dying, you return to map (will be used later on as well)
 	    System.out.print("\nReturning to map...");
 	    return true;
 	}
@@ -119,7 +119,7 @@ public class Quest1{
 	prints = "Please enter 'left' or 'right'";
 	System.out.println(prints);
 
-	while (true){
+	while (true){ //chooses path
 	    System.out.print("\nSelection: ");
 	    selection = Keyboard.readString();
 	    selection = selection.toLowerCase();
@@ -180,7 +180,7 @@ public class Quest1{
 		System.out.println(prints);
 		break;
 	    }
-	    else{
+	    else{ //in case player chooses something not available to them
 		System.out.print("\nOh come on, man. Left or right?");
 	    }
 	}
@@ -248,8 +248,8 @@ public class Quest1{
 	prints = "Welp, guess we gotta do what we gotta do\n\n";
 	System.out.println(prints);
 
-        woo.spawnBoss(1);
-	woo.fight();
+        woo.spawnBoss(1); //creates one boss
+	woo.fight(); //fights boss
 	if (!player.isAlive()){
 	    System.out.print("\nYou have lost to the boss. Returning to map...");
 	    return true;
@@ -301,6 +301,6 @@ public class Quest1{
 	    Thread.sleep(2000);
 	} catch (InterruptedException e) {}
 	
-	return false;    
+	return false;    //false so you may talk to king  
     }
 }

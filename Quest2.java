@@ -1,5 +1,6 @@
 import java.lang.*;
 import cs1.Keyboard;
+//format is similar to Quest 1 and Quest 3
 public class Quest2{
     Woo woo = new Woo();
     Character player = woo.getPlayer();
@@ -12,7 +13,7 @@ public class Quest2{
 	System.out.println(prints);
 	selection = Keyboard.readString();
 
-	if (selection.toLowerCase().equals("")){
+	if (selection.toLowerCase().equals("yes")){ //confirms if you would like to continue
 	    prints = "Alright, let's begin\n\n";
 	    System.out.println(prints);
 	}	
@@ -396,7 +397,7 @@ public class Quest2{
 	 prints = "One more fight won't hurt, right?";
 	 System.out.println(prints);
 
-	 woo.spawnBoss(2);
+	 woo.spawnBoss(2); //spawns second boss
 	 woo.fight();
 	 if (!player.isAlive()){
 	     System.out.print("\nReturning to map...");
@@ -429,6 +430,6 @@ public class Quest2{
 	 prints = "Guess we gotta go back and tell the king...again...\n\n";
 	 System.out.println(prints);
 	 
-	 return false;      
+	 return false; //false so you may talk to king     
     }
 }
