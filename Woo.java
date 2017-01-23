@@ -819,7 +819,10 @@ public class Woo{
 	    
 	    else if (action == 6){ //displays all info
 		System.out.print(player.playerInfo());
-		System.out.print(prints);
+		prints = "\n What else would you like to do?";
+		prints += "\n\t1: Venture out into the woods\n\t2: Return to the castle\n\t3: Quest 1\n\t4: Quest 2\n\t5: Quest 3\n\t6: Tell me about me\n\t7: Quit Game";
+		prints += "\nSelection (1, 2, 3, 4, 5, 6, or 7): ";
+		System.out.println(prints);
 		action = Keyboard.readInt();
 	    }
 	    else if (action == 7){ //quits game
