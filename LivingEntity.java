@@ -1,4 +1,4 @@
-public abstract class LivingEntity{
+public  class LivingEntity{
     
     protected int _health;
     protected int _attack;
@@ -11,6 +11,10 @@ public abstract class LivingEntity{
 
     public int getAttack(){
 	return _attack;
+    }
+
+    public int getCurrency(){
+	return _currency;
     }
     
     public int getDefense(){
@@ -38,5 +42,3 @@ public abstract class LivingEntity{
 	return damage;
     }
 }
-
-    

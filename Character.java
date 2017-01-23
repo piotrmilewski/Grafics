@@ -15,7 +15,8 @@ public class Character extends LivingEntity{
 	_name = name;
 	return getName();
     }
-  
+
+ 
     
     public int gainCurrency(int amount){
 	_currency += amount;

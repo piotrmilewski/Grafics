@@ -219,7 +219,7 @@ public class Woo{
 	int dM;
 	int dP;
 	while (player.isAlive() && monster.isAlive()){
-	    prints = "What would you like to do? 1: Attack 2: Parry 3: Use Item 4: Run \n";
+	    prints = "What would you like to do? 1: Attack 2: Parry 3: Use Item 4: Run (ONLY FOR FOREST)\n";
 	    prints += "Selection:  ";
 	    System.out.print(prints);
 	    action = Keyboard.readInt();
@@ -262,7 +262,10 @@ public class Woo{
 	}
 
 	if (quit){
-	    prints = "PLAYER IS A LOSER, HE RAN BACK TO THE CASTLE AND DROPPED SOME STUFF AND MONEY";
+	    if (player.getCurrency() > 10){
+		player.loseCurrency(10);
+	    }
+	    prints = "PLAYER IS A LOSER, HE RAN BACK TO THE CASTLE AND DROPPED MONEY";
 	}
 	else if (!player.isAlive() && !monster.isAlive()){
 	    prints = "Although " +  player.getName() + " killed the monster with one last blow from his fist, the monster lashed at " +  player.getName() + " with one last slash and took " +  player.getName() + " down with him.\n";
@@ -277,10 +280,16 @@ public class Woo{
 	    String dropped = monster.drop();
 	    player.addItem(dropped);
 	    System.out.print("\n" + player.getName() + " picked up 1 " + dropped + "!\n");
+	    int money = player.gainCurrency(monster.getCurrency());
+	    System.out.print("\n" + player.getName() + " gained " + monster.getCurrency() + " dollars!\n");
 	}
 	else if (!player.isAlive()){
 	    prints = "With one last slash from its claw, the monster was able to take down the mighty " + player.getName() + "\n";
 	    System.out.println(prints);
+	    if (player.getCurrency() > 10){
+		player.loseCurrency(10);
+	    }
+	    System.out.println(player.getName() + " dropped 10 dollars on his way back to the castle");		
 	}
     }//end fight()
     
