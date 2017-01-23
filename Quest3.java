@@ -201,7 +201,7 @@ public class Quest3{
 	prints = "For Lorule am I right?\n\n";
 	System.out.println(prints);
 	Monster monster = new Sirbow();
-	fight();
+	woo.fight();
 
 	prints = "Sirbow: *Cough* I suppose you win.\n\n";
 	System.out.println(prints);
