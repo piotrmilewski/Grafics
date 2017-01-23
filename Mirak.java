@@ -4,5 +4,6 @@ public class Mirak extends Monster{
 	_attack = 15;
 	_defense = 15;
 	_currency = 200;
+	fillItems();
     }
 }

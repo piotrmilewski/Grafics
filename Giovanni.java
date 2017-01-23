@@ -5,6 +5,7 @@ public class Giovanni extends Monster{
 	_attack = 10;
 	_defense = 10;
 	_currency = 100;
+	fillItems();
     }
 }
 

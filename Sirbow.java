@@ -4,5 +4,6 @@ public class Sirbow extends Monster{
 	_attack = 20;
 	_defense = 20;
 	_currency = 500;
+	fillItems();
     }
 }
