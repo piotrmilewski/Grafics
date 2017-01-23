@@ -1,4 +1,4 @@
-﻿Grafics
+Grafics
 Piotr Milewski
 Yuyang Zhang
 Angel Ng
@@ -12,17 +12,18 @@ OBSTACLES OVERCOME
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 -Static vs. Non-static issues
 -Organizing 10+ classes so that they each work with each other
+- Instead of pressing enter for a new line, we decided to use Thread.sleep() to slow down the print rate.
 
 UNRESOLVED ISSUES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
--Experience implementation
+-Although we technically do not need this anymore, we are still unsure of how enter a blank input with Keyboard.
 -Weapon implementation
--Currency implementation
 
 COOL STUFF LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 -How to properly handle errors
 -Using git fetch and git rebase in order to fix merge conflicts
+-The ability to slow down the rate in which the line is being read.
 
 MID-DEVELOPMENT DESIGN CHANGES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -35,7 +36,7 @@ MID-DEVELOPMENT DESIGN CHANGES
 LESSONS LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 -To make the MVP the priority since at first we wanted to complete all the classes except for Woo.
--
+-The UML diagram and flow chart come in handy.
 ||||||||||||||||||||||||||||||||||||||||||
 
 
