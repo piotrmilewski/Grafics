@@ -334,7 +334,7 @@ public class Woo{
     public void king(){
 	String prints;
 	if (kingEncounters == 0 && questCount == 0){
-	    prints = "Ahh, so this is the new recruit, well pleasure to meet you. My name is King Zbigniew, king of Lorule. So, what brings you here?\n\n";
+	    prints = "Zbigniew: Ahh, so this is the new recruit, well pleasure to meet you. My name is King Zbigniew, king of Lorule. So, what brings you here?\n\n";
 	    System.out.println(prints);
 	    try {
 		// thread to sleep for 2 second
@@ -347,42 +347,42 @@ public class Woo{
 		Thread.sleep(2000);
 	    } catch (InterruptedException e) {}
 	    
-	    prints = "So you fancy yourself some work ehh? Well I've got just the job for you.\n\n";
+	    prints = "Zbigniew: So you fancy yourself some work ehh? Well I've got just the job for you.\n\n";
 	    System.out.println(prints);
 	    try {
 		// thread to sleep for 2 second
 		Thread.sleep(2000);
 	    } catch (InterruptedException e) {}
 		
-	    prints = "So recently, my daughter, Peony, had been kidnapped by the evil Sirbow.\n\n";
+	    prints = "Zbigniew: So recently, my daughter, Peony, had been kidnapped by the evil Sirbow.\n\n";
 	    System.out.println(prints);
 	    try {
 		// thread to sleep for 2 second
 		Thread.sleep(2000);
 	    } catch (InterruptedException e) {}
 	    
-	    prints = "Personally, I don't really mind, she didn't really do much at home either.\n\n";
+	    prints = "Zbigniew: Personally, I don't really mind, she didn't really do much at home either.\n\n";
 	    System.out.println(prints);
 	    try {
 		// thread to sleep for 2 second
 		Thread.sleep(2000);
 	    } catch (InterruptedException e) {}
 
-	    prints = "However my wife insists that we get her back.\n\n";
+	    prints = "Zbigniew: However my wife insists that we get her back.\n\n";
 	    System.out.println(prints);
 	    try {
 		// thread to sleep for 2 second
 		Thread.sleep(2000);
 	    } catch (InterruptedException e) {}
 
-	    prints = "So now the job is placed upon you.\n\n";
+	    prints = "Zbigniew: So now the job is placed upon you.\n\n";
 	    System.out.println(prints);
 	    try {
 		// thread to sleep for 2 second
 		Thread.sleep(2000);
 	    } catch (InterruptedException e) {}
 
-	    prints = "Have fun finding the brat.\n\n";
+	    prints = "Zbigniew: Have fun finding the brat.\n\n";
 	    System.out.println(prints);
 	    try {
 		// thread to sleep for 2 second
@@ -394,7 +394,7 @@ public class Woo{
 	    inQuest = true;
 	}
 	else if (questCount == 1 && !(inQuest)){
-	    prints = "Well, I heard you weren't able to retrieve my daughter.\n\n";
+	    prints = "Zbigniew: Well, I heard you weren't able to retrieve my daughter.\n\n";
 	    System.out.println(prints);
 	    try {
 		// thread to sleep for 2 second
@@ -402,7 +402,7 @@ public class Woo{
 	    } catch (InterruptedException e) {}
 		 
 	    
-	    prints = "That's good news for me...but once again, my wife is not happy.\n\n";
+	    prints = "Zbigniew: That's good news for me...but once again, my wife is not happy.\n\n";
 	    System.out.println(prints);
 	    try {
 		// thread to sleep for 2 second
@@ -410,7 +410,7 @@ public class Woo{
 	    } catch (InterruptedException e) {}
 		 
 
-	    prints = "Rumor has it, my daughter has been found never the Yard of Sirbow.\n\n";
+	    prints = "Zbigniew: Rumor has it, my daughter has been found never the Yard of Sirbow.\n\n";
 	    System.out.println(prints);
 	    try {
 		// thread to sleep for 2 second
@@ -418,7 +418,7 @@ public class Woo{
 	    } catch (InterruptedException e) {}
 		 
 
-	    prints = "Why don't you check there? Consider this your second quest.\n\n";
+	    prints = "Zbigniew: Why don't you check there? Consider this your second quest.\n\n";
 	    System.out.println(prints);
 	    try {
 		// thread to sleep for 2 second
@@ -430,7 +430,7 @@ public class Woo{
 	    inQuest = true;
 	}
 	else if (questCount == 2 && !(inQuest)){
-	        prints = "You know it'll be great if you could get my daughter back before dinner.\n\n";
+	        prints = "Zbigniew: You know it'll be great if you could get my daughter back before dinner.\n\n";
 	    System.out.println(prints);
 	    try {
 		// thread to sleep for 2 second
@@ -438,7 +438,7 @@ public class Woo{
 	    } catch (InterruptedException e) {}
 		 
 	    
-	    prints = "My wife's advice.\n\n";
+	    prints = "Zbigniew: My wife's advice.\n\n";
 	    System.out.println(prints);
 	    try {
 		// thread to sleep for 2 second
@@ -446,7 +446,7 @@ public class Woo{
 	    } catch (InterruptedException e) {}
 		 
 
-	    prints = "My soldiers reported back saying she is in Sirbow's Castle.\n\n";
+	    prints = "Zbigniew: My soldiers reported back saying she is in Sirbow's Castle.\n\n";
 	    System.out.println(prints);
 	    try {
 		// thread to sleep for 2 second
@@ -454,14 +454,14 @@ public class Woo{
 	    } catch (InterruptedException e) {}
 		 
 
-	    prints = "This will be your last chance to retrieve her back.\n\n";
+	    prints = "Zbigniew: This will be your last chance to retrieve her back.\n\n";
 	    System.out.println(prints);
 	    try {
 		// thread to sleep for 2 second
 		Thread.sleep(2000);
 	    } catch (InterruptedException e) {}
 
-	       prints = "Good luck.\n\n";
+	       prints = "Zbigniew: Good luck.\n\n";
 	    System.out.println(prints);
 	    try {
 		// thread to sleep for 2 second
@@ -473,11 +473,24 @@ public class Woo{
 	    inQuest = true;
 	}
 	else if (questCount == 3 && !(inQuest)){
-	    prints = "Congratulations " + player.getName() + ", you saved my daughter! Without you my wife would've killed me. I suppose here is a thank you.\n\n";
-	    prints += "Well I have no more quests for you, however, your service will not go unrewarded. Here, this is one-tenth of the kingdom's treasury, use it wisely.\n\n";
-	    prints += "*" + player.getName() + " received 500,000 gold coins!*\n\n";
-	    prints += "I also hear news that a secret zone has been unlocked, I suggest you go check it out.\n";
+	    prints = "Zbigniew: Congratulations " + player.getName() + ", you saved my daughter! Without you my wife would've killed me. I suppose here is a thank you.\n\n";
 	    System.out.println(prints);
+	    try {
+		// thread to sleep for 2 second
+		Thread.sleep(2000);
+	    } catch (InterruptedException e) {}
+	    prints = "Zbigniew: Well I have no more quests for you, however, your service will not go unrewarded. Here, this is one-tenth of the kingdom's treasury, use it wisely.\n\n";
+	    System.out.println(prints);
+	    try {
+		// thread to sleep for 2 second
+		Thread.sleep(2000);
+	    } catch (InterruptedException e) {}
+	    prints = "*" + player.getName() + " received 500,000 gold coins!*\n\n";
+	    System.out.println(prints);
+	    try {
+		// thread to sleep for 2 second
+		Thread.sleep(2000);
+	    } catch (InterruptedException e) {}
 	    player.gainCurrency(500000);
 	    Endgame = true;
 	}
