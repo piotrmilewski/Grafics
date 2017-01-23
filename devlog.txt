@@ -11,7 +11,9 @@ Kingdom Quests
 OBSTACLES OVERCOME
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 -Static vs. Non-static issues
--Organizing 10+ classes so that they each work with each other
+	- We used accessors and made certain instance variables static.
+-Organizing 10+ classes so that they each work with each other.
+	- The usage of UML diagrams was very useful. Seeing everything as a hierarchy made things clear.
 - Instead of pressing enter for a new line, we decided to use Thread.sleep() to slow down the print rate.
 
 UNRESOLVED ISSUES
